@@ -376,14 +376,6 @@ window.MEMORY_IMAGES = [
     "asset": "assets/memory/princess/anna.jpg"
   },
   {
-    "id": "princess-mirabel",
-    "name": "Mirabel",
-    "theme": "princess",
-    "sourceUrl": "https://www.disney.com.br/novidades/mirabel-conheca-a-protagonista-de-encanto-nova-animacao-da-disney",
-    "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/encanto-online-use-365_fa35b6e2.jpeg",
-    "asset": "assets/memory/princess/mirabel.jpg"
-  },
-  {
     "id": "kpop-rumi",
     "name": "Rumi",
     "theme": "kpop",

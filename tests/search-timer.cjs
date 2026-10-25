@@ -1,7 +1,7 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 let now=1000,frames=0,cancelled=0,overlay=0;
 const el=()=>({style:{},textContent:'',attrs:{},setAttribute(k,v){this.attrs[k]=v},focus(){},scrollIntoView(){}});
-const nodes={'#search-time':el(),'#search-time-fill':el(),'#search-seconds':el(),'#hint':el(),'#again':el(),'#board':{insertAdjacentHTML(){overlay++},querySelector(){return el()}}};
+const nodes={'#search-time':el(),'#search-time-fill':el(),'#search-seconds':el(),'#hint':el(),'#again':el(),'#board':{closest(){return true},insertAdjacentHTML(){overlay++},querySelector(){return el()}}};
 const toys=[{disabled:false},{disabled:false}];
 const ctx={console,Date:{now:()=>now},requestAnimationFrame:()=>++frames,cancelAnimationFrame:()=>cancelled++,home(){},showCatalog(){},fashion(){},$:s=>nodes[s],document:{querySelectorAll:()=>toys},won:false,targets:[0,1],items:[{uid:0,found:true},{uid:1,found:false}]};vm.createContext(ctx);vm.runInContext(fs.readFileSync('dist/search-game.js','utf8'),ctx);
 const run=s=>vm.runInContext(s,ctx);

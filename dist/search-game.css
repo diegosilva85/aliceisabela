@@ -13,3 +13,12 @@ body:has(.immersive){overflow:hidden}.search-workspace.immersive{position:fixed;
 /* During play, only the green bar remains above the room. */
 .search-workspace.immersive:not(.loading-round){grid-template-rows:8px minmax(0,1fr);gap:3px;padding:3px max(3px,env(safe-area-inset-right)) 3px max(3px,env(safe-area-inset-left))}.immersive>.toolbar,.immersive .countdown-label{display:none}.immersive .search-countdown{height:8px;margin:0}.immersive .time-track{height:8px;border-radius:5px}.immersive .game-layout{gap:4px;grid-template-columns:minmax(0,1fr) clamp(68px,10vw,128px)}.immersive .board-scroll{border-radius:5px}.immersive .search-board{border-radius:5px}.immersive .sidebar{padding:5px;border-radius:7px}.immersive .sidebar h2{font-size:12px}.immersive .sidebar>p{font-size:11px}.immersive .win #end-rooms{display:block;margin:8px auto 0;background:#e2ebf4;color:#173b69}.immersive .search-board{width:min(100cqw,calc(100cqh * 1.776833))}
 @media(orientation:landscape) and (max-height:600px){.immersive .game-layout{grid-template-columns:minmax(0,1fr) 88px}.immersive .sidebar{padding:4px}.immersive .sidebar h2{font-size:11px}.immersive .sidebar>p{font-size:10px}}
+/* The timer owns a reserved row; the room can never grow beyond its remaining cell. */
+html:has(.immersive),body:has(.immersive){overflow:hidden;overscroll-behavior:none}
+.search-workspace.immersive{inset:auto;top:var(--search-viewport-top,0px);left:var(--search-viewport-left,0px);width:var(--search-viewport-width,100%);height:var(--search-viewport-height,100dvh);min-width:0;min-height:0;max-height:none;overflow:hidden;box-sizing:border-box}
+.search-workspace.immersive:not(.loading-round){grid-template-rows:8px minmax(0,1fr);padding: max(3px,env(safe-area-inset-top)) max(3px,env(safe-area-inset-right)) max(3px,env(safe-area-inset-bottom)) max(3px,env(safe-area-inset-left))}
+.immersive .search-countdown{grid-row:1;position:relative;z-index:5;align-self:start;min-height:8px;flex-shrink:0;overflow:hidden}
+.immersive .game-layout{grid-row:2;min-height:0;min-width:0;height:auto;max-height:100%;overflow:hidden;align-self:stretch}
+.immersive .scene-column{min-width:0;min-height:0;grid-template-rows:minmax(0,1fr);overflow:hidden}
+.immersive .board-scroll{min-width:0;min-height:0;max-width:100%;max-height:100%;overflow:hidden}
+.immersive .search-board{max-width:100%;max-height:100%;min-height:0;flex-shrink:0}

@@ -4,3 +4,5 @@
 /* Facial expression thumbnails keep the existing menu layout. */
 .preview-eyeExpression .girl,.preview-mouthExpression .girl{position:absolute;width:100%;height:105px;top:8px;left:0;overflow:hidden}
 .face-hit:hover{fill:transparent;stroke:none}.face-hit:focus-visible{fill:#ffffff20;stroke:#b87ba5;stroke-width:1}
+/* Full bag close-ups show handles, closures and stitching. */
+.preview-bag .girl{width:100%;height:112px;top:0;left:0;overflow:hidden}.style-presets button[data-preset="8"],.style-presets button[data-preset="9"],.style-presets button[data-preset="10"]{background:#eee5fb;color:#754b96;border-color:#d8c0ec}

@@ -20,11 +20,58 @@ function avatar(s=look,interactive=false){
  const arm=path('M117 198Q102 198 97 217L87 254 78 289Q74 296 75 306L78 315Q81 320 84 316L85 307Q86 319 90 316L92 302Q98 306 98 300L96 288 107 258 122 221Z',url('skin'),'#a16d60',.8)+line('M81 298L80 310M87 295L85 307','#a16d60',.65);
  const legs=mirror(path('M119 326Q113 353 118 390L122 452 120 466Q127 472 138 468L139 451 143 391 147 330Z',url('skin'),'#a16d60',.9)+path('M123 355Q121 391 128 444L125 460 121 465 122 452 118 390 118 352Z','#89584733','none')+line('M125 393Q131 396 136 393','#a16d60',.7));
  const neck=path('M137 164L136 190 118 199Q150 222 182 199L164 190 163 164Z',url('skin'),'#a16d60',.9)+path('M137 169Q150 182 163 169L163 183Q150 192 137 184Z','#955c4733','none');
- const face=mirror(path('M103 119Q89 111 94 133Q97 144 106 140Z',url('skin'),'#a16d60',.8)+line('M99 124Q95 127 101 134','#a16d60',1))+path('M103 89Q104 58 150 58Q196 58 197 89L193 137Q190 157 174 166L150 179Q125 169 113 154Q105 143 105 129Z',url('skin'),'#815348',1)+path('M106 105L108 139Q114 160 150 179Q121 172 113 154Q105 143 105 129Z','#ad6e5322','none');
- const eyes=mirror(`<g>${path('M111 118Q123 101 140 117Q138 137 126 139Q113 138 111 118Z','#fff9f7','#66434a',.8)}<ellipse cx="127" cy="123" rx="9.7" ry="14" fill="${url('iris')}"/><ellipse cx="128" cy="122" rx="4.1" ry="10" fill="#2e243b"/><path d="M120 130Q127 140 135 128" fill="none" stroke="${eye}" stroke-width="3"/><ellipse cx="124" cy="115" rx="4.3" ry="5.5" fill="white"/><circle cx="132" cy="129" r="2.3" fill="#fff9e6"/>${path('M108 113L112 116Q123 103 140 116L141 119Q122 109 112 122Z','#402b39','none')}${line('M111 116L107 110M115 112L112 107','#402b39',1.7)}${line('M117 139Q126 142 134 138','#865c63',.7)}${line('M114 102Q124 98 136 102',hair,1.8)}</g>`);
- const facialDetails=`<ellipse cx="117" cy="145" rx="14" ry="8" fill="${url('blush')}"/><ellipse cx="183" cy="145" rx="14" ry="8" fill="${url('blush')}"/>${line('M149 132L147 142 151 144','#a56d5d',.8)}${path('M142 155Q147 151 150 154Q154 152 159 155Q150 164 142 155Z',lip,'none')}${line('M143 155Q150 158 158 155','#81465c',.65)}${line('M147 159L153 159','#ffe6db',.9)}`;
- const fringe=path('M99 112Q86 76 109 54Q132 33 163 43Q203 43 206 86L201 119 189 98 188 80Q181 94 163 99L168 84Q155 102 136 105L142 91Q124 111 109 112L112 94Z',url('hair'))+line('M111 67Q126 49 151 50M120 74Q133 60 145 59M171 57Q190 65 194 85','#fff',2.5,'opacity=".18"')+line('M154 59Q150 82 136 99M176 64Q173 80 166 89',hair,1.1);
- const sideLocks=s.hair===0?mirror(path('M103 96Q99 141 112 179L107 153Q113 166 119 170Q103 124 113 103Z',url('hair'))):s.hair===1?mirror(path('M101 101Q89 119 101 137Q91 154 106 165Q98 182 112 192Q97 172 113 161Q100 143 113 132Q100 118 113 106Z',url('hair'))):s.hair===2?mirror(path('M101 103Q94 131 108 150L105 137 114 151Q102 122 113 102Z',url('hair'))):mirror(path('M101 102Q97 144 115 164L111 147 122 166Q108 140 115 103Z',url('hair')));
+ const face=mirror(path('M103 119Q89 111 94 133Q97 144 106 140Z',url('skin'),'#a16d60',.8)+line('M99 124Q95 127 101 134','#a16d60',1))+path('M103 89Q104 58 150 58Q196 58 197 89L193 137Q190 157 174 166Q162 175 150 176Q128 173 113 154Q105 143 105 129Z',url('skin'),'#815348',1)+path('M106 105L108 139Q114 160 150 179Q121 172 113 154Q105 143 105 129Z','#ad6e5322','none');
+ // Eye shapes clip the iris; no lower-lid stroke or under-eye shadow.
+ const expression=s.eyeExpression||0,mouth=s.mouthExpression||0;
+ const eyeShapes=[
+  'M110 120Q121 107 140 119Q136 134 125 134Q114 133 110 120Z',
+  'M110 122Q123 107 140 121Q134 133 124 132Q115 132 110 122Z',
+  'M110 119Q123 112 140 116Q138 135 126 136Q114 134 110 119Z',
+  'M109 118Q123 102 141 117Q139 137 125 138Q111 135 109 118Z',
+  'M110 117Q122 103 140 116Q140 138 125 138Q111 137 110 117Z',
+  'M110 118Q123 104 140 118Q138 137 125 137Q112 134 110 118Z',
+  'M110 120Q121 107 140 119Q136 134 125 134Q114 133 110 120Z',
+  'M110 120Q124 125 140 117Q136 135 126 135Q115 133 110 120Z'
+ ];
+ const brows=[
+  'M112 105Q124 100 137 105', 'M112 104Q123 97 137 102',
+  'M112 108Q124 107 138 100', 'M111 100Q122 92 137 98',
+  'M111 104Q126 105 138 96', 'M112 100Q124 93 137 99',
+  'M112 104Q124 98 137 103', 'M111 102Q123 102 138 111'
+ ];
+ const oneEye=(wink=false,side="left")=>{
+  if(wink)return line('M111 123Q125 114 139 124','#49313e',2.4)+line('M112 122L108 119','#49313e',1.5)+line(brows[expression],hair,1.7);
+  const shape=eyeShapes[expression],eyeClip=id+'-eye-'+side;
+  return `<defs><clipPath id="${eyeClip}"><path d="${shape}"/></clipPath></defs>`+
+   path(shape,'#fffaf7','none')+`<g clip-path="url(#${eyeClip})"><ellipse cx="126" cy="122" rx="9.1" ry="12.4" fill="${url('iris')}"/><ellipse cx="126" cy="121" rx="4" ry="8.8" fill="#2d2634"/><path d="M120 129Q126 135 133 128" stroke="${eye}" stroke-width="2.5" fill="none"/><ellipse cx="123" cy="115" rx="3.2" ry="4.1" fill="white"/><circle cx="131" cy="128" r="1.8" fill="#fff9e6"/>${expression===3?star(126,123,4):''}</g>`+
+   line(shape.split('Q')[0]+'Q'+shape.split('Q')[1],'#49313e',2.1)+
+   line('M111 119L107 115M114 115L111 111','#49313e',1.3)+line(brows[expression],hair,1.8);
+ };
+ const eyes=expression===1?mirror(oneEye(true)):expression===6?oneEye()+`<g transform="translate(300 0) scale(-1 1)">${oneEye(true)}</g>`:oneEye()+`<g transform="translate(300 0) scale(-1 1)">${oneEye(false,"right")}</g>`;
+ const mouthShapes=[
+  path('M139 155Q145 151 150 154Q155 151 162 154Q151 166 139 155Z',lip,'none')+line('M141 155Q151 158 160 154','#9c5665',.7)+line('M148 160L154 159','#ffe7df',1),
+  path('M138 153Q151 161 164 152Q161 170 150 170Q141 168 138 153Z',lip,'none')+path('M141 156Q151 161 161 155Q158 166 151 166Q145 165 141 156Z','#783e50','none')+path('M141 156Q151 160 161 155L158 160Q150 163 143 159Z','#fffaf5','none'),
+  path('M139 159Q150 147 162 159Q150 154 139 159Z',lip,'none')+line('M141 157Q150 150 160 157','#9c5665',.8),
+  path('M136 152Q151 160 165 151Q164 174 150 175Q137 172 136 152Z',lip,'none')+path('M139 155Q151 161 162 154Q161 171 150 171Q140 170 139 155Z','#713c50','none')+path('M139 155Q151 159 162 154L159 160Q151 164 142 160Z','#fff9f2','none')+path('M143 168Q150 162 158 167Q151 176 143 168Z','#eb8d9f','none'),
+  path('M141 160Q143 151 150 152Q158 151 161 161Q150 157 141 160Z',lip,'none')+line('M144 158Q151 156 158 159','#713c50',1.5),
+  `<ellipse cx="151" cy="159" rx="6" ry="8" fill="${lip}"/><ellipse cx="151" cy="158" rx="3.7" ry="5.3" fill="#713c50"/>`,
+  path('M146 151Q154 148 157 154L152 156 157 158Q151 165 145 160L149 156Z',lip,'none')+line('M149 155L153 156 149 158','#995165',.7),
+  path('M139 157Q149 159 162 154Q155 163 145 161Z',lip,'none')+line('M140 157Q150 159 161 154','#9c5665',.8)
+ ];
+ const facialDetails=`<ellipse cx="116" cy="145" rx="10" ry="5" fill="${url('blush')}" opacity=".5"/><ellipse cx="184" cy="145" rx="10" ry="5" fill="${url('blush')}" opacity=".5"/>${path('M147 136Q143 143 151 145Q156 143 153 141',skin,'none')}${line('M147 143Q151 146 154 143','#b27c69',.65)}${mouthShapes[mouth]}`;
+ // Lateral locks sit behind the crown, with the same solid base at the join.
+ // They stop outside the eyes instead of crossing them as detached triangles.
+ const sideLocks=mirror(path([
+  'M100 85Q90 119 100 151Q102 169 112 180Q102 149 107 125L116 90Z',
+  'M100 85Q88 105 96 122Q89 141 102 155Q94 174 111 187Q103 171 111 157Q100 139 109 124L116 91Z',
+  'M100 85Q92 108 99 135Q102 148 111 156Q103 137 107 117L116 89Z',
+  'M100 85Q90 120 104 153L113 164Q107 146 108 127L117 91Z'
+ ][s.hair],hair,'none')+line('M100 112Q98 139 106 155',hair,.6));
+ const fringe=path('M97 114Q87 84 100 63Q112 40 143 41Q177 37 195 62Q211 83 203 116L193 110Q194 87 181 72Q169 94 143 103Q154 91 158 78Q136 102 108 112L106 104 105 119Z',hair,hair,.7)+
+  path('M105 83Q111 52 143 49Q162 44 178 54Q143 50 131 76L113 101Z','#ffffff','none',0,'opacity=".10"')+
+  path('M178 54Q196 69 198 94L193 105Q192 78 178 63Z','#ffffff','none',0,'opacity=".10"')+
+  line('M160 54Q152 80 126 98M178 61Q170 85 151 97',hair,1.1)+
+  line('M116 70Q127 55 145 53','#fff',1.5,'opacity=".14"');
  const sleeveShort='M118 197Q102 198 97 217L93 232Q103 241 116 239L123 215Z';
  const sleevePuff='M119 195Q100 192 94 212Q90 223 94 235Q105 242 118 238L124 216Z';
  const sleeveLong='M118 198Q102 198 97 217L87 254 79 284Q86 293 98 290L108 259 123 218Z';
@@ -67,5 +114,5 @@ function avatar(s=look,interactive=false){
  line('M201 317Q201 278 219 278Q239 279 236 317','#c9a661',2,'stroke-dasharray="2 1"')+path('M196 315Q216 308 240 315V341Q220 347 196 341Z','#b898ce','#8f719f',1)+path('M197 315L219 330 239 315','#ddc8e9','#9d7eb1',.8)+star(219,328,4)+line('M200 339Q218 344 236 339','#ead8ef',.9)
  ][s.bag];
  const hit=(part,label,shape)=>interactive?`<g class="face-hit" role="button" tabindex="0" aria-label="${label}" data-face="${part}"><title>${label}</title>${shape}</g>`:'';
- return `<svg class="girl anime-girl" viewBox="${faceZoom&&interactive?'65 23 175 190':'0 0 300 510'}" xmlns="http://www.w3.org/2000/svg" role="${interactive?'group':'img'}" aria-label="Menina em estilo anime com o visual escolhido">${defs}<ellipse cx="150" cy="490" rx="65" ry="7" fill="#bba0ba" opacity=".15"/>${hairBack}${legs}${mirror(arm)}${neck}${sleeves}${bodice}${topDetail}${skirtBase}${skirtDetail}${waistband}${mirror(shoe)}${face}${eyes}${facialDetails}${fringe}${sideLocks}${earrings}${necklaces}${bags}${hit('hair','Mudar o cabelo','<path d="M85 97V24H215V97Z"/>')}${hit('eyes','Mudar os olhos','<rect x="108" y="103" width="84" height="39" rx="8"/>')}${hit('lip','Mudar o batom','<rect x="132" y="147" width="37" height="23" rx="10"/>')}${hit('earrings','Mudar os brincos','<rect x="88" y="135" width="20" height="30"/><rect x="192" y="135" width="20" height="30"/>')}</svg>`;
+ return `<svg class="girl anime-girl" viewBox="${faceZoom&&interactive?'65 23 175 190':'0 0 300 510'}" xmlns="http://www.w3.org/2000/svg" role="${interactive?'group':'img'}" aria-label="Menina em estilo anime com o visual escolhido">${defs}<ellipse cx="150" cy="490" rx="65" ry="7" fill="#bba0ba" opacity=".15"/>${hairBack}${legs}${mirror(arm)}${neck}${sleeves}${bodice}${topDetail}${skirtBase}${skirtDetail}${waistband}${mirror(shoe)}${face}${eyes}${facialDetails}${sideLocks}${fringe}${earrings}${necklaces}${bags}${hit('hair','Mudar o cabelo','<path d="M85 97V24H215V97Z"/>')}${hit('eyeExpression','Mudar a expressão dos olhos','<rect x="108" y="103" width="84" height="39" rx="8"/>')}${hit('mouthExpression','Mudar a expressão da boca','<rect x="132" y="147" width="37" height="23" rx="10"/>')}${hit('earrings','Mudar os brincos','<rect x="88" y="135" width="20" height="30"/><rect x="192" y="135" width="20" height="30"/>')}</svg>`;
 }

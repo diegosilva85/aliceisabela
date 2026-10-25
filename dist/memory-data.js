@@ -533,161 +533,161 @@ window.MEMORY_IMAGES = [
     "id": "poppy-huggy-wuggy",
     "name": "Huggy Wuggy",
     "theme": "poppy",
-    "asset": "assets/memory/poppy/huggy-wuggy.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Huggy.png?v=1788793463&width=900",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Huggy_10ea3f8e-af3d-44dc-bdf7-14d0fd716971.png?v=1788871034&width=800",
+    "asset": "assets/memory/poppy/huggy-wuggy-render.png",
     "official": true,
-    "kind": ""
+    "kind": "Retrato oficial de personagem"
   },
   {
     "id": "poppy-lily-lovebraids",
     "name": "Lily Lovebraids",
     "theme": "poppy",
-    "asset": "assets/memory/poppy/lily-lovebraids.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Lilly.png?v=1788793463&width=900",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Lily.png?v=1788870892&width=800",
+    "asset": "assets/memory/poppy/lily-lovebraids-render.png",
     "official": true,
-    "kind": ""
-  },
-  {
-    "id": "poppy-prototype",
-    "name": "Prototype",
-    "theme": "poppy",
-    "asset": "assets/memory/poppy/prototype.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Prototype.png?v=1788793852&width=900",
-    "official": true,
-    "kind": ""
-  },
-  {
-    "id": "poppy-catnap",
-    "name": "CatNap",
-    "theme": "poppy",
-    "asset": "assets/memory/poppy/catnap.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Catnap_1.png?v=1788967645&width=900",
-    "official": true,
-    "kind": ""
-  },
-  {
-    "id": "poppy-yarnaby",
-    "name": "Yarnaby",
-    "theme": "poppy",
-    "asset": "assets/memory/poppy/yarnaby.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Yarnaby.png?v=1788793852&width=900",
-    "official": true,
-    "kind": ""
-  },
-  {
-    "id": "poppy-kissy-missy",
-    "name": "Kissy Missy",
-    "theme": "poppy",
-    "asset": "assets/memory/poppy/kissy-missy.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Huggy-1.png?v=1788793463&width=900",
-    "official": true,
-    "kind": ""
-  },
-  {
-    "id": "poppy-bron",
-    "name": "Bron",
-    "theme": "poppy",
-    "asset": "assets/memory/poppy/bron.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Bron.png?v=1788793463&width=900",
-    "official": true,
-    "kind": ""
-  },
-  {
-    "id": "poppy-chum",
-    "name": "Chum",
-    "theme": "poppy",
-    "asset": "assets/memory/poppy/chum.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Chum.png?v=1788793462&width=900",
-    "official": true,
-    "kind": ""
-  },
-  {
-    "id": "poppy-doey",
-    "name": "Doey",
-    "theme": "poppy",
-    "asset": "assets/memory/poppy/doey.png",
-    "sourceUrl": "https://poppyplaytime.com/",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/60131_MOB_Playtime_Co_Site_Banners_Characters_5.png?v=1770379713&width=900",
-    "official": true,
-    "kind": ""
-  },
-  {
-    "id": "poppy-craftycorn",
-    "name": "CraftyCorn",
-    "theme": "poppy",
-    "asset": "assets/memory/poppy/craftycorn.png",
-    "sourceUrl": "https://poppyplaytime.com/collections/plush",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Crafty-Plush-Update-1.png?v=1791911367&width=480",
-    "official": true,
-    "kind": "official merchandise photograph"
+    "kind": "Retrato oficial de personagem"
   },
   {
     "id": "poppy-bobby-bearhug",
     "name": "Bobby BearHug",
     "theme": "poppy",
-    "asset": "assets/memory/poppy/bobby-bearhug.png",
-    "sourceUrl": "https://poppyplaytime.com/collections/plush",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Bobby-Plush-Update-1.png?v=1791911342&width=480",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Component_27.png?v=1785418126&width=800",
+    "asset": "assets/memory/poppy/bobby-bearhug-render.png",
     "official": true,
-    "kind": "official merchandise photograph"
+    "kind": "Retrato oficial de personagem"
+  },
+  {
+    "id": "poppy-kissy-missy",
+    "name": "Kissy Missy",
+    "theme": "poppy",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Missy.png?v=1788870891&width=800",
+    "asset": "assets/memory/poppy/kissy-missy-render.png",
+    "official": true,
+    "kind": "Retrato oficial de personagem"
+  },
+  {
+    "id": "poppy-bubba-bubbaphant",
+    "name": "Bubba Bubbaphant",
+    "theme": "poppy",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Property_1_Frame_4800.png?v=1785418325&width=800",
+    "asset": "assets/memory/poppy/bubba-bubbaphant-render.png",
+    "official": true,
+    "kind": "Retrato oficial de personagem"
+  },
+  {
+    "id": "poppy-poppy",
+    "name": "Poppy",
+    "theme": "poppy",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Poppy_7b7e0576-0ba7-4650-8dfc-02fba7169d05.png?v=1788870892&width=800",
+    "asset": "assets/memory/poppy/poppy-render.png",
+    "official": true,
+    "kind": "Retrato oficial de personagem"
+  },
+  {
+    "id": "poppy-catnap",
+    "name": "CatNap",
+    "theme": "poppy",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Property_1_Frame_4800_1.png?v=1785418543&width=800",
+    "asset": "assets/memory/poppy/catnap-render.png",
+    "official": true,
+    "kind": "Retrato oficial de personagem"
+  },
+  {
+    "id": "poppy-yarnaby",
+    "name": "Yarnaby",
+    "theme": "poppy",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Yarnaby_2f343c24-4b38-44f1-8818-562cd34d9a3c.png?v=1788870892&width=800",
+    "asset": "assets/memory/poppy/yarnaby-render.png",
+    "official": true,
+    "kind": "Retrato oficial de personagem"
+  },
+  {
+    "id": "poppy-dogday",
+    "name": "DogDay",
+    "theme": "poppy",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Property_1_Frame_4800_3.png?v=1785418641&width=800",
+    "asset": "assets/memory/poppy/dogday-render.png",
+    "official": true,
+    "kind": "Retrato oficial de personagem"
   },
   {
     "id": "poppy-hoppy-hopscotch",
     "name": "Hoppy HopScotch",
     "theme": "poppy",
-    "asset": "assets/memory/poppy/hoppy-hopscotch.png",
-    "sourceUrl": "https://poppyplaytime.com/collections/plush",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Hoppy-Plush-Update-1.png?v=1791911327&width=480",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Property_1_Frame_4800_4.png?v=1785418877&width=800",
+    "asset": "assets/memory/poppy/hoppy-hopscotch-render.png",
     "official": true,
-    "kind": "official merchandise photograph"
+    "kind": "Retrato oficial de personagem"
   },
   {
-    "id": "poppy-kickinchicken",
-    "name": "KickinChicken",
+    "id": "poppy-prototype",
+    "name": "Prototype",
     "theme": "poppy",
-    "asset": "assets/memory/poppy/kickinchicken.png",
-    "sourceUrl": "https://poppyplaytime.com/collections/plush",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Kickin-Plush-Update-1.png?v=1791911284&width=480",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Prototype_552dc3c7-0921-4d0d-b218-204dfa4c86fd.png?v=1788870892&width=800",
+    "asset": "assets/memory/poppy/prototype-render.png",
     "official": true,
-    "kind": "official merchandise photograph"
+    "kind": "Retrato oficial de personagem"
   },
   {
     "id": "poppy-pickypiggy",
     "name": "PickyPiggy",
     "theme": "poppy",
-    "asset": "assets/memory/poppy/pickypiggy.png",
-    "sourceUrl": "https://poppyplaytime.com/collections/plush",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Picky-Plush-Update-1.png?v=1791911090&width=480",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Property_1_Frame_4800_5.png?v=1785418930&width=800",
+    "asset": "assets/memory/poppy/pickypiggy-render.png",
     "official": true,
-    "kind": "official merchandise photograph"
+    "kind": "Retrato oficial de personagem"
   },
   {
-    "id": "poppy-blanky-blankz",
-    "name": "Blanky Blankz",
+    "id": "poppy-kickinchicken",
+    "name": "KickinChicken",
     "theme": "poppy",
-    "asset": "assets/memory/poppy/blanky-blankz.png",
-    "sourceUrl": "https://poppyplaytime.com/collections/plush",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/1560873_BlankyBlankzPlush_1.png?v=1771299367&width=480",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Property_1_Frame_4800_6.png?v=1785419001&width=800",
+    "asset": "assets/memory/poppy/kickinchicken-render.png",
     "official": true,
-    "kind": "official merchandise photograph"
+    "kind": "Retrato oficial de personagem"
   },
   {
-    "id": "poppy-bindle-boogie",
-    "name": "Bindle Boogie",
+    "id": "poppy-craftycorn",
+    "name": "CraftyCorn",
     "theme": "poppy",
-    "asset": "assets/memory/poppy/bindle-boogie.png",
-    "sourceUrl": "https://poppyplaytime.com/collections/plush",
-    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/1560871-00_MOBBindleBoogiePlush_1.png?v=1771955152&width=480",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Property_1_Frame_4800_2.png?v=1785418608&width=800",
+    "asset": "assets/memory/poppy/craftycorn-render.png",
     "official": true,
-    "kind": "official merchandise photograph"
+    "kind": "Retrato oficial de personagem"
+  },
+  {
+    "id": "poppy-doey",
+    "name": "Doey",
+    "theme": "poppy",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Doey.png?v=1788871189&width=800",
+    "asset": "assets/memory/poppy/doey-render.png",
+    "official": true,
+    "kind": "Retrato oficial de personagem"
+  },
+  {
+    "id": "poppy-mommy-long-legs",
+    "name": "Mommy Long Legs",
+    "theme": "poppy",
+    "sourceUrl": "https://poppyplaytime.com/pages/meet-the-characters",
+    "imageUrl": "https://poppyplaytime.com/cdn/shop/files/Mommy_cc55d856-cd6b-4a7a-9cdb-2c86f0c73c7b.png?v=1788934743&width=800",
+    "asset": "assets/memory/poppy/mommy-long-legs-render.png",
+    "official": true,
+    "kind": "Retrato oficial de personagem"
   },
   {
     "id": "sprunki-oren",

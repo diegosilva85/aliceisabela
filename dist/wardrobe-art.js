@@ -5,7 +5,7 @@ function wardrobeArt(s,{path:p,line:l,mirror:m,star,flower,hair,url}){
  const body='M118 197L136 190Q150 205 164 190L182 197Q179 218 179 237L181 279Q150 285 119 279L121 237Q121 216 118 197Z';
  const short='M118 197Q102 198 97 217L93 232Q103 241 116 239L123 215Z';
  const long='M118 198Q102 198 97 217L87 254 79 284Q86 293 98 290L108 259 123 218Z';
- if(s.top>=4){
+ if(s.top>=4&&s.top<=10){
   const i=s.top-4,c=topColors[i];
   const sleeves=i===1||i===6?'':m(p(i===3||i===4?long:short,c,ink,.9));
   let detail='';
@@ -17,7 +17,7 @@ function wardrobeArt(s,{path:p,line:l,mirror:m,star,flower,hair,url}){
   if(i===6)detail=p('M118 197L136 190 141 200 123 216ZM182 197L164 190 159 200 177 216Z','#34334b',ink,.7)+l('M125 217L175 217M125 226L175 226','#e9e1ff',2)+l('M150 228V279','#35445d',1.5)+p('M126 239L143 239 142 254 128 255ZM157 239H174L172 255 158 254Z','#91d0d3','#4d778b',.6)+star(150,232,4);
   out.top=sleeves+p(body,c,ink,.9)+detail;
  }
- if(s.skirt>=4){
+ if(s.skirt>=4&&s.skirt<=10){
   const i=s.skirt-4;
   const belt=c=>p('M120 275Q150 279 180 275L181 286Q150 290 119 286Z',c,ink,.7)+`<rect x="146" y="278" width="9" height="7" rx="1" fill="none" stroke="${gold}" stroke-width="1.5"/>`;
   const pleats=(c,hem=350)=>p(`M120 280H180L200 ${hem}Q150 ${hem+17} 100 ${hem}Z`,c,ink,.9)+[116,133,150,167,184].map((x,j)=>l(`M${127+j*11} 286L${x} ${hem}`,ink,.7)).join('');
@@ -29,7 +29,7 @@ function wardrobeArt(s,{path:p,line:l,mirror:m,star,flower,hair,url}){
   if(i===5)out.bottom=pleats('#efcc58',339)+p('M120 285H136L127 341 110 338Z','#f9e6a0','none')+l('M105 335Q150 351 195 335','#db9e50',2)+belt('#302b3b')+l('M175 284L183 308','#e37aa5',3)+star(184,311,5);
   if(i===6)out.bottom=p('M120 278H180Q187 332 180 395L182 457Q168 464 151 457L150 328 149 457Q132 465 117 457L120 396Q113 332 120 278Z','#7471b6',ink,1)+p('M120 305L140 327 122 349 138 370 120 394 133 419 120 441M179 301L159 324 179 347 160 374 179 396 163 422 180 444','#a7c2cf','#b8ddd3',2)+l('M150 289V328M123 452H146M154 452H179','#d3e6eb',2)+belt('#34364f');
  }
- if(s.shoes>=4){const i=s.shoes-4;let shoe='';
+ if(s.shoes>=4&&s.shoes<=10){const i=s.shoes-4;let shoe='';
   if(i===0)shoe=p('M121 413H140L140 466H120Z','#fff5e9','#aa94a2',.7)+l('M122 420H139','#9c849f',2)+p('M121 460L138 461 141 480Q123 489 105 482Q102 476 113 471Z','#65566d',ink,.9)+l('M119 466L138 470','#ad92ae',3);
   if(i===1)shoe=p('M121 464Q130 471 139 464L141 480Q123 487 107 482Q103 477 112 472Z','#e6a9c5','#a86e8e',.8)+l('M122 424L138 444 122 460M138 424L122 444 138 460','#d59bb5',2)+p('M126 471Q115 462 118 475L127 473Q137 461 136 475Z','#f9d7e9','#b77899',.5);
   if(i===2)shoe=p('M121 464L139 465 141 480Q124 488 105 482L111 475Z','#c69462',ink,.8)+l('M113 476L134 474M122 457L137 462M122 462L135 477','#faf0cc',4);
@@ -42,12 +42,12 @@ function wardrobeArt(s,{path:p,line:l,mirror:m,star,flower,hair,url}){
  if(s.bag===1){out.bag=l('M211 296Q196 299 200 322M216 301Q231 303 228 323','#a46d8c',3)+p('M196 319Q214 314 233 319L238 348Q219 360 193 350Z','#d99bb8','#a76c8e',.9)+p('M231 320L238 325 241 347 235 351Z','#b97c9c','#a76c8e',.7)+p('M197 320Q215 317 233 320L229 331Q213 339 198 331Z','#f1c5d8','#bb85a4',.7)+seam('M199 335L198 346Q215 354 231 347','#ffe3ef')+p('M215 329Q199 317 202 334L214 332Q230 317 228 334Z','#f9e0e9','#b7819e',.6)+`<ellipse cx="215" cy="331" rx="2.5" ry="3" fill="${gold}"/>`;}
  if(s.bag===2){out.bagBack=p('M176 222Q205 215 221 240L228 282Q212 301 184 285Z','#658f83','#496e64',1);out.bag=l('M178 200Q193 208 190 239L183 268','#52786e',4)+l('M178 200Q193 208 190 239L183 268','#bad5c4',2)+p('M194 247Q211 235 227 247L234 293Q214 306 195 295Z','#87b4a1','#52786e',.9)+p('M194 248Q208 239 227 248L224 261Q211 270 196 260Z','#c0dbca','#648b7a',.8)+p('M201 272Q213 268 227 272V291Q214 297 202 291Z','#a9cdb9','#648b7a',.7)+l('M204 277H224',gold,1.2)+star(211,256,4)+seam('M204 285V290Q215 294 225 289','#e8f3df');}
  if(s.bag===3){out.bag=l('M178 202Q206 225 210 291',gold,1.8,'stroke-dasharray="2 1.5"')+l('M210 291Q222 280 231 297',gold,1.8,'stroke-dasharray="2 1.5"')+p('M193 291Q212 286 230 292L232 315Q212 326 193 318Z','#aa87c4','#7f6196',.9)+p('M194 292L212 307 230 292','#ddc5ec','#9e7bb5',.8)+[199,207,215,223].map(x=>l(`M${x} 307L${x+7} 315M${x} 315L${x+7} 307`,'#c4a4d8',.6)).join('')+star(212,307,4)+l('M196 317Q212 323 229 315',gold,.8);}
- if(s.hair>=4){
+ if(s.hair>=4&&s.hair<=6){
   const cap=p('M99 128Q85 97 98 66Q108 38 150 39Q191 38 202 68Q215 102 201 132L188 145 112 145Z',hair,ink,.8);
   const pulled=p('M99 119Q88 89 100 64Q113 38 150 40Q190 39 202 69Q211 92 201 120L194 110Q195 86 182 69Q164 78 150 72Q131 82 113 73Q103 90 106 117Z',hair,ink,.7)+m(l('M105 79Q110 51 145 47','#ffffff33',1.5));
   if(s.hair===4){out.hairBack=cap+p('M176 49Q212 30 221 61L215 104 207 111 193 98 196 63Z',hair,ink,.8)+Array.from({length:12},(_,n)=>{const y=88+n*20,x=211+Math.sin(n*.65)*7;return p(`M${x} ${y}Q${x-22} ${y+4} ${x-12} ${y+19}Q${x} ${y+30} ${x+10} ${y+16}Q${x+18} ${y+4} ${x} ${y}Z`,hair,ink,.7)+l(`M${x-10} ${y+7}Q${x} ${y+9} ${x+7} ${y+19}`,'#ffffff44',1.5)}).join('')+p('M202 326L217 328 221 350 213 344 206 352Z',hair,ink,.8)+l('M202 328L218 330',gold,3);out.hairFront=pulled;}
   if(s.hair===5){out.hairBack=m(p('M105 65Q77 44 66 81Q60 134 75 194L72 298 88 321 88 297 99 309 99 218Q93 159 100 112Z',hair,ink,.8)+l('M82 77Q72 132 85 194L83 289','#ffffff40',2)+p('M83 64L103 72 100 82 80 74Z','#34283e',ink,.6))+cap;out.hairFront=pulled+p('M146 44Q126 56 113 79L106 121 101 113Q100 75 124 52Z',hair,'none')+p('M153 44Q175 57 189 79L195 121 201 113Q200 75 176 52Z',hair,'none');}
   if(s.hair===6){out.hairBack=m(p('M110 60Q79 69 77 46Q76 24 99 25Q122 26 123 48Z',hair,ink,.8)+l('M85 39Q101 28 112 48M83 48Q100 38 111 53','#ffffff33',1.4))+cap;out.hairFront=p('M98 116Q87 86 101 63Q114 40 150 41Q185 40 200 64Q212 87 202 117L193 110 188 87 181 99 172 88 165 99 155 90 148 100 139 89 131 98 121 87 111 102 106 119Z',hair,ink,.7)+l('M110 68Q144 43 186 65','#ffffff33',2)+m(p('M101 95L108 104 106 147 100 137Z',hair,'none'));}
  }
- return out;
+ return Object.assign(out,storybookArt(s,{p,l,m,star,flower,hair,url}));
 }

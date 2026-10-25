@@ -1,19 +1,35 @@
-# Aventura dos Brinquedos
+# Jogos de Alice e Isabela
 
-Jogo estático em português, sem instalação de dependências. Abra `dist/index.html` diretamente no navegador ou execute `python3 -m http.server 4173 --directory dist` nesta pasta.
+Jogo estático com busca de brinquedos e ateliê de moda. Layout adaptado para celular, tablet e computador. Looks e progresso são salvos apenas no navegador de cada dispositivo.
 
-## Primeira etapa
-- Tela inicial responsiva e cinco quartos ilustrados: Andy, Buzz, Bonnie, Blaze e Molly.
-- Procurar: cinco alvos entre doze fichas, pista, embaralhamento e comemoração.
-- Montar e vestir: colocar fichas, arrastar com mouse/toque, mover com setas, escolher chapéu/roupa/cor, remover e salvar por quarto no armazenamento local.
-- Catálogo pesquisável com filtro por filme e fontes por registro.
+## Iniciar no computador e na rede
 
-As fichas são provisórias. Não foram geradas imagens de brinquedos nesta etapa. As escolhas de roupas aparecem como texto; a troca visual depende dos futuros recortes e camadas. Os quartos são interpretações artísticas, não reconstruções exatas dos filmes. Buzz possui quarto temático imaginário. Blaze corresponde à menina do rancho do filme 5; Molly é a irmã de Andy.
+Requer Python 3.9 ou superior. Na pasta do projeto:
 
-## Arquivos e próxima etapa
-`dist/catalog.js` contém 97 registros, incluindo coletivos e variantes. `dist/sources.json` documenta fontes e limites: não há garantia de todos os figurantes. Cada item tem `asset: null` e `pose: 'inert'`. Ao produzir os brinquedos, salvar PNG/WebP transparente em `dist/assets/toys/` e preencher `asset` com caminho relativo. No modo procurar, usar pose inerte de brinquedo diante de humanos: membros relaxados, sem gestos vivos, sem cenário e sem roupa alternativa embutida. Para vestir, preparar base e camadas alinhadas por personagem; a primeira versão guarda escolhas em `hat` e `clothes`.
+```sh
+./iniciar-jogo.sh
+```
 
-`dist/assets/` preserva os cinco PNGs gerados pelo recurso integrado image_gen. `prompts.json` registra os prompts. Não usar as fichas como referência visual dos personagens. Progresso e quartos são locais a cada navegador; limpar dados do navegador os remove.
+O servidor escuta em `0.0.0.0:8080`. Abra `http://localhost:8080` no próprio computador ou `http://IP-LOCAL-DO-COMPUTADOR:8080` em outro aparelho da rede. Para encontrar o IP local, execute `hostname -I` e use o endereço da interface conectada ao roteador. Mantenha o processo e o computador ligados. Ctrl+C encerra o servidor.
 
-## Verificação
-`node --check dist/app.js` e `node --check dist/catalog.js` validam sintaxe. A publicação usa `.openai/hosting.json`.
+Para outra porta: `PORTA_JOGO=8081 ./iniciar-jogo.sh`.
+
+## Acesso pela internet com encaminhamento de porta
+
+1. Reserve o IP local do computador no DHCP do roteador.
+2. Configure encaminhamento **TCP**, porta externa **8080**, para o **IP local deste computador**, porta interna **8080**.
+3. Se o firewall bloquear entrada, permita TCP 8080 nele.
+4. Abra `http://SEU-IP-PUBLICO:8080` usando os dados móveis do celular para verificar o acesso de fora da rede.
+
+O encaminhamento do roteador e o firewall não são alterados pelo jogo. A disponibilidade externa depende deles e de um IPv4 público fornecido pela operadora; com CGNAT, encaminhar a porta no roteador pode não ser suficiente. O endereço público pode mudar; um serviço de DNS dinâmico é opcional.
+
+Este servidor entrega somente `dist/`, sem listagem de pastas, upload ou acesso ao código do projeto. O acesso local publicado por essa porta é HTTP e não exige login: quem alcançar o endereço poderá jogar. A configuração de acesso da hospedagem Sites continua independente.
+
+## Arquivos
+
+- `dist/`: arquivos publicados do jogo e imagens.
+- `dist/responsive.css`: adaptações de layout e toque.
+- `serve.py`: servidor estático para rede.
+- `.openai/hosting.json`: configuração da hospedagem Sites.
+
+As fontes web usam Google Fonts; na indisponibilidade da rede são usadas fontes alternativas. Nenhum cadastro é necessário no servidor local.

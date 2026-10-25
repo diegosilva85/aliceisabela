@@ -46,3 +46,5 @@ A tentativa de gerar 20 novas imagens nesta atualização foi interrompida: a ge
 
 Todas as dificuldades têm 60 segundos, contados após carregar os brinquedos e o cenário. A barra verde mostra o tempo restante. Vitória interrompe o cronômetro; ao zerar, a rodada bloqueia os toques e oferece nova tentativa. O tempo continua passando se a aba ficar em segundo plano.
 Teste do cronômetro: `node tests/search-timer.cjs`.
+
+Ao escolher o quarto, a rodada solicita tela cheia e orientação horizontal (quando suportadas). A contagem 3, 2, 1, Já! ocorre com o quarto oculto, antes dos 60 segundos. Se a API de tela cheia for recusada, o jogo ocupa a área da página. A faixa lateral apresenta somente imagens, com nomes preservados apenas para leitores de tela. Teste: `node tests/search-intro.cjs`.

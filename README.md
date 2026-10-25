@@ -48,3 +48,5 @@ Todas as dificuldades têm 60 segundos, contados após carregar os brinquedos e 
 Teste do cronômetro: `node tests/search-timer.cjs`.
 
 Ao escolher o quarto, a rodada solicita tela cheia e orientação horizontal (quando suportadas). A contagem 3, 2, 1, Já! ocorre com o quarto oculto, antes dos 60 segundos. Se a API de tela cheia for recusada, o jogo ocupa a área da página. A faixa lateral apresenta somente imagens, com nomes preservados apenas para leitores de tela. Teste: `node tests/search-intro.cjs`.
+
+Correção do carregamento móvel: tela cheia e rotação são opcionais e não bloqueiam a partida. As imagens têm limite de espera de 25 segundos por arquivo e são preparadas em até três tarefas simultâneas. A análise de transparência usa uma prévia de até 256 px, para reduzir memória e processamento. Teste de regressão: `node tests/search-loading.cjs`.

@@ -33,3 +33,13 @@ Este servidor entrega somente `dist/`, sem listagem de pastas, upload ou acesso 
 - `.openai/hosting.json`: configuração da hospedagem Sites.
 
 As fontes web usam Google Fonts; na indisponibilidade da rede são usadas fontes alternativas. Nenhum cadastro é necessário no servidor local.
+
+## Busca de brinquedos — níveis
+
+Fácil: 12 brinquedos e 3 alvos. Médio: 20 brinquedos e 5 alvos. Difícil: 30 brinquedos e 8 alvos. O sorteio usa apenas registros com imagem disponível; há 30 imagens nesta versão. Cada quarto tem pontos de apoio mapeados na mobília. Sobreposições preservam partes visíveis e o toque ignora pixels transparentes. A pista traz temporariamente o alvo para frente.
+
+No celular, vire para horizontal; em retrato o cenário panorâmico permite deslizar. Tela cheia tenta bloquear a orientação quando o navegador permite; se não permitir, a rotação manual continua funcionando.
+
+Verificação da lógica: `node tests/search-layout.cjs`.
+
+A tentativa de gerar 20 novas imagens nesta atualização foi interrompida: a geração de Lotso recebeu bloqueio do sistema de imagens e não produziu arquivo. Nenhuma imagem nova foi adicionada nem marcada como concluída.

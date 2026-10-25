@@ -376,12 +376,12 @@ window.MEMORY_IMAGES = [
     "asset": "assets/memory/princess/anna.jpg"
   },
   {
-    "id": "princess-moana-aventura",
-    "name": "Moana — com cocos",
+    "id": "princess-mirabel",
+    "name": "Mirabel",
     "theme": "princess",
-    "sourceUrl": "https://princess.disney.com/moana",
-    "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/g_moana_02_17699_0123be10_884e98e5.jpeg?region=0%2C0%2C1300%2C730",
-    "asset": "assets/memory/princess/moana-aventura.jpg"
+    "sourceUrl": "https://www.disney.com.br/novidades/mirabel-conheca-a-protagonista-de-encanto-nova-animacao-da-disney",
+    "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/encanto-online-use-365_fa35b6e2.jpeg",
+    "asset": "assets/memory/princess/mirabel.jpg"
   },
   {
     "id": "kpop-rumi",

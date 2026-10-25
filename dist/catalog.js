@@ -56,7 +56,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "hamm",
-    "name": "Hamm",
+    "name": "Porquinho",
     "films": [
       1,
       2,
@@ -161,7 +161,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "bo-peep",
-    "name": "Bo Peep",
+    "name": "Betty",
     "films": [
       1,
       2,
@@ -178,7 +178,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "aliens",
-    "name": "Aliens",
+    "name": "Alienígenas",
     "films": [
       1,
       2,
@@ -211,7 +211,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "wheezy",
-    "name": "Wheezy",
+    "name": "Pinguim Wheezy",
     "films": [
       2
     ],
@@ -225,7 +225,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "stinky-pete",
-    "name": "Stinky Pete",
+    "name": "Pete Fedido",
     "films": [
       2
     ],
@@ -247,7 +247,7 @@ window.TOY_CATALOG = [
     "group": "Loja de brinquedos",
     "description": "Boneco do adversário de Buzz.",
     "sourceUrl": "https://www.pixar.com/toy-story-2",
-    "asset": null,
+    "asset": "assets/toys/imperador-zurg-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -264,7 +264,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/billy-goat-e-gruff-inert-v1.png",
     "pose": "inert",
     "kind": "collective",
     "variantOf": null
@@ -296,7 +296,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/soldadinhos-verdes-inert-v1.png",
     "pose": "inert",
     "kind": "collective",
     "variantOf": null
@@ -327,14 +327,14 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/rocky-gibraltar-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
   },
   {
     "id": "etch",
-    "name": "Etch",
+    "name": "Lousa Mágica",
     "films": [
       1,
       2
@@ -349,7 +349,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "lenny",
-    "name": "Lenny",
+    "name": "Binóculos Lenny",
     "films": [
       1,
       2
@@ -364,21 +364,21 @@ window.TOY_CATALOG = [
   },
   {
     "id": "magic-8-ball",
-    "name": "Magic 8 Ball",
+    "name": "Bola 8 Mágica",
     "films": [
       1
     ],
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/bola-8-magica-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
   },
   {
     "id": "mike",
-    "name": "Mike",
+    "name": "Gravador Mike",
     "films": [
       1,
       2
@@ -386,14 +386,14 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/mike-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
   },
   {
     "id": "farmer-says-see-n-say",
-    "name": "Farmer Says See ’n Say",
+    "name": "Fazendeiro Veja e Diga",
     "films": [
       1,
       2
@@ -401,14 +401,14 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/veja-e-diga-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
   },
   {
     "id": "mr-shark",
-    "name": "Mr. Shark",
+    "name": "Sr. Tubarão",
     "films": [
       1,
       2
@@ -423,7 +423,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "mr-spell",
-    "name": "Mr. Spell",
+    "name": "Sr. Soletra",
     "films": [
       1,
       2
@@ -431,14 +431,14 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/sr-soletra-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
   },
   {
     "id": "robot",
-    "name": "Robot",
+    "name": "Robô",
     "films": [
       1,
       2
@@ -453,7 +453,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "snake",
-    "name": "Snake",
+    "name": "Cobra",
     "films": [
       1,
       2
@@ -461,14 +461,14 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/cobra-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
   },
   {
     "id": "troikas",
-    "name": "Troikas",
+    "name": "Bonecas Russas",
     "films": [
       1,
       2
@@ -476,14 +476,14 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/bonecas-russas-inert-v1.png",
     "pose": "inert",
     "kind": "collective",
     "variantOf": null
   },
   {
     "id": "toddle-tots",
-    "name": "Toddle Tots",
+    "name": "Bonequinhos Toddle Tots",
     "films": [
       1,
       2
@@ -498,7 +498,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "troll",
-    "name": "Troll",
+    "name": "Boneco Troll",
     "films": [
       1,
       2
@@ -513,7 +513,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "barrel-of-monkeys",
-    "name": "Barrel of Monkeys",
+    "name": "Barril de Macacos",
     "films": [
       1,
       2,
@@ -529,7 +529,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "roly-poly-clown",
-    "name": "Roly-Poly Clown",
+    "name": "Palhaço João-Bobo",
     "films": [
       1,
       2
@@ -544,7 +544,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "hockey-puck",
-    "name": "Hockey Puck",
+    "name": "Disco de Hóquei",
     "films": [
       1
     ],
@@ -558,7 +558,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "babyface",
-    "name": "Babyface",
+    "name": "Bebê-Aranha",
     "films": [
       1
     ],
@@ -572,7 +572,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "legs",
-    "name": "Legs",
+    "name": "Pernas",
     "films": [
       1
     ],
@@ -586,7 +586,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "hand-in-the-box",
-    "name": "Hand-in-the-box",
+    "name": "Mão na Caixa",
     "films": [
       1
     ],
@@ -600,7 +600,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "rollerbob",
-    "name": "Rollerbob",
+    "name": "Bob de Rodinhas",
     "films": [
       1
     ],
@@ -614,7 +614,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "rockmobile",
-    "name": "Rockmobile",
+    "name": "Carro de Pedra",
     "films": [
       1
     ],
@@ -628,7 +628,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "pump-boy",
-    "name": "Pump Boy",
+    "name": "Menino-Bomba",
     "films": [
       1
     ],
@@ -642,7 +642,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "tin-wind-up-frog",
-    "name": "Tin Wind-up Frog",
+    "name": "Sapo de Lata de Corda",
     "films": [
       1
     ],
@@ -656,7 +656,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "ducky-de-sid",
-    "name": "Ducky de Sid",
+    "name": "Patinho do Sid",
     "films": [
       1
     ],
@@ -670,7 +670,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "jingle-joe",
-    "name": "Jingle Joe",
+    "name": "Joe Sininho",
     "films": [
       1
     ],
@@ -684,7 +684,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "combat-carl-original",
-    "name": "Combat Carl original",
+    "name": "Combate Carl Original",
     "films": [
       1
     ],
@@ -712,7 +712,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "little-sister",
-    "name": "Little Sister",
+    "name": "Irmãzinha",
     "films": [
       1
     ],
@@ -754,7 +754,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "rock-em-sock-em-robots",
-    "name": "Rock ’Em Sock ’Em Robots",
+    "name": "Robôs de Boxe",
     "films": [
       2
     ],
@@ -811,7 +811,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "big-baby",
-    "name": "Big Baby",
+    "name": "Bebê Grandão",
     "films": [
       3
     ],
@@ -825,7 +825,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "twitch",
-    "name": "Twitch",
+    "name": "Inseto Twitch",
     "films": [
       3
     ],
@@ -839,7 +839,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "stretch",
-    "name": "Stretch",
+    "name": "Estica",
     "films": [
       3
     ],
@@ -853,7 +853,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "chunk",
-    "name": "Chunk",
+    "name": "Pedaço",
     "films": [
       3
     ],
@@ -867,7 +867,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "sparks",
-    "name": "Sparks",
+    "name": "Faísca",
     "films": [
       3
     ],
@@ -881,7 +881,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "chatter-telephone",
-    "name": "Chatter Telephone",
+    "name": "Telefone Falante",
     "films": [
       3
     ],
@@ -895,7 +895,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "bookworm",
-    "name": "Bookworm",
+    "name": "Minhoca de Livro",
     "films": [
       3
     ],
@@ -909,7 +909,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "monkey",
-    "name": "Monkey",
+    "name": "Macaco",
     "films": [
       3
     ],
@@ -923,7 +923,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "jack-in-the-box",
-    "name": "Jack-in-the-box",
+    "name": "Palhaço de Mola",
     "films": [
       3
     ],
@@ -951,7 +951,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "chuckles",
-    "name": "Chuckles",
+    "name": "Risadinha",
     "films": [
       3
     ],
@@ -1013,7 +1013,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "buttercup",
-    "name": "Buttercup",
+    "name": "Botão de Ouro",
     "films": [
       3,
       4,
@@ -1184,7 +1184,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "ducky",
-    "name": "Ducky",
+    "name": "Patinho",
     "films": [
       4,
       5
@@ -1199,7 +1199,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "bunny",
-    "name": "Bunny",
+    "name": "Coelhinho",
     "films": [
       4,
       5
@@ -1214,7 +1214,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "giggle-mcdimples",
-    "name": "Giggle McDimples",
+    "name": "Isa Risadinha",
     "films": [
       4,
       5
@@ -1272,7 +1272,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "combat-carls",
-    "name": "Combat Carls",
+    "name": "Combate Carls",
     "films": [
       4,
       5
@@ -1287,7 +1287,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "lilypad",
-    "name": "Lilypad",
+    "name": "Vitória-Régia",
     "films": [
       5
     ],
@@ -1301,7 +1301,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "smarty-pants",
-    "name": "Smarty Pants",
+    "name": "Sabichão",
     "films": [
       5
     ],
@@ -1315,7 +1315,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "snappy",
-    "name": "Snappy",
+    "name": "Mordisco",
     "films": [
       5
     ],
@@ -1357,7 +1357,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "garden-gnome",
-    "name": "Garden Gnome",
+    "name": "Gnomo de Jardim",
     "films": [
       5
     ],
@@ -1371,7 +1371,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "pizza-with-sunglasses",
-    "name": "Pizza with Sunglasses",
+    "name": "Pizza de Óculos Escuros",
     "films": [
       5
     ],
@@ -1385,7 +1385,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "inflatable-flamingo",
-    "name": "Inflatable Flamingo",
+    "name": "Flamingo Inflável",
     "films": [
       5
     ],
@@ -1399,7 +1399,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "dr-nutcase",
-    "name": "Dr. Nutcase",
+    "name": "Dr. Maluquinho",
     "films": [
       5
     ],
@@ -1413,7 +1413,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "buzz-hi-tech",
-    "name": "Buzz Hi-Tech",
+    "name": "Buzz de Alta Tecnologia",
     "films": [
       5
     ],
@@ -1427,7 +1427,7 @@ window.TOY_CATALOG = [
   },
   {
     "id": "zurg-hi-tech",
-    "name": "Zurg Hi-Tech",
+    "name": "Zurg de Alta Tecnologia",
     "films": [
       5
     ],

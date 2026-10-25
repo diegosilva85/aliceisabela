@@ -1,0 +1,14 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+let now=1000,frames=0,cancelled=0,overlay=0;
+const el=()=>({style:{},textContent:'',attrs:{},setAttribute(k,v){this.attrs[k]=v},focus(){},scrollIntoView(){}});
+const nodes={'#search-time':el(),'#search-time-fill':el(),'#search-seconds':el(),'#hint':el(),'#again':el(),'#board':{insertAdjacentHTML(){overlay++},querySelector(){return el()}}};
+const toys=[{disabled:false},{disabled:false}];
+const ctx={console,Date:{now:()=>now},requestAnimationFrame:()=>++frames,cancelAnimationFrame:()=>cancelled++,home(){},showCatalog(){},fashion(){},$:s=>nodes[s],document:{querySelectorAll:()=>toys},won:false,targets:[0,1],items:[{uid:0,found:true},{uid:1,found:false}]};vm.createContext(ctx);vm.runInContext(fs.readFileSync('dist/search-game.js','utf8'),ctx);
+const run=s=>vm.runInContext(s,ctx);
+run('startSearchTimer()');assert.equal(nodes['#search-seconds'].textContent,'1:00');
+now=31000;run('tickSearchTimer()');assert.equal(nodes['#search-seconds'].textContent,'0:30');assert.equal(nodes['#search-time-fill'].style.transform,'scaleX(0.5)');
+now=61000;assert.equal(run('searchTimeAllowsAction()'),false);assert.equal(overlay,1);assert.equal(nodes['#search-seconds'].textContent,'0:00');assert.ok(toys.every(t=>t.disabled));run('expireSearch()');assert.equal(overlay,1);
+run('startSearchTimer()');assert.equal(nodes['#search-seconds'].textContent,'1:00');assert.equal(run('searchTimeAllowsAction()'),true);
+run('won=true;stopSearchTimer()');now+=100000;run('tickSearchTimer()');assert.equal(overlay,1);assert.ok(cancelled>0);
+run('won=false;startSearchTimer();home()');assert.equal(run('searchDeadline'),0);
+console.log('Timer passed: 60 seconds, half bar, exact-deadline rejection, expiry once, retry, victory stop, navigation cleanup.');

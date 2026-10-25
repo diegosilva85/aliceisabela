@@ -43,3 +43,6 @@ No celular, vire para horizontal; em retrato o cenário panorâmico permite desl
 Verificação da lógica: `node tests/search-layout.cjs`.
 
 A tentativa de gerar 20 novas imagens nesta atualização foi interrompida: a geração de Lotso recebeu bloqueio do sistema de imagens e não produziu arquivo. Nenhuma imagem nova foi adicionada nem marcada como concluída.
+
+Todas as dificuldades têm 60 segundos, contados após carregar os brinquedos e o cenário. A barra verde mostra o tempo restante. Vitória interrompe o cronômetro; ao zerar, a rodada bloqueia os toques e oferece nova tentativa. O tempo continua passando se a aba ficar em segundo plano.
+Teste do cronômetro: `node tests/search-timer.cjs`.

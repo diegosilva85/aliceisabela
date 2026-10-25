@@ -1,5 +1,5 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const sandbox={console};vm.createContext(sandbox);vm.runInContext(fs.readFileSync('dist/search-game.js','utf8'),sandbox);
+const sandbox={console,home(){},showCatalog(){},fashion(){}};vm.createContext(sandbox);vm.runInContext(fs.readFileSync('dist/search-game.js','utf8'),sandbox);
 vm.runInContext(`
 for(const level of Object.keys(searchLevels))for(const room of Object.keys(roomSpots))for(let run=0;run<15;run++){
  const pool=Array.from({length:searchLevels[level].total},(_,n)=>({id:'toy'+n}));

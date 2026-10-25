@@ -23,7 +23,7 @@ function animeMouth(s,{path:p,line:l,lip}){
  return p(top+bottom,lip,'none')+inner+detail;
 }
 function portraitHair(s,{path:p,line:l,mirror:m,hair,url}){
- if(s.hair<9)return {};
+ if(s.hair<9||s.hair>14)return {};
  const n=s.hair-9,ink='#584353',shine='#ffffff30',base=url('hair');let back='',front='';
  const cap=p('M99 128Q85 97 98 66Q108 38 150 39Q191 38 202 68Q215 102 201 132L188 145 112 145Z',base,ink,.8);
  const sweep=p('M98 119Q87 83 102 61Q122 35 153 41Q187 39 202 67Q213 94 201 121L194 111Q194 85 181 73Q153 103 110 105L105 122Z',hair,ink,.7)+l('M114 68Q140 48 166 54',shine,2);

@@ -20,7 +20,7 @@ function drawPiecePalette(){
  const part=['top','skirt','shoes','earrings','bag','necklace'].includes(fashionCategory)?fashionCategory:fashionCategory==='hair'?'headwear':null;
  if(!part){target.innerHTML='';return;}
  const item=look[part==='headwear'?'hair':part];
- if((part==='headwear'&&![7,8].includes(item))||(part==='bag'&&item===4)||(part==='necklace'&&item===0)){target.innerHTML='';return;}
+ if((part==='headwear'&&![7,8,18,19,22].includes(item))||(part==='bag'&&item===4)||(part==='necklace'&&item===0)){target.innerHTML='';return;}
  const choice=look.tints?.[part]?.[item],title=part==='headwear'?'Cor do chapéu ou laço':'Cor desta peça';
  target.innerHTML=`<div class="piece-palette"><div class="palette-heading"><strong>${title}</strong><button data-tint="-1" aria-pressed="${choice===undefined}">Cor original</button></div><div class="tint-grid" role="group" aria-label="${title}">${garmentPalette.map(([name,color],i)=>`<button class="tint-swatch" data-tint="${i}" aria-label="${name}" title="${name}" aria-pressed="${choice===i}" style="--swatch:${color}"><span aria-hidden="true">${choice===i?'✓':''}</span><small>${name}</small></button>`).join('')}</div></div>`;
  target.querySelectorAll('[data-tint]').forEach(b=>b.onclick=()=>{const i=+b.dataset.tint;look.tints={...look.tints,[part]:{...look.tints?.[part]}};if(i<0)delete look.tints[part][item];else look.tints[part][item]=i;drawFashion();chime()});

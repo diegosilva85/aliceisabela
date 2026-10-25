@@ -1,0 +1,32 @@
+[
+  {
+    "id": "andy",
+    "description": "Andy's bedroom from Toy Story, iconic sky blue walls with white cloud pattern, wooden single bed with blue bedding, wooden desk, empty shelving, wooden toy chest, sunny window.",
+    "tool": "built-in image_gen",
+    "shared": "Wide 16:9 stylized 3D room, furniture only, no toys or people, clear foreground floor."
+  },
+  {
+    "id": "buzz",
+    "description": "An imaginary Buzz Lightyear themed child's bedroom, white and purple furniture, lime green accents, navy star wallpaper, spaceship-shaped bed, round window, empty shelving. This is an inspired fantasy room, not a canonical film room.",
+    "tool": "built-in image_gen",
+    "shared": "Wide 16:9 stylized 3D room, furniture only, no toys or people, clear foreground floor."
+  },
+  {
+    "id": "bonnie",
+    "description": "Bonnie's cozy bedroom inspired by Toy Story, pale lavender and cream walls, small wooden bed with colorful patchwork blanket, craft desk without loose supplies, empty low shelves and storage cubbies, warm curtains.",
+    "tool": "built-in image_gen",
+    "shared": "Wide 16:9 stylized 3D room, furniture only, no toys or people, clear foreground floor."
+  },
+  {
+    "id": "blaze",
+    "description": "Blaze's ranch child's bedroom inspired by Toy Story 5, western ranch decor, warm terracotta and cream palette, pine furniture, bed with quilt, horseshoe wall motif, ranch landscape through window, empty shelves. No horse toys.",
+    "tool": "built-in image_gen",
+    "shared": "Wide 16:9 stylized 3D room, furniture only, no toys or people, clear foreground floor."
+  },
+  {
+    "id": "molly",
+    "description": "Molly, Andy's sister's bedroom inspired by Toy Story, pastel pink walls and daisy wallpaper, white single bed, lilac blanket, white wardrobe, small dressing table and empty shelves, soft daylight.",
+    "tool": "built-in image_gen",
+    "shared": "Wide 16:9 stylized 3D room, furniture only, no toys or people, clear foreground floor."
+  }
+]

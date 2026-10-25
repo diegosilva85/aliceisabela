@@ -1,0 +1,57 @@
+{
+  "reviewedAt": "2026-10-25",
+  "count": 97,
+  "scope": "Cinco longas numerados Toy Story (1995, 1999, 2010, 2019, 2026).",
+  "limitations": [
+    "Catálogo inicial abrangente de personagens, modelos e conjuntos identificáveis; não afirma conter cada figurante ou objeto de cenário.",
+    "films registra aparições conhecidas, inclusive flashbacks; não é uma auditoria quadro a quadro.",
+    "Coletivos não representam uma contagem de indivíduos. Variantes têm vínculo variantOf quando aplicável.",
+    "Nomes em inglês são preservados quando a tradução brasileira não foi confirmada.",
+    "Curtas, especiais e o derivado Lightyear não estão incluídos neste escopo. Zurg Bots do videogame e humanos/animais reais não são brinquedos físicos do catálogo.",
+    "Blaze é uma criança de Toy Story 5. Molly é a irmã de Andy. Quarto do Buzz é um cenário temático original.",
+    "Imagens dos brinquedos permanecem pendentes. pose=inert solicita aparência estática, sem expressão de ação, quando forem produzidas."
+  ],
+  "sources": [
+    {
+      "title": "Pixar — Toy Story",
+      "url": "https://www.pixar.com/toy-story",
+      "type": "primary"
+    },
+    {
+      "title": "Pixar — Toy Story 2",
+      "url": "https://www.pixar.com/toy-story-2",
+      "type": "primary"
+    },
+    {
+      "title": "Pixar — Toy Story 3",
+      "url": "https://www.pixar.com/toy-story-3",
+      "type": "primary"
+    },
+    {
+      "title": "Pixar — Toy Story 4",
+      "url": "https://www.pixar.com/toy-story-4",
+      "type": "primary"
+    },
+    {
+      "title": "Pixar — Toy Story 5",
+      "url": "https://www.pixar.com/toy-story-5",
+      "type": "primary"
+    },
+    {
+      "title": "D23 — Meet the Characters of Toy Story 5",
+      "url": "https://d23.com/meet-the-characters-of-disney-and-pixars-toy-story-5/",
+      "type": "primary"
+    },
+    {
+      "title": "Disney — Toy Story 5 (lançamento: 19 de junho de 2026)",
+      "url": "https://movies.disney.com/toy-story-5",
+      "type": "primary"
+    },
+    {
+      "title": "Wikipedia — List of Toy Story characters",
+      "url": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
+      "type": "secondary",
+      "usage": "Identificação complementar de personagens menores, variantes e coletivos; revisar visualmente antes de produzir suas imagens."
+    }
+  ]
+}

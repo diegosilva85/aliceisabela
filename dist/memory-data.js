@@ -428,19 +428,6 @@ window.MEMORY_IMAGES = [
     "height": 589
   },
   {
-    "id": "kpop-gwi-ma",
-    "name": "Gwi-Ma",
-    "theme": "kpop",
-    "asset": "assets/memory/kpop/cast-4.jpg",
-    "sourceUrl": "https://www.netflix.com/tudum/articles/kpop-demon-hunters-cast",
-    "imageUrl": "https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQT-pxWEMO7No874szYnpkASoK2AGtm2UiAfNeuQPxkyfIl5vMEakgQehVdG3jSt8JW-WrAnlpGPGu0vLraaLTceDE97guzfh1fojypL2Lvw_q5LoxOKxguNV7JyBRlkrvrlH_Y55JbYV6a1jsno9LutT.jpg?r=428",
-    "official": true,
-    "kind": "official film still + actor photo; use right half only",
-    "viewBox": "432.0 0 768.0 589",
-    "width": 1200,
-    "height": 589
-  },
-  {
     "id": "kpop-celine",
     "name": "Celine",
     "theme": "kpop",
@@ -500,64 +487,47 @@ window.MEMORY_IMAGES = [
     "kind": "official licensed merchandise photograph"
   },
   {
-    "id": "kpop-kpop-extra-2",
-    "name": "Zoey — Figura de ação",
+    "id": "kpop-abby-saja",
+    "name": "Abby Saja",
+    "asset": "assets/memory/kpop/abby-saja.png",
+    "sourceUrl": "https://www.netflix.com/tudum/articles/kpop-demon-hunters-costumes",
+    "imageUrl": "https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQeUY5AmXeC0xdK0UfLN8PVMGkm-Zd-jS6QQzHMaCg1D3d_zynYvneJuxIjKng9Ia4QqPvjSykOTYXO29QO8dagzQU8ohJWx8I15pO8HS8grXtsOoZCt6yopXSG5JOpvK9LVDIn5ZyxOWJrm6-VwZgZGp.png?r=129",
     "theme": "kpop",
-    "asset": "assets/memory/kpop/variant-0.jpg",
-    "sourceUrl": "https://www.netflix.shop/collections/kpop-demon-hunters-collectibles",
-    "imageUrl": "https://www.netflix.shop/cdn/shop/files/one_55991ea9-feda-472d-b140-3f436c4334e8_480x.png?v=1770157980",
     "official": true,
-    "kind": "official licensed merchandise photograph"
+    "kind": "official animation still"
   },
   {
-    "id": "kpop-kpop-extra-3",
-    "name": "Rumi — Figura de ação",
+    "id": "kpop-baby-saja",
+    "name": "Baby Saja",
+    "asset": "assets/memory/kpop/baby-saja.png",
+    "sourceUrl": "https://www.netflix.com/tudum/articles/kpop-demon-hunters-costumes",
+    "imageUrl": "https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQcp1mTqKg0oLUXXDi_03cxc84dBcmDDcvnvJNc4pDkSv1dzlOv9H3AnboJZInSwhYKSBPPa2TTHdoFy1udADyT5kveJ8FRXWVFTUt5Y0DmTO9Lqi0Ah3cab5eoDTFnDgFx6HpbWfb7GNsxUfw6EV4-EV.png?r=fdd",
     "theme": "kpop",
-    "asset": "assets/memory/kpop/variant-1.jpg",
-    "sourceUrl": "https://www.netflix.shop/collections/kpop-demon-hunters-collectibles",
-    "imageUrl": "https://www.netflix.shop/cdn/shop/files/eight_480x.png?v=1770157211",
     "official": true,
-    "kind": "official licensed merchandise photograph"
+    "kind": "official animation still"
   },
   {
-    "id": "kpop-kpop-extra-4",
-    "name": "Mira — Figura de ação",
+    "id": "kpop-romance-saja",
+    "name": "Romance Saja",
+    "asset": "assets/memory/kpop/romance-saja-source.jpg",
+    "sourceUrl": "https://www.netflix.com/tudum/articles/kpop-demon-hunters-cast",
+    "imageUrl": "https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQcUs4qF6Sb8ZFj3P0KZ4QKQep4lnVn-RxMaYWZ4yrzLd2uO9sWIMsDbYHmulNv3baT4WmYq8PqLHVSxRY8fRQlfP3pOYp64U7XRyOc8hI0xvvhs7-JnXdR_Rvcr6BNkn9JMbLFnajJSDGNDOkS5M-Khk.jpg?r=d07",
+    "viewBox": "693 0 249 589",
+    "width": 1200,
+    "height": 589,
     "theme": "kpop",
-    "asset": "assets/memory/kpop/variant-2.jpg",
-    "sourceUrl": "https://www.netflix.shop/collections/kpop-demon-hunters-collectibles",
-    "imageUrl": "https://www.netflix.shop/cdn/shop/files/one_4324b458-c7c9-4067-9592-f260fbf83bc7_480x.png?v=1770157632",
     "official": true,
-    "kind": "official licensed merchandise photograph"
+    "kind": "official animation still"
   },
   {
-    "id": "kpop-kpop-extra-5",
-    "name": "Mira — Show",
+    "id": "kpop-sussie",
+    "name": "Sussie",
+    "asset": "assets/memory/kpop/sussie.png",
+    "sourceUrl": "https://tenor.com/view/smirk-sussie-kpop-demon-hunters-smile-netflix-gif-550942559248091354",
+    "imageUrl": "https://media.tenor.com/B6VXVq-giNoAAAAe/smirk-sussie.png",
     "theme": "kpop",
-    "asset": "assets/memory/kpop/variant-3.jpg",
-    "sourceUrl": "https://www.netflix.shop/collections/kpop-demon-hunters-collectibles",
-    "imageUrl": "https://www.netflix.shop/cdn/shop/files/95805_1_480x.jpg?v=1771008454",
     "official": true,
-    "kind": "official licensed merchandise photograph"
-  },
-  {
-    "id": "kpop-kpop-extra-6",
-    "name": "Zoey — Show",
-    "theme": "kpop",
-    "asset": "assets/memory/kpop/variant-4.jpg",
-    "sourceUrl": "https://www.netflix.shop/collections/kpop-demon-hunters-collectibles",
-    "imageUrl": "https://www.netflix.shop/cdn/shop/files/95809_1_480x.jpg?v=1771002676",
-    "official": true,
-    "kind": "official licensed merchandise photograph"
-  },
-  {
-    "id": "kpop-kpop-extra-7",
-    "name": "Rumi — Show",
-    "theme": "kpop",
-    "asset": "assets/memory/kpop/variant-5.jpg",
-    "sourceUrl": "https://www.netflix.shop/collections/kpop-demon-hunters-collectibles",
-    "imageUrl": "https://www.netflix.shop/cdn/shop/files/95808_4_480x.jpg?v=1771002645",
-    "official": true,
-    "kind": "official licensed merchandise photograph"
+    "kind": "official animation still"
   },
   {
     "id": "poppy-huggy-wuggy",

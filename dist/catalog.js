@@ -13,7 +13,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Boneco de xerife com chapéu e cordão.",
     "sourceUrl": "https://www.pixar.com/toy-story",
-    "asset": null,
+    "asset": "assets/toys/imported/woody-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -31,7 +31,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Patrulheiro espacial articulado.",
     "sourceUrl": "https://www.pixar.com/toy-story",
-    "asset": null,
+    "asset": "assets/toys/imported/buzz-lightyear-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -49,7 +49,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Dinossauro de brinquedo.",
     "sourceUrl": "https://www.pixar.com/toy-story",
-    "asset": null,
+    "asset": "assets/toys/official/rex-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -67,7 +67,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Porquinho-cofre.",
     "sourceUrl": "https://www.pixar.com/toy-story",
-    "asset": null,
+    "asset": "assets/toys/hamm-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -85,7 +85,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Cachorro com corpo de mola.",
     "sourceUrl": "https://www.pixar.com/toy-story",
-    "asset": null,
+    "asset": "assets/toys/imported/slinky-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -103,7 +103,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Boneco com peças removíveis.",
     "sourceUrl": "https://www.pixar.com/toy-story",
-    "asset": null,
+    "asset": "assets/toys/sr-cabeca-de-batata-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -120,7 +120,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Boneca vaqueira.",
     "sourceUrl": "https://www.pixar.com/toy-story-2",
-    "asset": null,
+    "asset": "assets/toys/imported/jessie-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -137,7 +137,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Cavalo da turma do Woody.",
     "sourceUrl": "https://www.pixar.com/toy-story-2",
-    "asset": null,
+    "asset": "assets/toys/imported/bala-no-alvo-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -154,7 +154,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Boneca com peças removíveis.",
     "sourceUrl": "https://www.pixar.com/toy-story-2",
-    "asset": null,
+    "asset": "assets/toys/official/sra-cabeca-de-batata-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -171,7 +171,7 @@ window.TOY_CATALOG = [
     "group": "Turma principal",
     "description": "Pastora de porcelana.",
     "sourceUrl": "https://www.pixar.com/toy-story-4",
-    "asset": null,
+    "asset": "assets/toys/official/bo-peep-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -204,7 +204,7 @@ window.TOY_CATALOG = [
     "group": "Bonnie",
     "description": "Brinquedo feito com um garfo-colher.",
     "sourceUrl": "https://www.pixar.com/toy-story-4",
-    "asset": null,
+    "asset": "assets/toys/garfinho-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -218,7 +218,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Pinguim de apertar.",
     "sourceUrl": "https://www.pixar.com/toy-story-2",
-    "asset": null,
+    "asset": "assets/toys/wheezy-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -232,7 +232,7 @@ window.TOY_CATALOG = [
     "group": "Coleção do Woody",
     "description": "Garimpeiro de coleção.",
     "sourceUrl": "https://www.pixar.com/toy-story-2",
-    "asset": null,
+    "asset": "assets/toys/stinky-pete-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -280,7 +280,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/sargento-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -312,7 +312,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/rc-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -342,7 +342,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/etch-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -357,7 +357,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/lenny-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -416,7 +416,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/mr-shark-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -446,7 +446,7 @@ window.TOY_CATALOG = [
     "group": "Andy",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/robot-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null
@@ -776,7 +776,7 @@ window.TOY_CATALOG = [
     "group": "Molly",
     "description": "Registro reservado para a futura imagem do brinquedo.",
     "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Toy_Story_characters",
-    "asset": null,
+    "asset": "assets/toys/barbie-inert-v1.png",
     "pose": "inert",
     "kind": "individual",
     "variantOf": null

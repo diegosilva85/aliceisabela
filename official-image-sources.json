@@ -1,0 +1,90 @@
+[
+  {
+    "id": "woody",
+    "sourcePage": "https://www.disneystore.eu/toys-and-fancy-dress/toys/action-figures",
+    "sourceImage": "https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/417138061238?fmt=png-alpha&wid=1200&hei=1200",
+    "original": "source-images/official/woody.png",
+    "output": null,
+    "status": "original_downloaded_edit_blocked",
+    "editingTool": "built-in image_gen",
+    "prompt": "Edit the supplied official toy product image into a full-body transparent PNG game sprite. Preserve this exact toy's identity, colors, outfit, accessories, physical materials and proportions. Remove the background and floor completely, truly transparent alpha, no white matte or checkerboard pixels. Center the entire toy with 8 percent margin, retain all feet, hat and tail. Make it an inert manufactured toy in a neutral resting pose: lower any raised arms to hang beside the body, wings folded for Buzz, all four legs at rest for animals. Fixed factory-painted eyes with dry matte pupils, no wet eye highlights or living expression; preserve the original molded face. No text, no extra objects, no redesign. Soft even studio light. ",
+    "note": "Official source image; edited derivative is not an official Disney/Mattel asset. Source does not imply permission for redistribution."
+  },
+  {
+    "id": "buzz-lightyear",
+    "sourcePage": "https://www.disneystore.eu/toys-and-fancy-dress/toys/action-figures",
+    "sourceImage": "https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/417138060408?fmt=png-alpha&wid=1200&hei=1200",
+    "original": "source-images/official/buzz-lightyear.png",
+    "output": null,
+    "status": "original_downloaded_edit_blocked",
+    "editingTool": "built-in image_gen",
+    "prompt": "Edit the supplied official toy product image into a full-body transparent PNG game sprite. Preserve this exact toy's identity, colors, outfit, accessories, physical materials and proportions. Remove the background and floor completely, truly transparent alpha, no white matte or checkerboard pixels. Center the entire toy with 8 percent margin, retain all feet, hat and tail. Make it an inert manufactured toy in a neutral resting pose: lower any raised arms to hang beside the body, wings folded for Buzz, all four legs at rest for animals. Fixed factory-painted eyes with dry matte pupils, no wet eye highlights or living expression; preserve the original molded face. No text, no extra objects, no redesign. Soft even studio light. ",
+    "note": "Official source image; edited derivative is not an official Disney/Mattel asset. Source does not imply permission for redistribution."
+  },
+  {
+    "id": "jessie",
+    "sourcePage": "https://www.disneystore.eu/toys-and-fancy-dress/toys/action-figures",
+    "sourceImage": "https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/417138058108?fmt=png-alpha&wid=1200&hei=1200",
+    "original": "source-images/official/jessie.png",
+    "output": null,
+    "status": "original_downloaded_edit_blocked",
+    "editingTool": "built-in image_gen",
+    "prompt": "Edit the supplied official toy product image into a full-body transparent PNG game sprite. Preserve this exact toy's identity, colors, outfit, accessories, physical materials and proportions. Remove the background and floor completely, truly transparent alpha, no white matte or checkerboard pixels. Center the entire toy with 8 percent margin, retain all feet, hat and tail. Make it an inert manufactured toy in a neutral resting pose: lower any raised arms to hang beside the body, wings folded for Buzz, all four legs at rest for animals. Fixed factory-painted eyes with dry matte pupils, no wet eye highlights or living expression; preserve the original molded face. No text, no extra objects, no redesign. Soft even studio light. ",
+    "note": "Official source image; edited derivative is not an official Disney/Mattel asset. Source does not imply permission for redistribution."
+  },
+  {
+    "id": "bala-no-alvo",
+    "sourcePage": "https://www.disneystore.eu/toys-and-fancy-dress/toys/action-figures",
+    "sourceImage": "https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/417138059358?fmt=png-alpha&wid=1200&hei=1200",
+    "original": "source-images/official/bala-no-alvo.png",
+    "output": null,
+    "status": "original_downloaded_edit_blocked",
+    "editingTool": "built-in image_gen",
+    "prompt": "Edit the supplied official toy product image into a full-body transparent PNG game sprite. Preserve this exact toy's identity, colors, outfit, accessories, physical materials and proportions. Remove the background and floor completely, truly transparent alpha, no white matte or checkerboard pixels. Center the entire toy with 8 percent margin, retain all feet, hat and tail. Make it an inert manufactured toy in a neutral resting pose: lower any raised arms to hang beside the body, wings folded for Buzz, all four legs at rest for animals. Fixed factory-painted eyes with dry matte pupils, no wet eye highlights or living expression; preserve the original molded face. No text, no extra objects, no redesign. Soft even studio light. ",
+    "note": "Official source image; edited derivative is not an official Disney/Mattel asset. Source does not imply permission for redistribution."
+  },
+  {
+    "id": "rex",
+    "sourcePage": "https://www.disneystore.eu/toys-and-fancy-dress/toys/action-figures",
+    "sourceImage": "https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/417138059198?fmt=png-alpha&wid=1200&hei=1200",
+    "original": "source-images/official/rex.png",
+    "output": "dist/assets/toys/official/rex-inert-v1.png",
+    "status": "edited_from_official_source",
+    "editingTool": "built-in image_gen",
+    "prompt": "Edit the supplied official toy product image into a full-body transparent PNG game sprite. Preserve this exact toy's identity, colors, outfit, accessories, physical materials and proportions. Remove the background and floor completely, truly transparent alpha, no white matte or checkerboard pixels. Center the entire toy with 8 percent margin, retain all feet, hat and tail. Make it an inert manufactured toy in a neutral resting pose: lower any raised arms to hang beside the body, wings folded for Buzz, all four legs at rest for animals. Fixed factory-painted eyes with dry matte pupils, no wet eye highlights or living expression; preserve the original molded face. No text, no extra objects, no redesign. Soft even studio light. ",
+    "note": "Official source image; edited derivative is not an official Disney/Mattel asset. Source does not imply permission for redistribution."
+  },
+  {
+    "id": "slinky",
+    "sourcePage": "https://www.disneystore.eu/toys-and-fancy-dress/toys/action-figures",
+    "sourceImage": "https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/417131819553?fmt=png-alpha&wid=1200&hei=1200",
+    "original": "source-images/official/slinky.png",
+    "output": null,
+    "status": "original_downloaded_edit_blocked",
+    "editingTool": "built-in image_gen",
+    "prompt": "Edit the supplied official toy product image into a full-body transparent PNG game sprite. Preserve this exact toy's identity, colors, outfit, accessories, physical materials and proportions. Remove the background and floor completely, truly transparent alpha, no white matte or checkerboard pixels. Center the entire toy with 8 percent margin, retain all feet, hat and tail. Make it an inert manufactured toy in a neutral resting pose: lower any raised arms to hang beside the body, wings folded for Buzz, all four legs at rest for animals. Fixed factory-painted eyes with dry matte pupils, no wet eye highlights or living expression; preserve the original molded face. No text, no extra objects, no redesign. Soft even studio light. Remove loose pull cord from foreground; preserve spring torso.",
+    "note": "Official source image; edited derivative is not an official Disney/Mattel asset. Source does not imply permission for redistribution."
+  },
+  {
+    "id": "bo-peep",
+    "sourcePage": "https://m.service.mattel.com/us/Technical/productDetail?prodno=GKP96&siteid=27",
+    "sourceImage": "https://service.mattel.com/us/img/prod/243/GKP96_C_20_0210.jpg",
+    "original": "source-images/official/bo-peep.jpg",
+    "output": "dist/assets/toys/official/bo-peep-inert-v1.png",
+    "status": "edited_from_official_source",
+    "editingTool": "built-in image_gen",
+    "prompt": "Edit the supplied official toy product image into a full-body transparent PNG game sprite. Preserve this exact toy's identity, colors, outfit, accessories, physical materials and proportions. Remove the background and floor completely, truly transparent alpha, no white matte or checkerboard pixels. Center the entire toy with 8 percent margin, retain all feet, hat and tail. Make it an inert manufactured toy in a neutral resting pose: lower any raised arms to hang beside the body, wings folded for Buzz, all four legs at rest for animals. Fixed factory-painted eyes with dry matte pupils, no wet eye highlights or living expression; preserve the original molded face. No text, no extra objects, no redesign. Soft even studio light. ",
+    "note": "Official source image; edited derivative is not an official Disney/Mattel asset. Source does not imply permission for redistribution."
+  },
+  {
+    "id": "sra-cabeca-de-batata",
+    "sourcePage": "https://toystory.disney.com/",
+    "sourceImage": "https://lumiere-a.akamaihd.net/v1/images/t_toystory_mrspotatohead_characterimage_v3_4dd9185e.jpeg?region=0%2C0%2C600%2C600",
+    "original": "source-images/official/sra-cabeca-de-batata.jpg",
+    "output": "dist/assets/toys/official/sra-cabeca-de-batata-inert-v1.png",
+    "status": "edited_from_official_source",
+    "editingTool": "built-in image_gen",
+    "prompt": "Edit the supplied official toy product image into a full-body transparent PNG game sprite. Preserve this exact toy's identity, colors, outfit, accessories, physical materials and proportions. Remove the background and floor completely, truly transparent alpha, no white matte or checkerboard pixels. Center the entire toy with 8 percent margin, retain all feet, hat and tail. Make it an inert manufactured toy in a neutral resting pose: lower any raised arms to hang beside the body, wings folded for Buzz, all four legs at rest for animals. Fixed factory-painted eyes with dry matte pupils, no wet eye highlights or living expression; preserve the original molded face. No text, no extra objects, no redesign. Soft even studio light. ",
+    "note": "Official source image; edited derivative is not an official Disney/Mattel asset. Source does not imply permission for redistribution."
+  }
+]

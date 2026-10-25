@@ -1,0 +1,86 @@
+[
+  {
+    "id": "aliens",
+    "status": "blocked_by_generator",
+    "asset": null,
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Three identical Little Green Men aliens from Toy Story grouped closely together, lime green molded vinyl, three eyes, pointed ears, blue space uniforms with purple collars and Pizza Planet emblem, short legs. All three standing rigidly like manufactured squeeze toys, arms hanging naturally, fixed printed smiles and dry painted eyes.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "garfinho",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/garfinho-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Forky from Toy Story 4, white plastic spork head, mismatched googly eyes, blue wax mouth, red pipe-cleaner eyebrows and arms, white clay base with rainbow sticker and wooden craft-stick feet. Standing motionless in a neutral handmade toy pose, arms relaxed down, googly eyes fixed and dry.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "wheezy",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/wheezy-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Wheezy from Toy Story 2, small black-and-white rubber squeak penguin with red bow tie and yellow beak and feet. Standing rigidly on both feet with flippers resting straight at his sides, fixed molded face and dry painted eyes.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "stinky-pete",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/stinky-pete-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Stinky Pete the Prospector from Toy Story 2, stocky elderly prospector doll with white beard, red shirt, blue overalls, brown boots and yellow neckerchief, holding a small pickaxe resting vertically. Rigid collectible doll pose, arms relaxed, fixed factory face and dry painted eyes, no packaging.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "imperador-zurg",
+    "status": "blocked_by_generator",
+    "asset": null,
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Emperor Zurg from Toy Story 2, purple and black plastic villain action figure with red cape, horned helmet, yellow teeth grille and red eyes. Standing rigidly upright with arms straight down, blaster stowed or absent, fixed manufactured face, no action pose.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "sargento",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/sargento-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Sarge from Toy Story, small monochrome olive-green molded plastic army sergeant figure wearing helmet and uniform. Standing at attention on an attached oval plastic base, arms resting neutrally, no weapon raised, static molded toy pose.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "rc",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/rc-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. RC from Toy Story, small green and blue remote-control toy race car with red antenna, large black tires, yellow hubcaps and friendly windshield eyes. Parked motionless with wheels straight, dry printed eyes, no remote controller.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "lenny",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/lenny-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Lenny from Toy Story, small blue plastic wind-up binocular toy with two lens eyes, red feet and a small wind-up key. Standing motionless, compact manufactured toy, fixed dry printed eyes.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "etch",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/etch-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Etch A Sketch from Toy Story, classic red rectangular drawing toy with gray screen, two white knobs and black plastic feet. Upright static product pose, blank gray screen without text or drawing.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "barbie",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/barbie-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Tour Guide Barbie from Toy Story 2, articulated fashion doll with long blonde hair in a ponytail, bright blue sleeveless dress with pink belt and pink high heels. Standing rigidly upright like a posed fashion doll, arms straight down, fixed factory-painted smile and dry painted eyes.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "mr-shark",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/mr-shark-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Mr. Shark from Toy Story, blue-gray rubber squeak shark toy with rounded body, white underside, small black eyes, triangular dorsal and side fins, open mouth showing simple white molded teeth. Resting motionless on his belly in a static manufactured toy pose.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "robot",
+    "status": "generated_and_integrated",
+    "asset": "assets/toys/robot-inert-v1.png",
+    "prompt": "Use case: product-mockup. Asset type: browser game sprite. Create one isolated full-body image of the specified Toy Story toy as an INANIMATE physical toy when humans are present. Match the recognizable film design, colors, materials and proportions. Eyes must appear factory-painted, printed or molded: dry matte pupils, fixed unfocused gaze, no glossy corneal reflections, no emotional acting. Neutral resting pose with no movement, gesture or action. Soft warm studio light from upper left, three-quarter front view, entire toy and accessories visible with 8 percent margin. Truly transparent RGBA background, clean antialiased cutout, no floor, no shadow outside the silhouette, no checkerboard, no text, no watermark. Robot from Andy's room in Toy Story, small retro boxy robot toy with dark gray and blue plastic body, red details, square head, antennae, jointed arms, tank-like feet and simple painted face. Standing rigidly upright with arms down in a static manufactured pose.",
+    "tool": "built-in image_gen"
+  }
+]

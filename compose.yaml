@@ -1,6 +1,10 @@
 services:
   https:
     image: caddy:2-alpine@sha256:eb4d35b7452d1ab6171fbdbe8d9275b2301dad6dad92115d91e19fb9b24d510f
+    # Evita herdar DNS IPv6 da operadora quando o contêiner só tem saída IPv4.
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
     ports:
       - "80:80"
       - "443:443"

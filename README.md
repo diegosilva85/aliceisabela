@@ -99,6 +99,7 @@ O site não exige login; HTTPS protege a conexão. A publicação Sites e suas p
 
 ### Diagnóstico
 
+- **`lookup acme-v02.api.letsencrypt.org ... network is unreachable`:** o contêiner não consegue alcançar o servidor DNS, antes mesmo de validar o domínio. O serviço `https` usa DNS IPv4 explícito para evitar herdar um DNS IPv6 inacessível da operadora. Após atualizar o repositório, aplique com `sudo docker compose up -d --force-recreate https`. A rede precisa permitir consultas DNS externas para 1.1.1.1 ou 8.8.8.8.
 - **Domínio não encontrado:** confirme o registro A e a propagação DNS.
 - **Timeout na emissão:** confira encaminhamento, firewall, registros A/AAAA e se a operadora usa CGNAT ou bloqueia 80/443. Com CGNAT, esse método exige obter IP público ou usar outra solução de acesso.
 - **502:** confira `sudo docker compose ps` e `sudo docker compose logs jogos`.

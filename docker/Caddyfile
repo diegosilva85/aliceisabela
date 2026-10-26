@@ -1,0 +1,4 @@
+aliceisabela.com.br {
+	encode zstd gzip
+	reverse_proxy jogos:8080
+}

@@ -25,7 +25,7 @@ sudo docker compose ps
 hostname -I
 ```
 
-Abra **http://IP-DO-RASPBERRY:8080** no celular ou computador da mesma rede. No próprio Pi, use **http://localhost:8080**. O contêiner continua rodando após fechar o terminal e reinicia quando o Pi liga, desde que o serviço Docker esteja habilitado. Depois de uma parada manual com `down` ou `stop`, inicie novamente com `up -d`.
+Após configurar DNS e roteador conforme a seção HTTPS abaixo, abra **https://aliceisabela.com.br**. O acesso direto na rede local continua em **http://IP-DO-RASPBERRY:8080**. No próprio Pi, use **http://localhost:8080**. O contêiner continua rodando após fechar o terminal e reinicia quando o Pi liga, desde que o serviço Docker esteja habilitado. Depois de uma parada manual com `down` ou `stop`, inicie novamente com `up -d`.
 
 O Docker escolhe automaticamente a arquitetura do sistema. A [imagem oficial Nginx Alpine](https://hub.docker.com/_/nginx) usada no Dockerfile tem variantes `linux/arm64`, `linux/arm/v7` e `linux/amd64`; não é necessário usar emulação no Pi. A base está fixada pelo digest para builds reproduzíveis. Para atualizá-la, substitua o digest por um índice multi-arquitetura atual e reconstrua.
 
@@ -54,13 +54,58 @@ sudo docker compose logs --tail=100 -f
 sudo docker compose down
 ```
 
-Não há volumes de dados do servidor para migrar. Os dados salvos no navegador pertencem ao endereço usado para acessar o jogo; o histórico do endereço Sites não é transferido automaticamente para o endereço do Pi.
+Os volumes `caddy_data` e `caddy_config` preservam os certificados e a configuração HTTPS. Não use `docker compose down -v` nas atualizações, pois isso apaga esses volumes. Não envie seu conteúdo ao Git. Os dados salvos no navegador pertencem ao endereço usado para acessar o jogo; o histórico do endereço Sites não é transferido automaticamente para o endereço do Pi.
 
-## Acesso de fora da rede
+## HTTPS em aliceisabela.com.br
 
-Reserve o IP local do Pi no DHCP do roteador e encaminhe uma porta **TCP** externa para a porta **8080** desse IP (ou a porta escolhida no `.env`). Teste usando os dados móveis do celular. Isso depende de IP público; CGNAT pode impedir o encaminhamento.
+O serviço `https` usa Caddy para emitir e renovar automaticamente o certificado e redirecionar HTTP para HTTPS. O Nginx continua servindo o jogo internamente em `jogos:8080`. Veja a [documentação do Caddy](https://caddyserver.com/docs/automatic-https).
 
-O serviço local usa HTTP e não exige login. Para um domínio com HTTPS, coloque um proxy reverso com certificado na frente da porta do jogo. A publicação Sites e suas permissões são independentes desta instalação. Tela cheia e bloqueio de orientação dependem do suporte e das permissões do navegador.
+### DNS no Registro.br
+
+Na administração de **aliceisabela.com.br**, entre em **DNS → Configurar zona DNS**. Se aparecer apenas **Configurar endereçamento**, selecione **Modo avançado** e aguarde a transição indicada no painel. Esses controles estão descritos pelo [Registro.br](https://registro.br/tecnologia/caracteristicas-tecnicas/).
+
+Crie uma entrada **A**, com **Nome vazio** (domínio raiz) e **Endereço IPv4 igual ao IP público da conexão do Raspberry**. Salve. Não use o IP local do Pi (`192.168.x.x` ou `10.x.x.x`). Você pode consultar o IP público no painel do roteador ou, no próprio Pi, com:
+
+```sh
+curl -4 https://api.ipify.org
+```
+
+Confira se esse IP é o mesmo IP WAN do roteador; se não for, pode haver outro roteador ou CGNAT. Se houver registro AAAA, ele também deve alcançar o Pi por IPv6. Não publique um AAAA sem configurar esse acesso. A configuração atual atende ao domínio **sem www**.
+
+### Roteador e Raspberry
+
+Reserve o IP local do Pi no DHCP e configure:
+
+| Protocolo | Porta externa | Destino |
+| --- | --- | --- |
+| TCP | 80 | IP local do Pi, porta 80 |
+| TCP | 443 | IP local do Pi, porta 443 |
+| UDP (opcional, HTTP/3) | 443 | IP local do Pi, porta 443 |
+
+O firewall também precisa permitir essas portas. Não use 8080 como destino dessas regras: ela é a porta direta do Nginx, sem TLS. Se já existe encaminhamento externo para 8080, ele não é necessário para HTTPS e pode ser removido; o acesso a 8080 continua disponível na rede local.
+
+As portas 80 e 443 do Pi devem estar livres. Confira conflitos com `sudo ss -ltnp`. Após configurar DNS e roteador, execute na pasta que contém `compose.yaml`:
+
+```sh
+git pull --ff-only
+sudo docker compose up -d --build
+sudo docker compose ps
+sudo docker compose logs --tail=100 -f https
+```
+
+Depois da propagação do DNS e com as portas acessíveis, o Caddy obtém o certificado. Abra **https://aliceisabela.com.br** usando os dados móveis do celular. A emissão pública só pode ser confirmada depois de executar a configuração no Raspberry; o teste local do proxy não comprova essa emissão.
+
+O site não exige login; HTTPS protege a conexão. A publicação Sites e suas permissões são independentes desta instalação. Os dados do navegador salvos no IP local não migram automaticamente para o domínio HTTPS.
+
+### Diagnóstico
+
+- **Domínio não encontrado:** confirme o registro A e a propagação DNS.
+- **Timeout na emissão:** confira encaminhamento, firewall, registros A/AAAA e se a operadora usa CGNAT ou bloqueia 80/443. Com CGNAT, esse método exige obter IP público ou usar outra solução de acesso.
+- **502:** confira `sudo docker compose ps` e `sudo docker compose logs jogos`.
+- **Funciona no 4G, mas não no Wi-Fi:** o roteador pode não suportar NAT loopback. Configure o DNS local para o domínio apontar ao IP do Pi; continue acessando pelo domínio HTTPS.
+- **IP público muda:** atualize o registro A; use DNS dinâmico se a conexão não tiver IP fixo.
+
+Mantenha o Pi ligado e acessível para a renovação automática. Para executar apenas o modo HTTP local, use `sudo docker compose up -d --build jogos`; se já estiver iniciado, pare o proxy com `sudo docker compose stop https`.
 
 ## Rodar sem Docker
 
@@ -75,6 +120,7 @@ O servidor escuta em `0.0.0.0:8080` e entrega apenas `dist/`. Para outra porta: 
 ## Organização
 
 - `dist/`: jogo completo e imagens servidas ao navegador.
+- `docker/Caddyfile`: domínio HTTPS e proxy; certificados ficam nos volumes Docker.
 - `docker/nginx.conf`: servidor do contêiner, endpoint `/healthz` e compressão.
 - `Dockerfile` e `compose.yaml`: construção e execução no Pi ou computador.
 - `tests/`: testes da lógica dos jogos, executados com Node.js.

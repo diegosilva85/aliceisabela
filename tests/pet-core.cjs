@@ -21,15 +21,15 @@ assert.equal(angry.stage,'done');assert.equal(C.touch(angry,'shower',0,5000),'ig
 assert.equal(C.create(()=>0).mood,'sad');
 console.log('Pet Shop: randomização, raiva, biscoito, tempos e quatro etapas OK.');
 assert.deepEqual(C.durations,{rinse:2500,soap:1500,rinseSoap:1500,dry:1500});
-function simulate(path){const m=C.motion();let credit=0;for(let i=0;i<150;i++){const [x,y]=path(i);credit+=C.circle(m,x,y,i*20,0);}return credit;}
+function simulate(path){const m=C.motion();let credit=0;for(let i=0;i<150;i++){const [x,y]=path(i);credit+=C.movement(m,x,y,i*20,0);}return credit;}
 assert.equal(simulate(()=>[.5,.5]),0,'Segurar parado não limpa');
-assert.equal(simulate(i=>[i*.04,.5]),0,'Linha reta não limpa');
-assert.equal(simulate(i=>[i%2?.6:.4,.5]),0,'Vai e volta não limpa');
-for(const direction of [1,-1])assert.ok(simulate(i=>[.5+.25*Math.cos(i*.18*direction),.5+.25*Math.sin(i*.18*direction)])>2000,'Círculos nos dois sentidos limpam');
-const m=C.motion();for(let i=0;i<40;i++)C.circle(m,Math.cos(i*.2),Math.sin(i*.2),i*20,0);
-assert.equal(C.circle(m,0,0,5000,0),0,'Pausa reinicia o gesto');
-assert.equal(C.circle(m,.1,.1,5020,1),0,'Outra região exige novo gesto');
-console.log('Gestos: círculos, pausa, troca de região, linha reta e imobilidade OK.');
+assert.ok(simulate(i=>[i*.04,.5])>2000,'Linha reta limpa');
+assert.ok(simulate(i=>[i%2?.6:.4,.5])>2000,'Vai e volta limpa');
+for(const direction of [1,-1])assert.ok(simulate(i=>[.5+.25*Math.cos(i*.18*direction),.5+.25*Math.sin(i*.18*direction)])>2000,'Círculos também limpam');
+const m=C.motion();for(let i=0;i<40;i++)C.movement(m,Math.cos(i*.2),Math.sin(i*.2),i*20,0);
+assert.equal(C.movement(m,0,0,5000,0),0,'Pausa reinicia o gesto');
+assert.equal(C.movement(m,.1,.1,5020,1),0,'Outra região exige novo gesto');
+console.log('Gestos: qualquer movimento limpa; pausa, troca de região e imobilidade não contam.');
 const wetCat=C.create(()=>0);
 for(let i=0;i<4;i++)C.touch(wetCat,'shower',i,2500);
 assert.equal(C.isWet(wetCat),false);

@@ -14,7 +14,7 @@
   }
   function calm(s){s.mood='calm';s.arched=false;s.feeding=false;}
   function isWet(s){return s.stage!=='done'&&(s.stage!=='rinse'||s.progress.filter(p=>p>=1).length>=5);}
-  function elapsedForTool(tool,elapsed,circularCredit){return tool==='dryer'?Math.min(100,Math.max(0,elapsed)):circularCredit;}
+  function elapsedForTool(tool,elapsed,circularCredit){return tool==='soap'?circularCredit:Math.min(100,Math.max(0,elapsed));}
   // Normalize coordinates to the region size, so small touch screens use the same gesture.
   function motion(){return {points:[],zone:-1};}
   function circle(m,x,y,time,zone){

@@ -38,5 +38,6 @@ assert.equal(C.isWet(wetCat),true);
 assert.equal(wetCat.stage,'rinse');
 assert.deepEqual(wetCat.progress,[1,1,1,1,1,0,0,0,0],'As quatro manchas restantes continuam');
 assert.equal(C.elapsedForTool('dryer',50,0),50,'Secador parado conta tempo');
-assert.equal(C.elapsedForTool('shower',50,0),0,'Ducha parada não conta');
+assert.equal(C.elapsedForTool('shower',50,0),50,'Ducha parada conta tempo');
+assert.equal(C.elapsedForTool('soap',50,0),0,'Sabonete parado não conta tempo');
 assert.equal(C.elapsedForTool('soap',50,30),30,'Sabão exige movimento');

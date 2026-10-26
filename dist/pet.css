@@ -21,3 +21,6 @@ body[data-section=pet]{overflow:hidden}body[data-section=pet]>header,body[data-s
 @media(prefers-reduced-motion:reduce){.pet-nail-cursor.snip{animation:none}}
 .pet-play{container-type:size}.pet-paw-area{width:min(52cqw,calc(100cqh - 150px));height:auto;max-width:none}.pet-nails:before{border-radius:46%;inset:115px 18% 25px}@media(max-height:520px),(max-width:700px){.pet-paw-area{width:min(49cqw,calc(100cqh - 102px));height:auto;max-width:none}.pet-nails:before{inset:77px 20% 14px}}
 @media(max-height:520px),(max-width:700px){.pet-play:not(.pet-dressing):not(.pet-nails) .pet-cat:before{content:"";position:absolute;left:-130px;right:-130px;top:0;bottom:0;z-index:0}.pet-cursor[data-tool=soap]{transform:translate(-50%,-50%)}.pet-cursor.pet-right-hand{transform:translate(-132%,-64%) scaleX(-1)}.pet-cursor.pet-right-hand[data-tool=dryer]{transform:translate(-165%,-28%) scaleX(-1)}.pet-cursor.pet-right-hand[data-tool=soap]{transform:translate(-50%,-50%) scaleX(-1)}}
+
+.pet-cat.pet-dog.arched{aspect-ratio:1374/1145}
+.pet-dog .pet-dirt{mask-image:radial-gradient(ellipse at center,#000 45%,transparent 72%)}

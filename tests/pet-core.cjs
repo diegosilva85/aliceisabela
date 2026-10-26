@@ -44,13 +44,13 @@ assert.equal(C.elapsedForTool('soap',50,30),30,'Sabão exige movimento');
 assert.deepEqual(C.offsetPoint(100,200,false,false),{x:100,y:200},'Desktop não desloca o ponto');
 assert.deepEqual(C.offsetPoint(100,200,false,true),{x:190,y:200},'Mobile horizontal desloca para a direita');
 assert.deepEqual(C.offsetPoint(100,200,true,true),{x:100,y:290},'Tela girada mantém o deslocamento no eixo horizontal do jogo');
-// Every random bin must choose one of the other three breeds, without retries.
-for(let previous=0;previous<4;previous++){
- const counts=[0,0,0,0];
- for(let i=0;i<300;i++){const next=C.create(()=>(i+.5)/300,previous);assert.notEqual(next.breed,previous);counts[next.breed]++;}
+// Every random bin must choose one of the other four breeds, without retries.
+for(let previous=0;previous<5;previous++){
+ const counts=[0,0,0,0,0];
+ for(let i=0;i<400;i++){const next=C.create(()=>(i+.5)/400,previous);assert.notEqual(next.breed,previous);counts[next.breed]++;}
  assert.deepEqual(counts,counts.map((_,i)=>i===previous?0:100));
  for(const value of [0,1-Number.EPSILON])assert.notEqual(C.create(()=>value,previous).breed,previous);
 }
-for(const invalid of [null,undefined,-1,4,'2',{}])assert.deepEqual([.125,.375,.625,.875].map(r=>C.create(()=>r,invalid).breed),[0,1,2,3]);
+for(const invalid of [null,undefined,-1,5,'2',{}])assert.deepEqual([.1,.3,.5,.7,.9].map(r=>C.create(()=>r,invalid).breed),[0,1,2,3,4]);
 let previous=null;for(let i=0;i<1000;i++){const next=C.create(()=>.5,previous).breed;assert.notEqual(next,previous);previous=next;}
-console.log('Sorteio: sem repetição consecutiva e chances iguais para as outras três raças OK.');
+console.log('Sorteio: sem repetição consecutiva e chances iguais para as outras quatro raças OK.');

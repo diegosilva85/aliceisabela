@@ -9,7 +9,7 @@ for(let breed=0;breed<4;breed++){
  assert.equal(A.placement(breed,'bow',52,80).slot,'neck');
 }
 console.log('Acessórios: encaixe no pescoço e limites da cabeça nos quatro gatos OK.');
-assert.equal(A.items.filter(i=>i.type==='mask').length,2);
+assert.equal(A.items.filter(i=>i.type==='mask').length,3);
 assert.equal(A.items.filter(i=>i.type==='cape').length,2);
 for(let breed=0;breed<4;breed++){
  const mask=A.placement(breed,'mask',90,90);assert.equal(mask.slot,'mask');assert.ok(mask.y>=30&&mask.y<=33);

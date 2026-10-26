@@ -41,3 +41,13 @@ assert.equal(C.elapsedForTool('dryer',50,0),50,'Secador parado conta tempo');
 assert.equal(C.elapsedForTool('shower',50,0),50,'Ducha parada conta tempo');
 assert.equal(C.elapsedForTool('soap',50,0),0,'Sabonete parado não conta tempo');
 assert.equal(C.elapsedForTool('soap',50,30),30,'Sabão exige movimento');
+// Every random bin must choose one of the other three breeds, without retries.
+for(let previous=0;previous<4;previous++){
+ const counts=[0,0,0,0];
+ for(let i=0;i<300;i++){const next=C.create(()=>(i+.5)/300,previous);assert.notEqual(next.breed,previous);counts[next.breed]++;}
+ assert.deepEqual(counts,counts.map((_,i)=>i===previous?0:100));
+ for(const value of [0,1-Number.EPSILON])assert.notEqual(C.create(()=>value,previous).breed,previous);
+}
+for(const invalid of [null,undefined,-1,4,'2',{}])assert.deepEqual([.125,.375,.625,.875].map(r=>C.create(()=>r,invalid).breed),[0,1,2,3]);
+let previous=null;for(let i=0;i<1000;i++){const next=C.create(()=>.5,previous).breed;assert.notEqual(next,previous);previous=next;}
+console.log('Sorteio: sem repetição consecutiva e chances iguais para as outras três raças OK.');

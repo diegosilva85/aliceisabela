@@ -2,7 +2,7 @@
   const stages=['rinse','soap','rinseSoap','dry','done'];
   const durations={rinse:2500,soap:1500,rinseSoap:1500,dry:1500};
   const expected={rinse:'shower',soap:'soap',rinseSoap:'shower',dry:'dryer'};
-  function create(random=Math.random){return {breed:Math.floor(random()*4),mood:random()<.5?'sad':'angry',arched:false,stage:'rinse',progress:Array(9).fill(0),feeding:false};}
+  function create(random=Math.random,previousBreed=null){const choices=[0,1,2,3].filter(b=>b!==previousBreed);return {breed:choices[Math.floor(random()*choices.length)],mood:random()<.5?'sad':'angry',arched:false,stage:'rinse',progress:Array(9).fill(0),feeding:false};}
   function touch(s,tool,index,ms){
     if(s.feeding||s.stage==='done'||index<0||index>8)return 'ignored';
     if(s.mood==='angry'){if(tool==='shower'){s.arched=true;return 'angry';}return 'ignored';}

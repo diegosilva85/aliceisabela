@@ -7,7 +7,7 @@ const crops=[[520,100,220,210],[220,390,210,210],[800,420,210,200],[440,620,350,
 const instructions={rinse:'Dê uma ducha nas manchas de sujeira.',soap:'Agora, passe sabonete em cada região.',rinseSoap:'Enxágue toda a espuma com a ducha.',dry:'Seque cada região com carinho.',done:'Limpinho, fofinho e feliz!'};
 const toolsInfo={shower:['Ducha','ducha-v1.webp'],soap:['Sabonete','sabonete-v1.webp'],dryer:['Secador','secador-v1.webp'],treat:['Biscoito','biscoito-inteiro-v1.webp']};
 let state,tool='shower',active=-1,held=false,frame=0,last=0,audio,soundOn=true,run=0,timers=[],ownFull=false;
-let lastBreed=null;
+let lastBreed=null,handSide='left';
 try{lastBreed=JSON.parse(localStorage.getItem('pet-last-breed'));}catch{}
 let gesture=PetCore.motion(),motionCredit=0,lastProgress=0,hintKey='';
 const q=s=>document.querySelector(s);
@@ -25,10 +25,13 @@ function position(e){
  const stage=q('.pet-play'),r=stage.getBoundingClientRect(),cursor=q('.pet-cursor');
  const portrait=stage.classList.contains('pet-portrait'),mobile=matchMedia('(max-height:520px),(max-width:700px)').matches&&tool!=='treat';
  cursor.hidden=false;
- // Mirror the existing tool-center distance on the left of the cleaning point.
- // The sprite, water and airflow all remain anchored to that cleaning point.
- const distance=mobile?(tool==='soap'?120:new DOMMatrixReadOnly(getComputedStyle(cursor).transform).m41+cursor.offsetWidth/2):0;
- const target=PetCore.offsetPoint(e.clientX,e.clientY,portrait,mobile,distance);
+ // Choose the hand in game coordinates, and keep it stable throughout the drag.
+ const fingerX=portrait?e.clientY-r.top:e.clientX-r.left,gameWidth=portrait?r.height:r.width;
+ if(mobile&&!held)handSide=fingerX>gameWidth/2?'right':'left';
+ const right=mobile&&handSide==='right';
+ cursor.classList.toggle('pet-right-hand',right);
+ const distance=mobile?(tool==='soap'?120:tool==='shower'?90:cursor.offsetWidth*1.15):0;
+ const target=PetCore.offsetPoint(e.clientX,e.clientY,portrait,mobile,right?-distance:distance);
  let x=target.x-r.left,y=target.y-r.top;
  if(portrait){x=target.y-r.top;y=r.right-target.x;}
  cursor.style.left=x+'px';cursor.style.top=y+'px';

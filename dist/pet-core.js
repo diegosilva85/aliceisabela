@@ -15,6 +15,10 @@
   function calm(s){s.mood='calm';s.arched=false;s.feeding=false;}
   function isWet(s){return s.stage!=='done'&&(s.stage!=='rinse'||s.progress.filter(p=>p>=1).length>=5);}
   function elapsedForTool(tool,elapsed,circularCredit){return tool==='soap'?circularCredit:Math.min(100,Math.max(0,elapsed));}
+  function offsetPoint(x,y,portrait,mobile,distance=90){
+    if(!mobile)return {x,y};
+    return portrait?{x,y:y+distance}:{x:x+distance,y};
+  }
   // Normalize coordinates to the region size, so small touch screens use the same gesture.
   function motion(){return {points:[],zone:-1};}
   function movement(m,x,y,time,zone){
@@ -25,5 +29,5 @@
     if(!last||time-last.t>180)return 0;
     return Math.hypot(x-last.x,y-last.y)>=.015?Math.min(80,time-last.t):0;
   }
-  const api={create,touch,calm,durations,expected,motion,movement,circle:movement,isWet,elapsedForTool};root.PetCore=api;if(typeof module!=='undefined')module.exports=api;
+  const api={create,touch,calm,durations,expected,motion,movement,circle:movement,isWet,elapsedForTool,offsetPoint};root.PetCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);

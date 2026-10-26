@@ -41,6 +41,9 @@ assert.equal(C.elapsedForTool('dryer',50,0),50,'Secador parado conta tempo');
 assert.equal(C.elapsedForTool('shower',50,0),50,'Ducha parada conta tempo');
 assert.equal(C.elapsedForTool('soap',50,0),0,'Sabonete parado não conta tempo');
 assert.equal(C.elapsedForTool('soap',50,30),30,'Sabão exige movimento');
+assert.deepEqual(C.offsetPoint(100,200,false,false),{x:100,y:200},'Desktop não desloca o ponto');
+assert.deepEqual(C.offsetPoint(100,200,false,true),{x:190,y:200},'Mobile horizontal desloca para a direita');
+assert.deepEqual(C.offsetPoint(100,200,true,true),{x:100,y:290},'Tela girada mantém o deslocamento no eixo horizontal do jogo');
 // Every random bin must choose one of the other three breeds, without retries.
 for(let previous=0;previous<4;previous++){
  const counts=[0,0,0,0];

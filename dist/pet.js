@@ -27,7 +27,7 @@ function position(e){
  cursor.hidden=false;
  // Mirror the existing tool-center distance on the left of the cleaning point.
  // The sprite, water and airflow all remain anchored to that cleaning point.
- const distance=mobile?new DOMMatrixReadOnly(getComputedStyle(cursor).transform).m41+cursor.offsetWidth/2:0;
+ const distance=mobile?(tool==='soap'?120:new DOMMatrixReadOnly(getComputedStyle(cursor).transform).m41+cursor.offsetWidth/2):0;
  const target=PetCore.offsetPoint(e.clientX,e.clientY,portrait,mobile,distance);
  let x=target.x-r.left,y=target.y-r.top;
  if(portrait){x=target.y-r.top;y=r.right-target.x;}

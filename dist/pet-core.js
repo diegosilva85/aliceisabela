@@ -13,6 +13,8 @@
     return 'region';
   }
   function calm(s){s.mood='calm';s.arched=false;s.feeding=false;}
+  function isWet(s){return s.stage!=='done'&&(s.stage!=='rinse'||s.progress.filter(p=>p>=1).length>=5);}
+  function elapsedForTool(tool,elapsed,circularCredit){return tool==='dryer'?Math.min(100,Math.max(0,elapsed)):circularCredit;}
   // Normalize coordinates to the region size, so small touch screens use the same gesture.
   function motion(){return {points:[],zone:-1};}
   function circle(m,x,y,time,zone){
@@ -35,5 +37,5 @@
     }
     return Math.abs(turn)>.65&&Math.abs(turn)>total*.7&&distance>.2?Math.min(80,time-last.t):0;
   }
-  const api={create,touch,calm,durations,expected,motion,circle};root.PetCore=api;if(typeof module!=='undefined')module.exports=api;
+  const api={create,touch,calm,durations,expected,motion,circle,isWet,elapsedForTool};root.PetCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);

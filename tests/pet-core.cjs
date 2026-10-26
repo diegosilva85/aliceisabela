@@ -30,3 +30,13 @@ const m=C.motion();for(let i=0;i<40;i++)C.circle(m,Math.cos(i*.2),Math.sin(i*.2)
 assert.equal(C.circle(m,0,0,5000,0),0,'Pausa reinicia o gesto');
 assert.equal(C.circle(m,.1,.1,5020,1),0,'Outra região exige novo gesto');
 console.log('Gestos: círculos, pausa, troca de região, linha reta e imobilidade OK.');
+const wetCat=C.create(()=>0);
+for(let i=0;i<4;i++)C.touch(wetCat,'shower',i,2500);
+assert.equal(C.isWet(wetCat),false);
+C.touch(wetCat,'shower',4,2500);
+assert.equal(C.isWet(wetCat),true);
+assert.equal(wetCat.stage,'rinse');
+assert.deepEqual(wetCat.progress,[1,1,1,1,1,0,0,0,0],'As quatro manchas restantes continuam');
+assert.equal(C.elapsedForTool('dryer',50,0),50,'Secador parado conta tempo');
+assert.equal(C.elapsedForTool('shower',50,0),0,'Ducha parada não conta');
+assert.equal(C.elapsedForTool('soap',50,30),30,'Sabão exige movimento');

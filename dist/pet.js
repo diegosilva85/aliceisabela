@@ -30,7 +30,8 @@ function select(next){if(state&&next!==tool&&(next===PetCore.expected[state.stag
 function feed(){if(state.feeding||state.stage==='done')return;release();lastProgress=performance.now();state.feeding=true;const bite=q('.pet-snack');bite.hidden=false;bite.src=base+snackFile();update();later(()=>bite.src=base+snackFile('mordido-30'),650);later(()=>bite.src=base+snackFile('mordido-70'),1300);later(()=>{bite.hidden=true;lastProgress=performance.now();PetCore.calm(state);renderCat();select(PetCore.expected[state.stage]);tone();},2000);}
 function position(e){
  const stage=q('.pet-play'),r=stage.getBoundingClientRect(),cursor=q('.pet-cursor');
- const portrait=stage.classList.contains('pet-portrait'),mobile=matchMedia('(max-height:520px),(max-width:700px)').matches&&tool!=='treat';
+ // Touch events need finger clearance on tablets too, regardless of viewport size.
+ const portrait=stage.classList.contains('pet-portrait'),mobile=(e.pointerType==='touch'||matchMedia('(max-height:520px),(max-width:700px)').matches)&&tool!=='treat';
  cursor.hidden=false;
  // Choose the hand in game coordinates, and keep it stable throughout the drag.
  const fingerX=portrait?e.clientY-r.top:e.clientX-r.left,gameWidth=portrait?r.height:r.width;

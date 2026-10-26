@@ -32,6 +32,7 @@ function position(e){
  const stage=q('.pet-play'),r=stage.getBoundingClientRect(),cursor=q('.pet-cursor');
  // Touch events need finger clearance on tablets too, regardless of viewport size.
  const portrait=stage.classList.contains('pet-portrait'),mobile=(e.pointerType==='touch'||matchMedia('(max-height:520px),(max-width:700px)').matches)&&tool!=='treat';
+ stage.classList.toggle('pet-touch-tools',mobile);
  cursor.hidden=false;
  // Choose the hand in game coordinates, and keep it stable throughout the drag.
  const fingerX=portrait?e.clientY-r.top:e.clientX-r.left,gameWidth=portrait?r.height:r.width;

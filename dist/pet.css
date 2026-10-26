@@ -24,3 +24,11 @@ body[data-section=pet]{overflow:hidden}body[data-section=pet]>header,body[data-s
 
 .pet-cat.pet-dog.arched{aspect-ratio:1374/1145}
 .pet-dog .pet-dirt{mask-image:radial-gradient(ellipse at center,#000 45%,transparent 72%)}
+
+/* Match phone tool geometry on touch tablets, independently of viewport size. */
+.pet-play.pet-touch-tools:not(.pet-dressing):not(.pet-nails) .pet-cat:before{content:"";position:absolute;left:-130px;right:-130px;top:0;bottom:0;z-index:0}
+.pet-touch-tools .pet-cursor{width:75px;height:75px}
+.pet-touch-tools .pet-cursor[data-tool=soap]{transform:translate(-50%,-50%)}
+.pet-touch-tools .pet-cursor.pet-right-hand{transform:translate(-132%,-64%) scaleX(-1)}
+.pet-touch-tools .pet-cursor.pet-right-hand[data-tool=dryer]{transform:translate(-165%,-28%) scaleX(-1)}
+.pet-touch-tools .pet-cursor.pet-right-hand[data-tool=soap]{transform:translate(-50%,-50%) scaleX(-1)}

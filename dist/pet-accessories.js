@@ -23,7 +23,7 @@ function mount({breed,onNext,onPlace}){
  stage.querySelector('.pet-finish').hidden=true;stage.querySelector('.pet-regions').hidden=true;
  stage.querySelector('#pet-message').textContent='Um toque de charme!';
  stage.querySelector('#pet-count').textContent='Escolha e coloque no gatinho';
- stage.querySelector('.pet-steps').innerHTML='<span class="current">5 · Acessórios</span>';
+ stage.querySelector('.pet-steps').innerHTML='<span class="current">6 · Acessórios</span>';
  panel.classList.add('pet-accessory-panel');panel.setAttribute('aria-label','Acessórios');
  panel.innerHTML='<h2>Acessórios</h2><div class="pet-accessory-tabs"><button data-group="bow" aria-pressed="true">Laços</button><button data-group="tie" aria-pressed="false">Gravatas</button><button data-group="hero" aria-pressed="false">Heróis</button></div><div class="pet-accessory-list">'+items.map(i=>'<button data-accessory="'+i.id+'" aria-label="'+i.name+'" aria-pressed="false"><img draggable="false" src="'+base+i.id+'-v1.webp" alt=""><span>'+i.name+'</span></button>').join('')+'</div><button class="pet-remove">Retirar acessórios</button><button class="pet-dress-next">Outro gatinho →</button>';
  const back=document.createElement('div');back.className='pet-accessory-back';cat.prepend(back);

@@ -11,8 +11,9 @@ const tips=[
  [[21,16,8,12],[38,3,9,12],[56,3,9,12],[73,14,9,12]]
 ];
 const dogTips=[[[16,15,13,8],[33,3,12,8],[56,3,12,8],[73,15,13,8],[75,69,6,7]],[[18,14,13,9],[36,3,13,8],[58,3,13,8],[77,16,13,9],[26,75,6,7]],[[19,13,13,8],[36,4,13,8],[57,5,13,8],[76,15,13,8]],[[14,16,13,9],[33,2,13,9],[57,2,13,9],[77,15,13,9]]];
-function pawTips(breed,paw){return (breed===4?dogTips:tips)[paw];}
-function file(breed,paw){return base+(['','gatinho-branco-','gatinho-siames-','gatinho-scottish-fold-','cachorrinho-dalmata-'][breed]||'')+'pata-'+paws[paw]+(breed===3?'-v2.webp':'-v1.webp');}
+const shihTips=[[[18,15,8,7],[39,3,7,7],[58,3,7,7],[78,15,7,8],[82,61,5,7]],[[22,12,7,7],[40,3,6,7],[59,3,6,8],[81,12,7,7],[18,61,5,7]],[[17,17,7,8],[36,6,7,8],[58,6,7,8],[81,17,7,8]],[[19,17,7,7],[39,4,7,8],[61,6,7,8],[84,18,7,8]]];
+function pawTips(breed,paw){return (breed===5?shihTips:breed===4?dogTips:tips)[paw];}
+function file(breed,paw){return base+(['','gatinho-branco-','gatinho-siames-','gatinho-scottish-fold-','cachorrinho-dalmata-','cachorrinho-shih-tzu-'][breed]||'')+'pata-'+paws[paw]+(breed===3?'-v2.webp':'-v1.webp');}
 function create(){return {paw:0,cut:paws.map((_,i)=>tips[i].map(()=>false)),selected:false};}
 function clip(s,index){if(!s.selected||!Number.isInteger(index)||index<0||index>=s.cut[s.paw].length||s.cut[s.paw][index])return false;s.cut[s.paw][index]=true;return true;}
 function total(s){return s.cut.flat().filter(Boolean).length;}

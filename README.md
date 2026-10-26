@@ -138,4 +138,4 @@ Com Node.js instalado na máquina de desenvolvimento:
 for teste in tests/*.cjs; do node "$teste" || exit 1; done
 ```
 
-O Pet Shop alterna gato e cachorro e guarda a última escolha no navegador. O dálmata está jogável; as imagens do shih-tzu estão preparadas, mas essa raça ainda não participa do sorteio.
+O Pet Shop alterna gato e cachorro e guarda a última escolha no navegador. Dálmata e shih-tzu estão jogáveis e têm chances iguais nas rodadas de cachorro, com banho, biscoito, corte das unhas e acessórios.

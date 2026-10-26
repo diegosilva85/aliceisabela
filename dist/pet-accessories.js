@@ -12,9 +12,9 @@ const items=[
  {id:'capa-roxa',name:'Capa roxa e dourada',type:'cape'},
  {id:'capa-azul',name:'Capa azul e dourada',type:'cape'}
 ];
-const fit=[{neck:[53.5,53],head:[29,79,13,23]},{neck:[53.5,53],head:[29,79,13,23]},{neck:[53.5,53.5],head:[29,79,13,23]},{neck:[53.5,53],head:[29,79,12,22]},{neck:[53.5,51],head:[30,78,13,22]}];
+const fit=[{neck:[53.5,53],head:[29,79,13,23]},{neck:[53.5,53],head:[29,79,13,23]},{neck:[53.5,53.5],head:[29,79,13,23]},{neck:[53.5,53],head:[29,79,12,22]},{neck:[53.5,51],head:[30,78,13,22]},{neck:[53.5,53],head:[30,78,13,22]}];
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-function placement(breed,type,x,y){const f=fit[breed]||fit[0];if(type==='mask')return {slot:'mask',x:54.5,y:breed===4?30:breed===3?31:32,width:breed===4?58:65,height:18,angle:2};if(type==='cape')return {slot:'cape',x:53.5,y:72,width:118,height:57,angle:0};if(type==='tie'||y>34)return {slot:'neck',x:clamp(x,f.neck[0]-3,f.neck[0]+3),y:f.neck[1],width:type==='tie'?32:28,angle:0};return {slot:x<54?'headLeft':'headRight',x:clamp(x,f.head[0],f.head[1]),y:clamp(y,f.head[2],f.head[3]),width:26,angle:x<54?-12:12};}
+function placement(breed,type,x,y){const f=fit[breed]||fit[0];if(type==='mask')return {slot:'mask',x:54.5,y:(breed===4||breed===5)?30:breed===3?31:32,width:(breed===4||breed===5)?58:65,height:18,angle:2};if(type==='cape')return {slot:'cape',x:53.5,y:72,width:118,height:57,angle:0};if(type==='tie'||y>34)return {slot:'neck',x:clamp(x,f.neck[0]-3,f.neck[0]+3),y:f.neck[1],width:type==='tie'?32:28,angle:0};return {slot:x<54?'headLeft':'headRight',x:clamp(x,f.head[0],f.head[1]),y:clamp(y,f.head[2],f.head[3]),width:26,angle:x<54?-12:12};}
 let cleanup=()=>{};
 function mount({breed,onNext,onPlace}){
  cleanup();const stage=document.querySelector('.pet-play'),cat=stage.querySelector('.pet-cat'),panel=stage.querySelector('.pet-tools'),base='assets/petshop/';

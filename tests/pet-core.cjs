@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict');
 const C=require('../dist/pet-core.js');
 const angry=C.create(()=>.75);
-assert.equal(angry.breed,3);assert.equal(angry.mood,'angry');
+assert.equal(angry.breed,4);assert.equal(angry.mood,'angry');
 assert.equal(C.touch(angry,'shower',0,4000),'angry');
 assert.equal(angry.arched,true);assert.equal(angry.progress[0],0);
 angry.feeding=true;assert.equal(C.touch(angry,'shower',0,4000),'ignored');
@@ -45,12 +45,12 @@ assert.deepEqual(C.offsetPoint(100,200,false,false),{x:100,y:200},'Desktop não 
 assert.deepEqual(C.offsetPoint(100,200,false,true),{x:190,y:200},'Mobile horizontal desloca para a direita');
 assert.deepEqual(C.offsetPoint(100,200,true,true),{x:100,y:290},'Tela girada mantém o deslocamento no eixo horizontal do jogo');
 // Every draw must switch species, including restored browser history.
-for(let previous=0;previous<5;previous++){
- const counts=[0,0,0,0,0];
+for(let previous=0;previous<6;previous++){
+ const counts=[0,0,0,0,0,0];
  for(let i=0;i<400;i++){const next=C.create(()=>(i+.5)/400,JSON.parse(JSON.stringify(previous)));assert.notEqual(C.isDog(next.breed),C.isDog(previous));counts[next.breed]++;}
- assert.deepEqual(counts,C.isDog(previous)?[100,100,100,100,0]:[0,0,0,0,400]);
+ assert.deepEqual(counts,C.isDog(previous)?[100,100,100,100,0,0]:[0,0,0,0,200,200]);
  for(const value of [0,1-Number.EPSILON])assert.notEqual(C.isDog(C.create(()=>value,previous).breed),C.isDog(previous));
 }
-for(const invalid of [null,undefined,-1,5,'2',{}])assert.deepEqual([.1,.3,.5,.7,.9].map(r=>C.create(()=>r,invalid).breed),[0,1,2,3,4]);
+for(const invalid of [null,undefined,-1,6,'2',{}])assert.deepEqual([.01,.2,.4,.55,.7,.9].map(r=>C.create(()=>r,invalid).breed),[0,1,2,3,4,5]);
 let previous=null;for(let i=0;i<1000;i++){const next=C.create(()=>(i%100)/100,previous).breed;if(previous!==null)assert.notEqual(C.isDog(next),C.isDog(previous));previous=next;}
 console.log('Sorteio: gato e cachorro sempre alternados; quatro gatos com chances iguais; histórico restaurado e 1.000 partidas OK.');

@@ -1,6 +1,6 @@
 (() => {
-const base='assets/petshop/', files=['gatinho-laranja','gatinho-branco','gatinho-siames','gatinho-scottish-fold','cachorrinho-dalmata'];
-const names=['Laranjinha','Floquinho','Siamês','Scottish Fold','Dálmata'];
+const base='assets/petshop/', files=['gatinho-laranja','gatinho-branco','gatinho-siames','gatinho-scottish-fold','cachorrinho-dalmata','cachorrinho-shih-tzu'];
+const names=['Laranjinha','Floquinho','Siamês','Scottish Fold','Dálmata','Shih-tzu'];
 const normal=[[55,15,19,15],[29,36,17,15],[79,38,17,14],[54,54,29,18],[42,72,18,26],[66,75,21,29],[22,83,34,24],[85,79,23,20],[49,91,15,10]];
 const arched=[[31,34,14,12],[20,43,12,12],[39,43,12,12],[56,37,18,14],[48,61,13,21],[69,63,13,21],[83,23,15,17],[81,78,14,14],[35,79,12,10]];
 const crops=[[520,100,220,210],[220,390,210,210],[800,420,210,200],[440,620,350,250],[350,790,230,360],[620,820,270,420],[40,950,430,370],[840,940,260,270],[460,1170,180,170]];
@@ -16,7 +16,7 @@ const dogNormal=[[55,16,24,17],[24,28,20,28],[82,30,20,28],[54,56,27,23],[44,73,
 const dogAttack=[[42,22,21,15],[17,37,16,24],[69,34,16,24],[46,63,19,14],[25,74,15,20],[67,76,15,20],[87,29,16,12],[90,70,14,20],[49,76,15,15]];
 const dogCrops=[[470,70,320,310],[150,170,280,440],[800,170,280,460],[420,600,410,380],[410,850,230,330],[640,850,240,370],[100,890,300,340],[850,980,210,240],[320,1180,570,160]];
 function regions(){return PetCore.isDog(state.breed)?(state.arched?dogAttack:dogNormal):(state.arched?arched:normal);}
-function dirtFile(){return PetCore.isDog(state.breed)?'cachorrinho-dalmata-sujeiras-v1.webp':'gatinho-sujeiras-v1.webp';}
+function dirtFile(){return PetCore.isDog(state.breed)?files[state.breed]+'-sujeiras-v1.webp':'gatinho-sujeiras-v1.webp';}
 function snackFile(bite='inteiro'){return PetCore.treatFile(state.breed,bite);}
 function toolFile(id){return id==='treat'?snackFile():toolsInfo[id][1];}
 function tone(finish=false){if(!soundOn)return;try{audio??=new(window.AudioContext||window.webkitAudioContext)();audio.resume();const now=audio.currentTime;(finish?[523,659,784,1047,1319,1568,2093]:[1047,1568]).forEach((f,i)=>{const o=audio.createOscillator(),g=audio.createGain(),t=now+i*.075;o.type='sine';o.frequency.value=f;o.connect(g);g.connect(audio.destination);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.09,t+.01);g.gain.exponentialRampToValueAtTime(.001,t+.5);o.start(t);o.stop(t+.52);});}catch{}}

@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),{Matchmaking}=require('../server/matchmaking.cjs'),{createServer}=require('../server/server.cjs');
 let now=1000;const m=new Matchmaking({now:()=>now,rng:()=>.4});const a=m.join();assert.equal(a.phase,'waiting');const b=m.join();assert.equal(b.phase,'draft');let s=m.state(a.token);assert.equal(s.you,0);assert.equal(b.you,1);assert.deepEqual(s.pool,b.pool);
 assert.throws(()=>m.action(b.token,{kind:'draft',id:s.pool[0].id,picks:0}),/disponível/);
-for(let i=0;i<10;i++){s=m.state(a.token);m.action(s.turn===0?a.token:b.token,{kind:'draft',id:s.pool[0].id,picks:s.picks});}
+for(let i=0;i<12;i++){s=m.state(a.token);m.action(s.turn===0?a.token:b.token,{kind:'draft',id:s.pool[0].id,picks:s.picks});}
 s=m.state(a.token);assert.equal(s.phase,'ready');
 const beat=(token,active=true)=>{const v=m.state(token);return m.action(token,{kind:'heartbeat',active,phase:v.phase,round:v.round,deadline:v.deadline});};
 beat(a.token);assert.equal(m.state(a.token).phase,'ready');beat(b.token);assert.equal(m.state(a.token).phase,'choose');

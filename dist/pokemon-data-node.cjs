@@ -1,0 +1,1 @@
+const fs=require('node:fs'),vm=require('node:vm');const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(require.resolve('./pokemon-data.js'),'utf8'),sandbox);module.exports=JSON.parse(JSON.stringify(sandbox.window.PokemonTableData));

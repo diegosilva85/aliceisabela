@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),{Matchmaking}=require('../server/matchmaking.cjs');
 let now=0;const m=new Matchmaking({now:()=>now,rng:()=>.4}),a=m.join().token,b=m.join().token;
 const heartbeat=t=>{const s=m.state(t);return m.action(t,{kind:'heartbeat',active:true,phase:s.phase,round:s.round,deadline:s.deadline});};
-for(let i=0;i<10;i++){const s=m.state(a);m.action(s.turn?b:a,{kind:'draft',picks:s.picks,id:s.pool[0].id});}
+for(let i=0;i<12;i++){const s=m.state(a);m.action(s.turn?b:a,{kind:'draft',picks:s.picks,id:s.pool[0].id});}
 heartbeat(a);assert.equal(m.state(a).phase,'ready');heartbeat(b);
 for(let i=0;i<10;i++){now+=450;heartbeat(a);heartbeat(b);}
 now=5000;heartbeat(a);assert.equal(m.state(a).phase,'choose');assert.equal(m.state(a).result,null);

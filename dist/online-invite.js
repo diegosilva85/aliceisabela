@@ -1,0 +1,1 @@
+(()=>{const oldHome=home;home=function(){OnlineRooms.cancel();oldHome();};const params=new URLSearchParams(location.search),code=params.get('room'),game=params.get('game');if(!code||!['pokemon','keepup'].includes(game))return;history.replaceState(null,'',location.pathname);if(game==='pokemon')PokemonOnlineInvite(code);else KeepupOnlineInvite(code);})();

@@ -1,7 +1,9 @@
 'use strict';
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path');const {Matchmaking}=require('./matchmaking.cjs');
 const {KeepupMatchmaking}=require('./keepup-matchmaking.cjs');
+const {withPrivateRooms}=require('./private-rooms.cjs');
 function createServer({matchmaking=new Matchmaking(),keepup=new KeepupMatchmaking(),staticRoot=null}={}){
+ matchmaking=withPrivateRooms(matchmaking,'pokemon');keepup=withPrivateRooms(keepup,'keepup');
  const simulation=setInterval(()=>keepup.sweep(),20);simulation.unref();
  const limits=new Map();const sweep=setInterval(()=>{matchmaking.sweep();for(const [ip,v] of limits)if(Date.now()-v.start>60000)limits.delete(ip);},250);sweep.unref();
  const server=http.createServer(async(req,res)=>{
@@ -16,7 +18,7 @@ function createServer({matchmaking=new Matchmaking(),keepup=new KeepupMatchmakin
    if(req.method==='GET'&&route==='/api/pokemon/state')return send(200,service.state(token));
    if(req.method!=='POST')return send(405,{error:'Método inválido'});
    if(!String(req.headers['content-type']||'').startsWith('application/json'))return send(415,{error:'Use JSON'});
-   let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>2048)return send(413,{error:'Pedido muito grande'});}let body;try{body=JSON.parse(raw||'{}');}catch{return send(400,{error:'JSON inválido'});}if(!body||typeof body!=='object'||Array.isArray(body))return send(400,{error:'Pedido inválido'});
+   let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>32768)return send(413,{error:'Pedido muito grande'});}let body;try{body=JSON.parse(raw||'{}');}catch{return send(400,{error:'JSON inválido'});}if(!body||typeof body!=='object'||Array.isArray(body))return send(400,{error:'Pedido inválido'});
    if(route==='/api/pokemon/join'){if(++rate.joins>40)return send(429,{error:'Aguarde antes de entrar novamente.'});return send(200,service.join(body));}
    if(route==='/api/pokemon/leave'){service.leave(token);return send(200,{ok:true});}
    if(route==='/api/pokemon/action')return send(200,service.action(token,body));

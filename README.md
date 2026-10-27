@@ -176,7 +176,7 @@ Charmander e Bulbasaur receberam novos recortes oficiais. Adicionados Riolu, Luc
 
 ## Batalha Pokémon: solo e online
 
-A coleção agora abre partidas. São sorteadas dez cartas únicas: uma de cada um dos nove tipos e uma extra, cujo tipo é sorteado entre os sete restantes, excluindo Lutador e Normal. Os jogadores alternam a escolha das cinco cartas. Há 5 segundos por escolha (também na montagem do time); ao expirar, uma carta válida é escolhida automaticamente. Cada Pokémon começa com 50 HP, mantidos entre rodadas. Os danos são simultâneos na regra, apresentados em sequência na tela: 50 super efetivo, 25 neutro/efetivo e 12 resistido/não efetivo. A tabela simplificada de oito tipos está em “Como jogar”. Normal não tem vantagens especiais. Cartas a zero HP são retiradas; vence quem mantiver Pokémon vivos depois de derrotar todos os adversários. Se os últimos caírem juntos, há empate. O efeito Normal reutiliza o golpe de caratê.
+A coleção agora abre partidas. São sorteadas doze cartas únicas: duas de Lutador, duas de Normal, uma de cada um dos outros sete tipos e uma extra sorteada entre esses sete tipos. Os jogadores alternam seis escolhas por pessoa. Há 5 segundos por escolha (também na montagem do time); ao expirar, uma carta válida é escolhida automaticamente. Cada Pokémon começa com 50 HP, mantidos entre rodadas. Os danos são simultâneos na regra, apresentados em sequência na tela: 50 super efetivo, 25 neutro/efetivo e 12 resistido/não efetivo. A tabela simplificada de oito tipos está em “Como jogar”. Normal não tem vantagens especiais. Cartas a zero HP são retiradas; vence quem mantiver Pokémon vivos depois de derrotar todos os adversários. Se os últimos caírem juntos, há empate. O efeito Normal reutiliza o golpe de caratê.
 
 **Atualizar no Raspberry Pi (Caddy do host continua atendendo 80/443):**
 
@@ -207,7 +207,7 @@ Os efeitos de fogo, água, choque, pancada, folhas, ondas psíquicas e energia n
 
 Manter no Alto agora começa pela escolha de 1 ou 2 pessoas. No online, a fila combina jogadores da mesma dificuldade; cada um escolhe Bluey ou Bingo, sem repetir. Os dois cooperam na mesma sala e compartilham os três estouros. O servidor calcula os movimentos e colisões; o navegador desenha e suaviza as posições recebidas. A sessão encerra quando alguém sai ou fica sem conexão por 15 segundos. A fila e as partidas ficam na memória e não sobrevivem a reinícios.
 
-Pokémon: os dez Pokémon são distribuídos por escolhas alternadas, sem cronômetro na montagem dos times. Só após as dez escolhas começa a batalha. Cada rodada permite cinco segundos de escolha (automática no fim do prazo), espera ambos, mostra 3–2–1, revela as cartas e aplica a sequência visual de ataques. Máximo de sete rodadas; termina antes se um time perder todos. Desempate: mais Pokémon vivos, depois soma da vida restante, depois empate.
+Pokémon: os doze Pokémon são distribuídos por escolhas alternadas, sem cronômetro na montagem dos times. Só após as doze escolhas começa a batalha. Cada rodada permite cinco segundos de escolha (automática no fim do prazo), espera ambos, mostra 3–2–1, revela as cartas e aplica a sequência visual de ataques. Máximo de sete rodadas; termina antes se um time perder todos. Desempate: mais Pokémon vivos, depois soma da vida restante, depois empate.
 
 Atualize ambos os contêineres (o Caddy do host continua atendendo HTTPS):
 
@@ -243,7 +243,7 @@ A coleção tem 53 cartas. Entraram Scizor, Scyther, Onix, Steelix, Togedemaru, 
 
 Na tabela simplificada do jogo, Aço vence Psíquico (que também agrupa Fada) e perde para Fogo e Lutador. Seus ataques causam 12 contra Fogo, Água, Elétrico e Aço; recebe 12 de Planta, Psíquico e Normal. As demais relações permanecem iguais. O símbolo é a energia Metal da carta oficial de Scizor, exibido por CSS. O ataque usa três cortes metálicos animados em CSS com som sintetizado localmente.
 
-O sorteio do pool garante os nove tipos em partidas locais e online. O tipo da décima carta é sorteado com chances iguais entre os tipos elegíveis com outra carta disponível; depois sorteia-se o Pokémon desse tipo. A ordem das dez cartas é embaralhada.
+O sorteio do pool garante os nove tipos em partidas locais e online. Além das duas cartas de Lutador e duas de Normal, o tipo da décima segunda carta é sorteado com chances iguais entre os tipos elegíveis com outra carta disponível; depois sorteia-se o Pokémon desse tipo. A ordem das doze cartas é embaralhada.
 
 
 ### Suavização da Bluey/Bingo online
@@ -255,3 +255,16 @@ As requisições são sequenciais, com cadência alvo de 60 ms durante a partida
 Ambos precisam terminar de carregar as imagens antes de a física avançar. Se alguém ficar em segundo plano ou sem enviar controles por 1,5 s, a simulação pausa e retoma quando ambos responderem; a desconexão definitiva continua encerrando a sessão após 15 s. Atualize os serviços `jogos` e `matchmaking` juntos.
 
 Validação: `node tests/keepup.cjs`, `node tests/keepup-net.cjs`, `node tests/keepup-server.cjs`, `node tests/keepup-music.cjs`, `node tests/keepup-pop.cjs`. A previsão foi testada em 30/60/120 quadros por segundo, perda de atualizações, correção de posição e pausa. Ganho real de latência depende da rede; os testes locais não equivalem a medições no Wi-Fi/tablet do usuário.
+
+
+### Salas privadas e anfitrião no aparelho
+
+Nos dois jogos, “2 pessoas” oferece “Procurar partida” (fila pública) e “Convidar um amigo” (sala privada). O criador recebe um link com capacidade aleatória de 192 bits, pode copiá-lo ou usar o compartilhamento nativo quando disponível. A sala não é listada nem misturada à fila. Depois da entrada do convidado, só o dono pode clicar em “Começar jogo”. São exatamente dois participantes; o link não permite ocupar uma sala já completa. O convite expira com a saída de um membro ou após uma hora.
+
+Nas salas por convite, “Hospedar no meu aparelho” tenta WebRTC DataChannel direto, sem STUN/TURN externo. Funciona especialmente em redes locais onde os aparelhos podem se alcançar; isolamento de clientes Wi-Fi, VPNs ou NAT podem impedir isso. A negociação usa o servidor existente por HTTPS. Se ambos não confirmarem o canal em dez segundos, os dois passam ao servidor, com uma decisão central única. O site continua necessário para abrir a sala e sinalizar presença; não é um modo offline. O Pi não precisa expor portas adicionais.
+
+No modo direto, o criador executa a autoridade de jogo e o convidado envia ações pelo canal confiável. `dist/pokemon-session.js` e `dist/keepup-session.js` são os mesmos motores usados pelo Node; não há segunda implementação das regras. Colisões, sorteios, prontidão e pontuação são decididos pelo anfitrião. Ambos veem o modo de conexão. Se o anfitrião fechar a página, a sessão termina; não há migração de autoridade no meio da partida. Não há tráfego de gameplay via HTTP nesse modo, apenas sinalização/presença. Por ser um jogo entre amigos, o anfitrião tem controle sobre seu processo, sem garantia antitrapaça contra um anfitrião modificado.
+
+“Jogar novamente” pede revanche ao outro participante, tanto nas salas quanto no matchmaking. A partida só reinicia quando os dois aceitam; conserva participantes, transporte e convite. Pokémon sorteia doze cartas novas e zera vida/rodadas; Bluey retorna à escolha das personagens. As sete rodadas máximas de Pokémon permanecem.
+
+Atualização no Pi: `git pull --ff-only` e `sudo docker compose up -d --build jogos matchmaking`. Atualize os dois serviços juntos e recarregue os navegadores. Testes adicionais: `node tests/private-rooms.cjs`, `node tests/online-transport.cjs`, `node tests/pokemon-server.cjs`. As regras são testadas também com os mesmos motores que rodam no navegador anfitrião.

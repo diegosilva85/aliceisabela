@@ -13,6 +13,7 @@ function deal(cards,rng=Math.random){
  for(const c of cards){if(!types.includes(c.type))throw Error('Tipo desconhecido');groups[c.type].push(c);}
  if(types.some(t=>!groups[t].length))throw Error('Não há tipos suficientes: é necessária uma carta de cada tipo');
  const pool=types.map(t=>{const group=groups[t];return group.splice(Math.floor(rng()*group.length),1)[0];});
+ for(const type of ['fighting','normal']){const group=groups[type];if(!group.length)throw Error('São necessárias duas cartas de Lutador e Normal');pool.push(group.splice(Math.floor(rng()*group.length),1)[0]);}
  const extraTypes=types.filter(t=>t!=='fighting'&&t!=='normal'&&groups[t].length);
  if(!extraTypes.length)throw Error('Não há carta extra disponível fora de Lutador e Normal');
  const extraType=extraTypes[Math.floor(rng()*extraTypes.length)],extraGroup=groups[extraType];

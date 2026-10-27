@@ -142,7 +142,7 @@ O Pet Shop alterna gato e cachorro e guarda a última escolha no navegador. Dál
 
 ## Manter no Alto
 
-Escolha Fácil (novo balão a cada 10 s), Médio (8 s) ou Difícil (6 s), depois Bluey ou Bingo. Um balão começa no topo; cores e posições são sorteadas. Segure ←/→ ou A/D no computador, ou as setas translúcidas na tela. As duas poses se alternam durante a corrida e são espelhadas para a esquerda. O ponto de contato e a velocidade horizontal influenciam a rebatida. A rodada termina quando qualquer balão toca o chão, com opção de repetir ou trocar de personagem.
+Escolha Fácil (novo balão a cada 10 s), Médio (8 s) ou Difícil (6 s), depois Bluey ou Bingo. Um balão começa no topo; cores e posições são sorteadas. Segure ←/→ ou A/D no computador, ou as setas translúcidas na tela. As duas poses se alternam durante a corrida e são espelhadas para a esquerda. O ponto de contato e a velocidade horizontal influenciam a rebatida. Cada balão que toca o chão estoura com uma animação desenhada no canvas, sem imagens adicionais. A rodada termina no terceiro estouro, mostrando no centro o tempo conseguido, com opção de repetir ou trocar de personagem.
 
 A física usa passos fixos de 1/120 s, desaceleração, limites laterais e proteção contra rebatidas duplicadas. O tempo pausa em aba oculta. Em dispositivos de toque, solicita tela cheia e orientação horizontal; se o navegador não permitir, usa a área disponível e gira o cenário em retrato. A sala inteira mantém proporção 16:9. PNGs originais são preservados e o jogo carrega cópias WebP menores. Não há música neste jogo ainda.
 

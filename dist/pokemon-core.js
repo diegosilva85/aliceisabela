@@ -1,9 +1,9 @@
 (function(root){
 'use strict';
-const types=['fire','water','grass','electric','fighting','psychic','dark','normal'];
+const types=['fire','water','grass','electric','fighting','psychic','dark','normal','steel'];
 // Simplified single-type house chart: neutral=25, advantage=50, resistance=12.
-const strong={fire:['grass'],water:['fire'],grass:['water'],electric:['water'],fighting:['normal','dark'],psychic:['fighting'],dark:['psychic'],normal:[]};
-const weak={fire:['fire','water'],water:['water','grass'],grass:['fire','grass'],electric:['electric','grass'],fighting:['psychic'],psychic:['psychic','dark'],dark:['fighting','dark'],normal:[]};
+const strong={fire:['grass','steel'],water:['fire'],grass:['water'],electric:['water'],fighting:['normal','dark','steel'],psychic:['fighting'],dark:['psychic'],normal:[],steel:['psychic']};
+const weak={fire:['fire','water'],water:['water','grass'],grass:['fire','grass','steel'],electric:['electric','grass'],fighting:['psychic'],psychic:['psychic','dark','steel'],dark:['fighting','dark'],normal:['steel'],steel:['fire','water','electric','steel']};
 const CHOOSE_MS=5000,RESULT_MS=7200;
 function shuffle(a,rng=Math.random){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function damage(a,b){if(!types.includes(a)||!types.includes(b))throw Error('Tipo desconhecido');return strong[a].includes(b)?50:weak[a].includes(b)?12:25;}

@@ -1,0 +1,121 @@
+{
+  "category": "Pokemon",
+  "id": "sm1-143",
+  "illustrator": "5ban Graphics",
+  "image": "https://assets.tcgdex.net/en/sm/sm1/143",
+  "localId": "143",
+  "name": "Solgaleo GX",
+  "rarity": "Ultra Rare",
+  "set": {
+    "cardCount": {
+      "official": 149,
+      "total": 172
+    },
+    "id": "sm1",
+    "logo": "https://assets.tcgdex.net/en/sm/sm1/logo",
+    "name": "Sun & Moon",
+    "symbol": "https://assets.tcgdex.net/univ/sm/sm1/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": false,
+    "normal": true,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "normal",
+      "size": "standard",
+      "variantId": "generated"
+    }
+  ],
+  "dexId": [
+    791
+  ],
+  "hp": 250,
+  "types": [
+    "Metal"
+  ],
+  "evolveFrom": "Cosmoem",
+  "suffix": "GX",
+  "abilities": [
+    {
+      "type": "Ability",
+      "name": "Ultra Road",
+      "effect": "Once during your turn (before your attack), you may switch your Active Pok\u00e9mon with 1 of your Benched Pok\u00e9mon."
+    }
+  ],
+  "attacks": [
+    {
+      "cost": [
+        "Metal",
+        "Metal",
+        "Colorless"
+      ],
+      "name": "Sunsteel Strike",
+      "effect": "Discard all Energy from this Pok\u00e9mon.",
+      "damage": 230
+    },
+    {
+      "cost": [
+        "Metal"
+      ],
+      "name": "Sol Burst GX",
+      "effect": "Search your deck for up to 5 Energy cards and attach them to your Pok\u00e9mon in any way you like. Then, shuffle your deck. (You can\u2019t use more than 1 GX attack in a game.)"
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fire",
+      "value": "\u00d72"
+    }
+  ],
+  "resistances": [
+    {
+      "type": "Psychic",
+      "value": "-20"
+    }
+  ],
+  "retreat": 3,
+  "legal": {
+    "standard": false,
+    "expanded": true
+  },
+  "updated": "2026-08-16T21:23:08+01:00",
+  "thirdParty": {
+    "cardmarket": 295456,
+    "tcgplayer": 127015
+  },
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.941Z",
+      "unit": "EUR",
+      "idProduct": 295456,
+      "avg": 6.54,
+      "low": 0.9,
+      "trend": 12.12,
+      "avg1": 8.72,
+      "avg7": 7.67,
+      "avg30": 12.67,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 6.97,
+      "avg1-holo": 7.5,
+      "avg7-holo": 7.13,
+      "avg30-holo": 8.24
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:54:58.649Z",
+      "holofoil": {
+        "productId": 127015,
+        "lowPrice": 4.99,
+        "midPrice": 6.5,
+        "highPrice": 20,
+        "marketPrice": 6.39,
+        "directLowPrice": 6.25
+      }
+    }
+  }
+}

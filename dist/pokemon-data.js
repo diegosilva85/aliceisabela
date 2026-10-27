@@ -32,6 +32,18 @@ window.PokemonTableData={
     "fighting": {
       "name": "Lutador",
       "color": "#c88345"
+    },
+    "steel": {
+      "name": "Aço",
+      "color": "#9eb8c6",
+      "iconCrop": {
+        "source": "originals/scizor-solo.png",
+        "x": 523,
+        "y": 24,
+        "size": 52,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
     }
   },
   "cards": [
@@ -455,6 +467,230 @@ window.PokemonTableData={
         "y": 95,
         "width": 240,
         "height": 336,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "scizor",
+      "name": "Scizor",
+      "type": "steel",
+      "set": "Obsidian Flames",
+      "number": "205/197",
+      "art": "originals/scizor-solo.png",
+      "original": "originals/scizor-solo.png",
+      "artCrop": {
+        "x": 100,
+        "y": 130,
+        "width": 240,
+        "height": 336,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "scyther",
+      "name": "Scyther",
+      "type": "grass",
+      "set": "Paldean Fates",
+      "number": "095/91",
+      "art": "originals/scyther-solo.png",
+      "original": "originals/scyther-solo.png",
+      "artCrop": {
+        "x": 165,
+        "y": 85,
+        "width": 210,
+        "height": 294,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      },
+      "artNote": "Carta Shiny Rare com janela de ilustração; não é Full Art."
+    },
+    {
+      "id": "onix",
+      "name": "Onix",
+      "type": "fighting",
+      "set": "Hidden Fates",
+      "number": "36/68",
+      "art": "originals/onix-solo.png",
+      "original": "originals/onix-solo.png",
+      "artCrop": {
+        "x": 35,
+        "y": 90,
+        "width": 245,
+        "height": 343,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "steelix",
+      "name": "Steelix",
+      "type": "steel",
+      "set": "Paradox Rift",
+      "number": "208/182",
+      "art": "originals/steelix-solo.png",
+      "original": "originals/steelix-solo.png",
+      "artCrop": {
+        "x": 65,
+        "y": 110,
+        "width": 270,
+        "height": 378,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "togedemaru",
+      "name": "Togedemaru",
+      "type": "steel",
+      "set": "Phantasmal Flames",
+      "number": "104/94",
+      "art": "originals/togedemaru-solo.png",
+      "original": "originals/togedemaru-solo.png",
+      "artCrop": {
+        "x": 120,
+        "y": 190,
+        "width": 200,
+        "height": 280,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "mawile",
+      "name": "Mawile",
+      "type": "steel",
+      "set": "Silver Tempest",
+      "number": "178/195",
+      "art": "originals/mawile-solo.png",
+      "original": "originals/mawile-solo.png",
+      "artCrop": {
+        "x": 105,
+        "y": 100,
+        "width": 285,
+        "height": 399,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      },
+      "typeNote": "Categoria Aço no jogo por seu tipo secundário; a carta original é Psíquico."
+    },
+    {
+      "id": "tinkaton",
+      "name": "Tinkaton",
+      "type": "steel",
+      "set": "Paldea Evolved",
+      "number": "262/193",
+      "art": "originals/tinkaton-solo.png",
+      "original": "originals/tinkaton-solo.png",
+      "artCrop": {
+        "x": 190,
+        "y": 145,
+        "width": 230,
+        "height": 322,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      },
+      "typeNote": "Categoria Aço no jogo por seu tipo secundário; a carta original é Psíquico."
+    },
+    {
+      "id": "corviknight",
+      "name": "Corviknight",
+      "type": "steel",
+      "set": "Battle Styles",
+      "number": "156/163",
+      "art": "originals/corviknight-solo.png",
+      "original": "originals/corviknight-solo.png",
+      "artCrop": {
+        "x": 215,
+        "y": 100,
+        "width": 280,
+        "height": 392,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "metagross",
+      "name": "Metagross",
+      "type": "steel",
+      "set": "Temporal Forces",
+      "number": "178/162",
+      "art": "originals/metagross-solo.png",
+      "original": "originals/metagross-solo.png",
+      "artCrop": {
+        "x": 240,
+        "y": 160,
+        "width": 230,
+        "height": 322,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "solgaleo",
+      "name": "Solgaleo",
+      "type": "steel",
+      "set": "Sun & Moon",
+      "number": "143/149",
+      "art": "originals/solgaleo-solo.png",
+      "original": "originals/solgaleo-solo.png",
+      "artCrop": {
+        "x": 300,
+        "y": 85,
+        "width": 230,
+        "height": 322,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "raikou",
+      "name": "Raikou",
+      "type": "electric",
+      "set": "Crown Zenith Galarian Gallery",
+      "number": "GG41/70",
+      "art": "originals/raikou-solo.png",
+      "original": "originals/raikou-solo.png",
+      "artCrop": {
+        "x": 90,
+        "y": 100,
+        "width": 275,
+        "height": 385,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "entei",
+      "name": "Entei",
+      "type": "fire",
+      "set": "Crown Zenith Galarian Gallery",
+      "number": "GG36/70",
+      "art": "originals/entei-solo.png",
+      "original": "originals/entei-solo.png",
+      "artCrop": {
+        "x": 90,
+        "y": 100,
+        "width": 285,
+        "height": 399,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "suicune",
+      "name": "Suicune",
+      "type": "water",
+      "set": "Crown Zenith Galarian Gallery",
+      "number": "GG38/70",
+      "art": "originals/suicune-solo.png",
+      "original": "originals/suicune-solo.png",
+      "artCrop": {
+        "x": 135,
+        "y": 100,
+        "width": 285,
+        "height": 399,
         "sourceWidth": 600,
         "sourceHeight": 825
       }

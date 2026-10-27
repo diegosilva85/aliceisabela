@@ -1,0 +1,154 @@
+{
+  "category": "Pokemon",
+  "id": "sv04-208",
+  "illustrator": "nisimono",
+  "image": "https://assets.tcgdex.net/en/sv/sv04/208",
+  "localId": "208",
+  "name": "Steelix",
+  "rarity": "Illustration rare",
+  "set": {
+    "cardCount": {
+      "official": 182,
+      "total": 266
+    },
+    "id": "sv04",
+    "logo": "https://assets.tcgdex.net/en/sv/sv04/logo",
+    "name": "Paradox Rift",
+    "symbol": "https://assets.tcgdex.net/univ/sv/sv04/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 740751,
+        "tcgplayer": 523889,
+        "cardtrader": 265563
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.941Z",
+          "unit": "EUR",
+          "idProduct": 740751,
+          "avg": 21.83,
+          "low": 13,
+          "trend": 19.95,
+          "avg1": 21.24,
+          "avg7": 20.95,
+          "avg30": 21.6,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:09.915Z",
+          "holofoil": {
+            "productId": 523889,
+            "lowPrice": 31.25,
+            "midPrice": 39.74,
+            "highPrice": 395.88,
+            "marketPrice": 36.8,
+            "directLowPrice": 34.99
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    208
+  ],
+  "cameoDexIds": [
+    532,
+    533
+  ],
+  "hp": 180,
+  "types": [
+    "Metal"
+  ],
+  "evolveFrom": "Onix",
+  "description": "It is thought its body transformed as a result of iron accumulating internally from swallowing soil.",
+  "stage": "Stage1",
+  "attacks": [
+    {
+      "cost": [
+        "Metal"
+      ],
+      "name": "Earthquake",
+      "effect": "This attack also does 30 damage to each of your Benched Pok\u00e9mon. (Don't apply Weakness and Resistance for Benched Pok\u00e9mon.)",
+      "damage": 130
+    },
+    {
+      "cost": [
+        "Metal",
+        "Metal",
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "name": "Heavy Impact",
+      "damage": 180
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fire",
+      "value": "\u00d72"
+    }
+  ],
+  "resistances": [
+    {
+      "type": "Grass",
+      "value": "-30"
+    }
+  ],
+  "retreat": 4,
+  "regulationMark": "G",
+  "legal": {
+    "standard": false,
+    "expanded": true
+  },
+  "updated": "2026-09-06T11:00:03+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.941Z",
+      "unit": "EUR",
+      "idProduct": 740751,
+      "avg": 21.83,
+      "low": 13,
+      "trend": 19.95,
+      "avg1": 21.24,
+      "avg7": 20.95,
+      "avg30": 21.6,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:09.915Z",
+      "holofoil": {
+        "productId": 523889,
+        "lowPrice": 31.25,
+        "midPrice": 39.74,
+        "highPrice": 395.88,
+        "marketPrice": 36.8,
+        "directLowPrice": 34.99
+      }
+    }
+  }
+}

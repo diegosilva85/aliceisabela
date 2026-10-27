@@ -1,0 +1,115 @@
+{
+  "category": "Pokemon",
+  "id": "swsh12.5gg-GG36",
+  "illustrator": "Shigenori Negishi",
+  "localId": "GG36",
+  "name": "Entei V",
+  "rarity": "Ultra Rare",
+  "set": {
+    "cardCount": {
+      "official": 70,
+      "total": 70
+    },
+    "id": "swsh12.5gg",
+    "name": "Crown Zenith Galarian Gallery"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 691916,
+        "tcgplayer": 478065
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.941Z",
+          "unit": "EUR",
+          "idProduct": 691916,
+          "avg": 54.72,
+          "low": 30,
+          "trend": 69.76,
+          "avg1": 88,
+          "avg7": 68.79,
+          "avg30": 56.58,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": null
+      }
+    }
+  ],
+  "dexId": [
+    244
+  ],
+  "hp": 230,
+  "types": [
+    "Fire"
+  ],
+  "stage": "Basic",
+  "suffix": "V",
+  "abilities": [
+    {
+      "type": "Ability",
+      "name": "Fleet-Footed",
+      "effect": "Once during your turn, if this Pok\u00e9mon is in the Active Spot, you may draw a card."
+    }
+  ],
+  "attacks": [
+    {
+      "cost": [
+        "Fire",
+        "Colorless"
+      ],
+      "name": "Burning Rondo",
+      "effect": "This attack does 20 more damage for each Benched Pok\u00e9mon (both yours and your opponent's).",
+      "damage": "20+"
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Water",
+      "value": "\u00d72"
+    }
+  ],
+  "retreat": 3,
+  "regulationMark": "F",
+  "legal": {
+    "standard": false,
+    "expanded": true
+  },
+  "updated": "2026-07-05T10:55:06+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.941Z",
+      "unit": "EUR",
+      "idProduct": 691916,
+      "avg": 54.72,
+      "low": 30,
+      "trend": 69.76,
+      "avg1": 88,
+      "avg7": 68.79,
+      "avg30": 56.58,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": null
+  },
+  "downloadSource": "https://assets.tcgdex.net/en/swsh/swsh12.5/GG36/high.png"
+}

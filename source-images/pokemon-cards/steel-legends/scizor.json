@@ -1,0 +1,147 @@
+{
+  "category": "Pokemon",
+  "id": "sv03-205",
+  "illustrator": "Oku",
+  "image": "https://assets.tcgdex.net/en/sv/sv03/205",
+  "localId": "205",
+  "name": "Scizor",
+  "rarity": "Illustration rare",
+  "set": {
+    "cardCount": {
+      "official": 197,
+      "total": 230
+    },
+    "id": "sv03",
+    "logo": "https://assets.tcgdex.net/en/sv/sv03/logo",
+    "name": "Obsidian Flames",
+    "symbol": "https://assets.tcgdex.net/univ/sv/sv03/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 725285,
+        "tcgplayer": 509952,
+        "cardtrader": 255647
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.927Z",
+          "unit": "EUR",
+          "idProduct": 725285,
+          "avg": 12.52,
+          "low": 4.44,
+          "trend": 9.92,
+          "avg1": 11.27,
+          "avg7": 8.98,
+          "avg30": 12.56,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:09.414Z",
+          "holofoil": {
+            "productId": 509952,
+            "lowPrice": 8.5,
+            "midPrice": 14.87,
+            "highPrice": 500,
+            "marketPrice": 13.27,
+            "directLowPrice": 9.98
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    212
+  ],
+  "hp": 140,
+  "types": [
+    "Metal"
+  ],
+  "evolveFrom": "Scyther",
+  "description": "This Pok\u00e9mon's pincers, which contain steel, can crush any hard object they get ahold of into bits.",
+  "stage": "Stage1",
+  "attacks": [
+    {
+      "cost": [
+        "Metal"
+      ],
+      "name": "Punishing Scissors",
+      "effect": "This attack does 50 more damage for each of your opponent's Pok\u00e9mon in play that has an Ability.",
+      "damage": "10+"
+    },
+    {
+      "cost": [
+        "Metal",
+        "Metal"
+      ],
+      "name": "Cut",
+      "damage": 70
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fire",
+      "value": "\u00d72"
+    }
+  ],
+  "resistances": [
+    {
+      "type": "Grass",
+      "value": "-30"
+    }
+  ],
+  "retreat": 2,
+  "regulationMark": "G",
+  "legal": {
+    "standard": false,
+    "expanded": true
+  },
+  "updated": "2026-08-20T08:26:31+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.927Z",
+      "unit": "EUR",
+      "idProduct": 725285,
+      "avg": 12.52,
+      "low": 4.44,
+      "trend": 9.92,
+      "avg1": 11.27,
+      "avg7": 8.98,
+      "avg30": 12.56,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:09.414Z",
+      "holofoil": {
+        "productId": 509952,
+        "lowPrice": 8.5,
+        "midPrice": 14.87,
+        "highPrice": 500,
+        "marketPrice": 13.27,
+        "directLowPrice": 9.98
+      }
+    }
+  }
+}

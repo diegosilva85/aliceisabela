@@ -1,0 +1,143 @@
+{
+  "category": "Pokemon",
+  "id": "me02-104",
+  "illustrator": "Orca",
+  "image": "https://assets.tcgdex.net/en/me/me02/104",
+  "localId": "104",
+  "name": "Togedemaru",
+  "rarity": "Illustration rare",
+  "set": {
+    "cardCount": {
+      "official": 94,
+      "total": 130
+    },
+    "id": "me02",
+    "logo": "https://assets.tcgdex.net/en/me/me02/logo",
+    "name": "Phantasmal Flames"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 857679,
+        "tcgplayer": 662233,
+        "cardtrader": 356890
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.927Z",
+          "unit": "EUR",
+          "idProduct": 857679,
+          "avg": 1.77,
+          "low": 0.19,
+          "trend": 1.5,
+          "avg1": 1.41,
+          "avg7": 1.52,
+          "avg30": 1.73,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:13.055Z",
+          "holofoil": {
+            "productId": 662233,
+            "lowPrice": 1.25,
+            "midPrice": 2.62,
+            "highPrice": 999,
+            "marketPrice": 2.01,
+            "directLowPrice": 2
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    777
+  ],
+  "hp": 80,
+  "types": [
+    "Metal"
+  ],
+  "description": "When it's in trouble, it curls up into a ball, makes its fur spikes stand on end, and then discharges electricity indiscriminately.",
+  "stage": "Basic",
+  "attacks": [
+    {
+      "cost": [
+        "Colorless"
+      ],
+      "name": "Find a Friend",
+      "effect": "Search your deck for a Pok\u00e9mon, reveal it, and put it into your hand. Then, shuffle your deck."
+    },
+    {
+      "cost": [
+        "Metal"
+      ],
+      "name": "Gnaw",
+      "damage": 30
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fire",
+      "value": "\u00d72"
+    }
+  ],
+  "resistances": [
+    {
+      "type": "Grass",
+      "value": "-30"
+    }
+  ],
+  "retreat": 1,
+  "regulationMark": "I",
+  "legal": {
+    "standard": true,
+    "expanded": true
+  },
+  "updated": "2026-08-16T13:05:43+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.927Z",
+      "unit": "EUR",
+      "idProduct": 857679,
+      "avg": 1.77,
+      "low": 0.19,
+      "trend": 1.5,
+      "avg1": 1.41,
+      "avg7": 1.52,
+      "avg30": 1.73,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:13.055Z",
+      "holofoil": {
+        "productId": 662233,
+        "lowPrice": 1.25,
+        "midPrice": 2.62,
+        "highPrice": 999,
+        "marketPrice": 2.01,
+        "directLowPrice": 2
+      }
+    }
+  }
+}

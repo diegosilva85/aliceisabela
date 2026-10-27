@@ -42,3 +42,5 @@ body[data-section=pokemon]{background:#25492f;color:#263d30}body[data-section=po
 .pk-type-chart thead{background:#e3edd6}.pk-type-chart img{width:30px;height:30px;vertical-align:middle;margin:0 4px}
 @media(max-width:600px){.pk-top{gap:5px;flex-wrap:wrap}.pk-top>div{display:flex;gap:5px}.pk-page .pk-top button{padding:8px 12px;font-size:12px}.pk-type-dialog{padding:18px}.pk-type-chart th,.pk-type-chart td{padding:4px 8px}}
 .pk-type-chart img{border-radius:50%}
+
+.pk-metal-icon{display:inline-block;border-radius:50%;background-repeat:no-repeat}.pk-type-chart .pk-metal-icon{width:30px;height:30px;vertical-align:middle;margin:0 4px}.pk-metal-attack{filter:drop-shadow(0 0 9px #d5efff)}.pk-metal-attack i{position:absolute;top:12%;left:20%;width:11%;height:76%;border-radius:100% 0;background:linear-gradient(90deg,#456575,#fff,#96b2c5);transform:rotate(35deg);animation:pk-metal-shine .22s ease-in-out infinite alternate}.pk-metal-attack i:nth-child(2){left:45%;animation-delay:-.08s}.pk-metal-attack i:nth-child(3){left:70%;animation-delay:-.16s}@keyframes pk-metal-shine{to{filter:brightness(1.8);transform:rotate(35deg) scaleY(.75)}}

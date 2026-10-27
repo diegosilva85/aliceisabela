@@ -1,0 +1,141 @@
+{
+  "category": "Pokemon",
+  "id": "swsh12-178",
+  "illustrator": "takuyoa",
+  "image": "https://assets.tcgdex.net/en/swsh/swsh12/178",
+  "localId": "178",
+  "name": "Mawile V",
+  "rarity": "Ultra Rare",
+  "set": {
+    "cardCount": {
+      "official": 195,
+      "total": 215
+    },
+    "id": "swsh12",
+    "logo": "https://assets.tcgdex.net/en/swsh/swsh12/logo",
+    "name": "Silver Tempest",
+    "symbol": "https://assets.tcgdex.net/univ/swsh/swsh12/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 682225,
+        "tcgplayer": 451826
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.941Z",
+          "unit": "EUR",
+          "idProduct": 682225,
+          "avg": 2.9,
+          "low": 1,
+          "trend": 2.59,
+          "avg1": 1,
+          "avg7": 2.32,
+          "avg30": 2.76,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:08.270Z",
+          "holofoil": {
+            "productId": 451826,
+            "lowPrice": 1.5,
+            "midPrice": 2.66,
+            "highPrice": 27.62,
+            "marketPrice": 2.4,
+            "directLowPrice": 3.12
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    303
+  ],
+  "hp": 200,
+  "types": [
+    "Psychic"
+  ],
+  "stage": "Basic",
+  "suffix": "V",
+  "attacks": [
+    {
+      "cost": [
+        "Psychic"
+      ],
+      "name": "Pouty Slap",
+      "effect": "Flip a coin. If heads, discard an Energy from your opponent's Active Pok\u00e9mon.",
+      "damage": 30
+    },
+    {
+      "cost": [
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "name": "Chomp Down",
+      "effect": "Discard a random card from your opponent's hand.",
+      "damage": 100
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Metal",
+      "value": "\u00d72"
+    }
+  ],
+  "retreat": 1,
+  "regulationMark": "F",
+  "legal": {
+    "standard": false,
+    "expanded": true
+  },
+  "updated": "2026-07-01T21:21:49+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.941Z",
+      "unit": "EUR",
+      "idProduct": 682225,
+      "avg": 2.9,
+      "low": 1,
+      "trend": 2.59,
+      "avg1": 1,
+      "avg7": 2.32,
+      "avg30": 2.76,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:08.270Z",
+      "holofoil": {
+        "productId": 451826,
+        "lowPrice": 1.5,
+        "midPrice": 2.66,
+        "highPrice": 27.62,
+        "marketPrice": 2.4,
+        "directLowPrice": 3.12
+      }
+    }
+  }
+}

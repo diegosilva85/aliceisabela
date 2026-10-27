@@ -485,5 +485,291 @@
     "source": "https://pbs.twimg.com/media/GHWcmaGXYAATmTv.png",
     "page": "https://x.com/PokeGetInfoMain/status/1762487042301174098",
     "editing": "Pokémon TCG Pocket card back, unmodified; community-hosted reference"
+  },
+  {
+    "pokemon": "scizor",
+    "source": "https://assets.tcgdex.net/en/sv/sv03/205/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv03-205",
+    "original": "source-images/pokemon-cards/steel-legends/scizor.png",
+    "derivative": "originals/scizor-solo.png",
+    "crop": {
+      "x": 100,
+      "y": 130,
+      "width": 240,
+      "height": 336,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "steel",
+    "printedTypes": [
+      "Metal"
+    ]
+  },
+  {
+    "pokemon": "scyther",
+    "source": "https://assets.tcgdex.net/en/sv/sv04.5/095/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv04.5-095",
+    "original": "source-images/pokemon-cards/steel-legends/scyther.png",
+    "derivative": "originals/scyther-solo.png",
+    "crop": {
+      "x": 165,
+      "y": 85,
+      "width": 210,
+      "height": 294,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Shiny rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "grass",
+    "printedTypes": [
+      "Grass"
+    ]
+  },
+  {
+    "pokemon": "onix",
+    "source": "https://assets.tcgdex.net/en/sm/sm115/36/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sm115-36",
+    "original": "source-images/pokemon-cards/steel-legends/onix.png",
+    "derivative": "originals/onix-solo.png",
+    "crop": {
+      "x": 35,
+      "y": 90,
+      "width": 245,
+      "height": 343,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Ultra Rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "fighting",
+    "printedTypes": [
+      "Fighting"
+    ]
+  },
+  {
+    "pokemon": "steelix",
+    "source": "https://assets.tcgdex.net/en/sv/sv04/208/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv04-208",
+    "original": "source-images/pokemon-cards/steel-legends/steelix.png",
+    "derivative": "originals/steelix-solo.png",
+    "crop": {
+      "x": 65,
+      "y": 110,
+      "width": 270,
+      "height": 378,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "steel",
+    "printedTypes": [
+      "Metal"
+    ]
+  },
+  {
+    "pokemon": "togedemaru",
+    "source": "https://assets.tcgdex.net/en/me/me02/104/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/me02-104",
+    "original": "source-images/pokemon-cards/steel-legends/togedemaru.png",
+    "derivative": "originals/togedemaru-solo.png",
+    "crop": {
+      "x": 120,
+      "y": 190,
+      "width": 200,
+      "height": 280,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "steel",
+    "printedTypes": [
+      "Metal"
+    ]
+  },
+  {
+    "pokemon": "mawile",
+    "source": "https://assets.tcgdex.net/en/swsh/swsh12/178/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/swsh12-178",
+    "original": "source-images/pokemon-cards/steel-legends/mawile.png",
+    "derivative": "originals/mawile-solo.png",
+    "crop": {
+      "x": 105,
+      "y": 100,
+      "width": 285,
+      "height": 399,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Ultra Rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "steel",
+    "printedTypes": [
+      "Psychic"
+    ]
+  },
+  {
+    "pokemon": "tinkaton",
+    "source": "https://assets.tcgdex.net/en/sv/sv02/262/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv02-262",
+    "original": "source-images/pokemon-cards/steel-legends/tinkaton.png",
+    "derivative": "originals/tinkaton-solo.png",
+    "crop": {
+      "x": 190,
+      "y": 145,
+      "width": 230,
+      "height": 322,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Special illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "steel",
+    "printedTypes": [
+      "Psychic"
+    ]
+  },
+  {
+    "pokemon": "corviknight",
+    "source": "https://assets.tcgdex.net/en/swsh/swsh5/156/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/swsh5-156",
+    "original": "source-images/pokemon-cards/steel-legends/corviknight.png",
+    "derivative": "originals/corviknight-solo.png",
+    "crop": {
+      "x": 215,
+      "y": 100,
+      "width": 280,
+      "height": 392,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Ultra Rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "steel",
+    "printedTypes": [
+      "Metal"
+    ]
+  },
+  {
+    "pokemon": "metagross",
+    "source": "https://assets.tcgdex.net/en/sv/sv05/178/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv05-178",
+    "original": "source-images/pokemon-cards/steel-legends/metagross.png",
+    "derivative": "originals/metagross-solo.png",
+    "crop": {
+      "x": 240,
+      "y": 160,
+      "width": 230,
+      "height": 322,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "steel",
+    "printedTypes": [
+      "Metal"
+    ]
+  },
+  {
+    "pokemon": "solgaleo",
+    "source": "https://assets.tcgdex.net/en/sm/sm1/143/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sm1-143",
+    "original": "source-images/pokemon-cards/steel-legends/solgaleo.png",
+    "derivative": "originals/solgaleo-solo.png",
+    "crop": {
+      "x": 300,
+      "y": 85,
+      "width": 230,
+      "height": 322,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Ultra Rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "steel",
+    "printedTypes": [
+      "Metal"
+    ]
+  },
+  {
+    "pokemon": "raikou",
+    "source": "https://assets.tcgdex.net/en/swsh/swsh12.5/GG41/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/swsh12.5gg-GG41",
+    "original": "source-images/pokemon-cards/steel-legends/raikou.png",
+    "derivative": "originals/raikou-solo.png",
+    "crop": {
+      "x": 90,
+      "y": 100,
+      "width": 275,
+      "height": 385,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Ultra Rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "electric",
+    "printedTypes": [
+      "Lightning"
+    ]
+  },
+  {
+    "pokemon": "entei",
+    "source": "https://assets.tcgdex.net/en/swsh/swsh12.5/GG36/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/swsh12.5gg-GG36",
+    "original": "source-images/pokemon-cards/steel-legends/entei.png",
+    "derivative": "originals/entei-solo.png",
+    "crop": {
+      "x": 90,
+      "y": 100,
+      "width": 285,
+      "height": 399,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Ultra Rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "fire",
+    "printedTypes": [
+      "Fire"
+    ]
+  },
+  {
+    "pokemon": "suicune",
+    "source": "https://assets.tcgdex.net/en/swsh/swsh12.5/GG38/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/swsh12.5gg-GG38",
+    "original": "source-images/pokemon-cards/steel-legends/suicune.png",
+    "derivative": "originals/suicune-solo.png",
+    "crop": {
+      "x": 135,
+      "y": 100,
+      "width": 285,
+      "height": 399,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Ultra Rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "water",
+    "printedTypes": [
+      "Water"
+    ]
+  },
+  {
+    "asset": "steel-type-icon",
+    "source": "originals/scizor-solo.png",
+    "editing": "Official Metal symbol displayed with CSS background viewport; original pixels preserved.",
+    "crop": {
+      "source": "originals/scizor-solo.png",
+      "x": 523,
+      "y": 24,
+      "size": 52,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    }
   }
 ]

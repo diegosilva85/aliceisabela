@@ -1,0 +1,144 @@
+{
+  "category": "Pokemon",
+  "id": "sv02-262",
+  "illustrator": "Tika Matsuno",
+  "image": "https://assets.tcgdex.net/en/sv/sv02/262",
+  "localId": "262",
+  "name": "Tinkaton ex",
+  "rarity": "Special illustration rare",
+  "set": {
+    "cardCount": {
+      "official": 193,
+      "total": 279
+    },
+    "id": "sv02",
+    "logo": "https://assets.tcgdex.net/en/sv/sv02/logo",
+    "name": "Paldea Evolved",
+    "symbol": "https://assets.tcgdex.net/univ/sv/sv02/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 715737,
+        "tcgplayer": 497681,
+        "cardtrader": 248916
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.941Z",
+          "unit": "EUR",
+          "idProduct": 715737,
+          "avg": 21.47,
+          "low": 9.9,
+          "trend": 19.19,
+          "avg1": 15,
+          "avg7": 18.31,
+          "avg30": 20.23,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:09.144Z",
+          "holofoil": {
+            "productId": 497681,
+            "lowPrice": 49,
+            "midPrice": 56.33,
+            "highPrice": 558.19,
+            "marketPrice": 52.98,
+            "directLowPrice": 52.98
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    959
+  ],
+  "hp": 300,
+  "types": [
+    "Psychic"
+  ],
+  "evolveFrom": "Tinkatuff",
+  "stage": "Stage2",
+  "suffix": "ex",
+  "attacks": [
+    {
+      "cost": [
+        "Colorless",
+        "Colorless"
+      ],
+      "name": "Big Hammer",
+      "effect": "This attack does 30 damage for each card in your hand.",
+      "damage": "30\u00d7"
+    },
+    {
+      "cost": [
+        "Psychic",
+        "Colorless",
+        "Colorless"
+      ],
+      "name": "Pulverizing Press",
+      "effect": "This attack's damage isn't affected by any effects on your opponent's Active Pok\u00e9mon.",
+      "damage": 140
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Metal",
+      "value": "\u00d72"
+    }
+  ],
+  "retreat": 2,
+  "regulationMark": "G",
+  "legal": {
+    "standard": false,
+    "expanded": true
+  },
+  "updated": "2026-06-10T13:42:32+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.941Z",
+      "unit": "EUR",
+      "idProduct": 715737,
+      "avg": 21.47,
+      "low": 9.9,
+      "trend": 19.19,
+      "avg1": 15,
+      "avg7": 18.31,
+      "avg30": 20.23,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:09.144Z",
+      "holofoil": {
+        "productId": 497681,
+        "lowPrice": 49,
+        "midPrice": 56.33,
+        "highPrice": 558.19,
+        "marketPrice": 52.98,
+        "directLowPrice": 52.98
+      }
+    }
+  }
+}

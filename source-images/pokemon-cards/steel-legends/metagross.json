@@ -1,0 +1,148 @@
+{
+  "category": "Pokemon",
+  "id": "sv05-178",
+  "illustrator": "Katsunori Sato",
+  "image": "https://assets.tcgdex.net/en/sv/sv05/178",
+  "localId": "178",
+  "name": "Metagross",
+  "rarity": "Illustration rare",
+  "set": {
+    "cardCount": {
+      "official": 162,
+      "total": 218
+    },
+    "id": "sv05",
+    "name": "Temporal Forces",
+    "symbol": "https://assets.tcgdex.net/univ/sv/sv05/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 760808,
+        "tcgplayer": 542899
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.941Z",
+          "unit": "EUR",
+          "idProduct": 760808,
+          "avg": 25.47,
+          "low": 9.5,
+          "trend": 24.99,
+          "avg1": 24.5,
+          "avg7": 23.7,
+          "avg30": 25.57,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:10.402Z",
+          "holofoil": {
+            "productId": 542899,
+            "lowPrice": 24,
+            "midPrice": 35.19,
+            "highPrice": 237.58,
+            "marketPrice": 30.87,
+            "directLowPrice": 30.87
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    376
+  ],
+  "hp": 180,
+  "types": [
+    "Metal"
+  ],
+  "evolveFrom": "Metang",
+  "description": "Because the magnetic powers of these Pok\u00e9mon get stronger in freezing temperatures, Metagross living on snowy mountains are full of energy.",
+  "stage": "Stage2",
+  "attacks": [
+    {
+      "cost": [
+        "Metal"
+      ],
+      "name": "Meteor Mash",
+      "effect": "During your next turn, this Pok\u00e9mon's Meteor Mash attack does 60 more damage (before applying Weakness and Resistance).",
+      "damage": 60
+    },
+    {
+      "cost": [
+        "Metal",
+        "Colorless",
+        "Colorless",
+        "Colorless"
+      ],
+      "name": "Luster Blast",
+      "effect": "Discard 2 Energy from this Pok\u00e9mon.",
+      "damage": 200
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fire",
+      "value": "\u00d72"
+    }
+  ],
+  "resistances": [
+    {
+      "type": "Grass",
+      "value": "-30"
+    }
+  ],
+  "retreat": 3,
+  "regulationMark": "H",
+  "legal": {
+    "standard": true,
+    "expanded": true
+  },
+  "updated": "2026-06-09T13:03:01+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.941Z",
+      "unit": "EUR",
+      "idProduct": 760808,
+      "avg": 25.47,
+      "low": 9.5,
+      "trend": 24.99,
+      "avg1": 24.5,
+      "avg7": 23.7,
+      "avg30": 25.57,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:10.402Z",
+      "holofoil": {
+        "productId": 542899,
+        "lowPrice": 24,
+        "midPrice": 35.19,
+        "highPrice": 237.58,
+        "marketPrice": 30.87,
+        "directLowPrice": 30.87
+      }
+    }
+  }
+}

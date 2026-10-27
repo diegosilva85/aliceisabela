@@ -23,3 +23,5 @@ console.log('150 matches: balanced deals, persistent HP, simultaneous damage, hi
 assert.equal(C.winner({hands:[[{hp:1},{hp:1}],[{hp:50}]]}),0);
 assert.equal(C.winner({hands:[[{hp:12}],[{hp:13}]]}),1);
 assert.equal(C.winner({hands:[[{hp:12},{hp:0}],[{hp:12}]]}),'draw');
+
+assert.equal(C.damage('fire','steel'),50);assert.equal(C.damage('fighting','steel'),50);assert.equal(C.damage('steel','psychic'),50);assert.equal(C.damage('normal','steel'),12);

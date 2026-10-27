@@ -236,3 +236,9 @@ As nove cartas usam enquadramento CSS definido por `artCrop`, sem redesenhar os 
 ### Cartas ocultas e derrota
 
 Durante a escolha de cada rodada, a mão adversária mostra apenas versos do Pokémon TCG Pocket, sem nomes, tipos ou vida individual. As cartas escolhidas continuam sendo reveladas após a contagem regressiva. A tela de derrota usa o Psyduck oficial da Pokédex com as mãos na cabeça; empate e partida interrompida não usam essa imagem. As duas imagens são locais e suas fontes estão em `dist/assets/pokemon-table/sources.json`.
+
+### Aço e treze novos Pokémon
+
+A coleção tem 53 cartas. Entraram Scizor, Scyther, Onix, Steelix, Togedemaru, Mawile, Tinkaton, Corviknight, Metagross, Solgaleo, Raikou, Entei e Suicune. As artes originais e metadados ficam em `source-images/pokemon-cards/steel-legends`; os recortes são janelas CSS, com fontes registradas no catálogo. Scyther usa uma Shiny Rare, não Full Art. Mawile e Tinkaton ficam em Aço pelo tipo secundário, apesar das cartas selecionadas serem Psíquico.
+
+Na tabela simplificada do jogo, Aço vence Psíquico (que também agrupa Fada) e perde para Fogo e Lutador. Seus ataques causam 12 contra Fogo, Água, Elétrico e Aço; recebe 12 de Planta, Psíquico e Normal. As demais relações permanecem iguais. O símbolo é a energia Metal da carta oficial de Scizor, exibido por CSS. O ataque usa três cortes metálicos animados em CSS com som sintetizado localmente.

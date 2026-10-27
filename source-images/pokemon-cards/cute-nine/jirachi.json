@@ -1,0 +1,102 @@
+{
+  "category": "Pokemon",
+  "id": "xyp-XY67a",
+  "illustrator": "sui",
+  "image": "https://assets.tcgdex.net/en/xy/xyp/XY67a",
+  "localId": "XY67a",
+  "name": "Jirachi",
+  "rarity": "Promo",
+  "set": {
+    "cardCount": {
+      "official": 211,
+      "total": 216
+    },
+    "id": "xyp",
+    "logo": "https://assets.tcgdex.net/en/xy/xyp/logo",
+    "name": "XY Black Star Promos",
+    "symbol": "https://assets.tcgdex.net/univ/xy/xyp/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": false,
+    "normal": true,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "normal",
+      "size": "standard",
+      "variantId": "generated"
+    }
+  ],
+  "dexId": [
+    385
+  ],
+  "hp": 60,
+  "types": [
+    "Metal"
+  ],
+  "description": "It is said to have the ability to grant any wish for just one week every thousand years.",
+  "stage": "Basic",
+  "attacks": [
+    {
+      "cost": [
+        "Colorless"
+      ],
+      "name": "Stardust",
+      "effect": "Discard a Special Energy attached to your opponent's Active Pokémon. If you do, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",
+      "damage": 10
+    },
+    {
+      "cost": [
+        "Metal",
+        "Colorless"
+      ],
+      "name": "Dream Dance",
+      "effect": "Both Active Pokémon are now Asleep.",
+      "damage": 20
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fire",
+      "value": "×2"
+    }
+  ],
+  "resistances": [
+    {
+      "type": "Psychic",
+      "value": "-20"
+    }
+  ],
+  "retreat": 1,
+  "legal": {
+    "standard": false,
+    "expanded": true
+  },
+  "updated": "2026-06-17T18:49:22+01:00",
+  "thirdParty": {
+    "cardmarket": 289787
+  },
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.939Z",
+      "unit": "EUR",
+      "idProduct": 289787,
+      "avg": 20.71,
+      "low": 6.9,
+      "trend": 17.9,
+      "avg1": 10.75,
+      "avg7": 17.67,
+      "avg30": 12.6,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 2.03,
+      "avg1-holo": 2.3,
+      "avg7-holo": 2.22,
+      "avg30-holo": 1.51
+    },
+    "tcgplayer": null
+  }
+}

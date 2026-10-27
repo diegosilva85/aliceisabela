@@ -284,5 +284,194 @@
     "crop": "240x250+55+65",
     "editing": "Upper artwork crop from full-art card, no AI reconstruction",
     "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "zorua",
+    "source": "https://assets.tcgdex.net/en/sv/sv10.5w/142/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv10.5w-142",
+    "original": "source-images/pokemon-cards/cute-nine/zorua.png",
+    "derivative": "originals/zorua-solo.png",
+    "crop": {
+      "x": 140,
+      "y": 130,
+      "width": 250,
+      "height": 350,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "dark",
+    "printedTypes": [
+      "Darkness"
+    ]
+  },
+  {
+    "pokemon": "nickit",
+    "source": "https://assets.tcgdex.net/en/swsh/swsh7/104/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/swsh7-104",
+    "original": "source-images/pokemon-cards/cute-nine/nickit.png",
+    "derivative": "originals/nickit-solo.png",
+    "crop": {
+      "x": 150,
+      "y": 95,
+      "width": 210,
+      "height": 294,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Common",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "dark",
+    "printedTypes": [
+      "Darkness"
+    ]
+  },
+  {
+    "pokemon": "purrloin",
+    "source": "https://assets.tcgdex.net/en/sv/sv10.5w/136/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv10.5w-136",
+    "original": "source-images/pokemon-cards/cute-nine/purrloin.png",
+    "derivative": "originals/purrloin-solo.png",
+    "crop": {
+      "x": 170,
+      "y": 125,
+      "width": 280,
+      "height": 392,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "dark",
+    "printedTypes": [
+      "Darkness"
+    ]
+  },
+  {
+    "pokemon": "mew",
+    "source": "https://assets.tcgdex.net/en/sv/sv03.5/193/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv03.5-193",
+    "original": "source-images/pokemon-cards/cute-nine/mew.png",
+    "derivative": "originals/mew-solo.png",
+    "crop": {
+      "x": 130,
+      "y": 100,
+      "width": 235,
+      "height": 329,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Ultra Rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "psychic",
+    "printedTypes": [
+      "Psychic"
+    ]
+  },
+  {
+    "pokemon": "jirachi",
+    "source": "https://assets.tcgdex.net/en/xy/xyp/XY67a/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/xyp-XY67a",
+    "original": "source-images/pokemon-cards/cute-nine/jirachi.png",
+    "derivative": "originals/jirachi-solo.png",
+    "crop": {
+      "x": 110,
+      "y": 100,
+      "width": 250,
+      "height": 350,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Promo",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "psychic",
+    "printedTypes": [
+      "Metal"
+    ]
+  },
+  {
+    "pokemon": "espurr",
+    "source": "https://assets.tcgdex.net/en/me/me03/095/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/me03-095",
+    "original": "source-images/pokemon-cards/cute-nine/espurr.png",
+    "derivative": "originals/espurr-solo.png",
+    "crop": {
+      "x": 70,
+      "y": 80,
+      "width": 290,
+      "height": 406,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "psychic",
+    "printedTypes": [
+      "Psychic"
+    ]
+  },
+  {
+    "pokemon": "dedenne",
+    "source": "https://assets.tcgdex.net/en/me/me03/093/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/me03-093",
+    "original": "source-images/pokemon-cards/cute-nine/dedenne.png",
+    "derivative": "originals/dedenne-solo.png",
+    "crop": {
+      "x": 215,
+      "y": 95,
+      "width": 235,
+      "height": 329,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "electric",
+    "printedTypes": [
+      "Lightning"
+    ]
+  },
+  {
+    "pokemon": "emolga",
+    "source": "https://assets.tcgdex.net/en/sv/sv10.5b/112/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv10.5b-112",
+    "original": "source-images/pokemon-cards/cute-nine/emolga.png",
+    "derivative": "originals/emolga-solo.png",
+    "crop": {
+      "x": 180,
+      "y": 85,
+      "width": 270,
+      "height": 378,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "electric",
+    "printedTypes": [
+      "Lightning"
+    ]
+  },
+  {
+    "pokemon": "pachirisu",
+    "source": "https://assets.tcgdex.net/en/sv/sv01/208/high.png",
+    "catalog": "https://api.tcgdex.net/v2/en/cards/sv01-208",
+    "original": "source-images/pokemon-cards/cute-nine/pachirisu.png",
+    "derivative": "originals/pachirisu-solo.png",
+    "crop": {
+      "x": 110,
+      "y": 95,
+      "width": 240,
+      "height": 336,
+      "sourceWidth": 600,
+      "sourceHeight": 825
+    },
+    "rarity": "Illustration rare",
+    "editing": "Original card pixels preserved; CSS viewport crop hides printed text in game.",
+    "gameType": "electric",
+    "printedTypes": [
+      "Lightning"
+    ]
   }
 ]

@@ -304,6 +304,160 @@ window.PokemonTableData={
       "number": "106/094",
       "art": "meowth-art-v1.webp",
       "original": "originals/meowth-solo.png"
+    },
+    {
+      "id": "zorua",
+      "name": "Zorua",
+      "type": "dark",
+      "set": "White Flare",
+      "number": "142/86",
+      "art": "originals/zorua-solo.png",
+      "original": "originals/zorua-solo.png",
+      "artCrop": {
+        "x": 140,
+        "y": 130,
+        "width": 250,
+        "height": 350,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "nickit",
+      "name": "Nickit",
+      "type": "dark",
+      "set": "Evolving Skies",
+      "number": "104/203",
+      "art": "originals/nickit-solo.png",
+      "original": "originals/nickit-solo.png",
+      "artCrop": {
+        "x": 150,
+        "y": 95,
+        "width": 210,
+        "height": 294,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "purrloin",
+      "name": "Purrloin",
+      "type": "dark",
+      "set": "White Flare",
+      "number": "136/86",
+      "art": "originals/purrloin-solo.png",
+      "original": "originals/purrloin-solo.png",
+      "artCrop": {
+        "x": 170,
+        "y": 125,
+        "width": 280,
+        "height": 392,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "mew",
+      "name": "Mew",
+      "type": "psychic",
+      "set": "151",
+      "number": "193/165",
+      "art": "originals/mew-solo.png",
+      "original": "originals/mew-solo.png",
+      "artCrop": {
+        "x": 130,
+        "y": 100,
+        "width": 235,
+        "height": 329,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "jirachi",
+      "name": "Jirachi",
+      "type": "psychic",
+      "set": "XY Black Star Promos",
+      "number": "XY67a/211",
+      "art": "originals/jirachi-solo.png",
+      "original": "originals/jirachi-solo.png",
+      "artCrop": {
+        "x": 110,
+        "y": 100,
+        "width": 250,
+        "height": 350,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      },
+      "typeNote": "Categoria Psíquico escolhida para o jogo; esta carta original tem tipo Metal."
+    },
+    {
+      "id": "espurr",
+      "name": "Espurr",
+      "type": "psychic",
+      "set": "Perfect Order",
+      "number": "095/88",
+      "art": "originals/espurr-solo.png",
+      "original": "originals/espurr-solo.png",
+      "artCrop": {
+        "x": 70,
+        "y": 80,
+        "width": 290,
+        "height": 406,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "dedenne",
+      "name": "Dedenne",
+      "type": "electric",
+      "set": "Perfect Order",
+      "number": "093/88",
+      "art": "originals/dedenne-solo.png",
+      "original": "originals/dedenne-solo.png",
+      "artCrop": {
+        "x": 215,
+        "y": 95,
+        "width": 235,
+        "height": 329,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "emolga",
+      "name": "Emolga",
+      "type": "electric",
+      "set": "Black Bolt",
+      "number": "112/86",
+      "art": "originals/emolga-solo.png",
+      "original": "originals/emolga-solo.png",
+      "artCrop": {
+        "x": 180,
+        "y": 85,
+        "width": 270,
+        "height": 378,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
+    },
+    {
+      "id": "pachirisu",
+      "name": "Pachirisu",
+      "type": "electric",
+      "set": "Scarlet & Violet",
+      "number": "208/198",
+      "art": "originals/pachirisu-solo.png",
+      "original": "originals/pachirisu-solo.png",
+      "artCrop": {
+        "x": 110,
+        "y": 95,
+        "width": 240,
+        "height": 336,
+        "sourceWidth": 600,
+        "sourceHeight": 825
+      }
     }
   ]
 };

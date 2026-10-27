@@ -1,0 +1,138 @@
+{
+  "category": "Pokemon",
+  "id": "me03-093",
+  "illustrator": "HYOGONOSUKE",
+  "image": "https://assets.tcgdex.net/en/me/me03/093",
+  "localId": "093",
+  "name": "Dedenne",
+  "rarity": "Illustration rare",
+  "set": {
+    "cardCount": {
+      "official": 88,
+      "total": 124
+    },
+    "id": "me03",
+    "logo": "https://assets.tcgdex.net/en/me/me03/logo",
+    "name": "Perfect Order",
+    "symbol": "https://assets.tcgdex.net/univ/me/me03/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "tcgplayer": 684413,
+        "cardmarket": 877510
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.939Z",
+          "unit": "EUR",
+          "idProduct": 877510,
+          "avg": 5.72,
+          "low": 2,
+          "trend": 5.62,
+          "avg1": 5.49,
+          "avg7": 6.12,
+          "avg30": 5.74,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:13.679Z",
+          "holofoil": {
+            "productId": 684413,
+            "lowPrice": 3.5,
+            "midPrice": 5.87,
+            "highPrice": 105.81,
+            "marketPrice": 4.85,
+            "directLowPrice": 5.99
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    702
+  ],
+  "hp": 70,
+  "types": [
+    "Lightning"
+  ],
+  "stage": "Basic",
+  "attacks": [
+    {
+      "cost": [
+        "Lightning"
+      ],
+      "name": "Tail Generator",
+      "effect": "Choose Basic {L} Energy cards from your discard pile up to the amount of Energy attached to all of your opponent's Pokémon and attach them to your {L} Pokémon in any way you like."
+    },
+    {
+      "cost": [
+        "Lightning",
+        "Colorless"
+      ],
+      "name": "Thunder Shock",
+      "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+      "damage": 30
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fighting",
+      "value": "×2"
+    }
+  ],
+  "retreat": 1,
+  "regulationMark": "J",
+  "legal": {
+    "standard": true,
+    "expanded": true
+  },
+  "updated": "2026-06-26T15:48:19+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.939Z",
+      "unit": "EUR",
+      "idProduct": 877510,
+      "avg": 5.72,
+      "low": 2,
+      "trend": 5.62,
+      "avg1": 5.49,
+      "avg7": 6.12,
+      "avg30": 5.74,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:13.679Z",
+      "holofoil": {
+        "productId": 684413,
+        "lowPrice": 3.5,
+        "midPrice": 5.87,
+        "highPrice": 105.81,
+        "marketPrice": 4.85,
+        "directLowPrice": 5.99
+      }
+    }
+  }
+}

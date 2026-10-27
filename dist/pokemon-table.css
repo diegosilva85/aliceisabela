@@ -26,3 +26,5 @@ body[data-section=pokemon]{background:#25492f;color:#263d30}body[data-section=po
 
 .pk-reveal-count{font-size:clamp(100px,22vh,220px);text-align:center;font-weight:900;color:#7641d1;text-shadow:0 8px 0 #fff;margin:20px auto}
 .pk-totals{text-align:center;color:white;font-weight:700;text-shadow:0 2px 4px #33200c;margin:8px auto 16px}
+
+.pk-art-window{position:absolute;inset:0;overflow:hidden;display:block}.pk-art-crop{position:absolute;max-width:none;object-fit:fill;display:block;pointer-events:none}

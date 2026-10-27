@@ -1,0 +1,130 @@
+{
+  "category": "Pokemon",
+  "id": "sv10.5b-112",
+  "illustrator": "Tomomi Ozaki",
+  "image": "https://assets.tcgdex.net/en/sv/sv10.5b/112",
+  "localId": "112",
+  "name": "Emolga",
+  "rarity": "Illustration rare",
+  "set": {
+    "cardCount": {
+      "official": 86,
+      "total": 172
+    },
+    "id": "sv10.5b",
+    "logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo",
+    "name": "Black Bolt",
+    "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5b/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 836132,
+        "tcgplayer": 642565
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.944Z",
+          "unit": "EUR",
+          "idProduct": 836132,
+          "avg": 14.48,
+          "low": 6,
+          "trend": 13.11,
+          "avg1": 15,
+          "avg7": 13.22,
+          "avg30": 14.26,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:12.373Z",
+          "holofoil": {
+            "productId": 642565,
+            "lowPrice": 5.69,
+            "midPrice": 19.33,
+            "highPrice": 118.02,
+            "marketPrice": 11.26,
+            "directLowPrice": null
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    587
+  ],
+  "hp": 70,
+  "types": [
+    "Lightning"
+  ],
+  "stage": "Basic",
+  "attacks": [
+    {
+      "cost": [
+        "Colorless"
+      ],
+      "name": "Call for Family",
+      "effect": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck."
+    },
+    {
+      "cost": [
+        "Lightning"
+      ],
+      "name": "Static Shock",
+      "damage": 20
+    }
+  ],
+  "retreat": 0,
+  "regulationMark": "I",
+  "legal": {
+    "standard": true,
+    "expanded": true
+  },
+  "updated": "2026-04-14T17:41:47Z",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.944Z",
+      "unit": "EUR",
+      "idProduct": 836132,
+      "avg": 14.48,
+      "low": 6,
+      "trend": 13.11,
+      "avg1": 15,
+      "avg7": 13.22,
+      "avg30": 14.26,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:12.373Z",
+      "holofoil": {
+        "productId": 642565,
+        "lowPrice": 5.69,
+        "midPrice": 19.33,
+        "highPrice": 118.02,
+        "marketPrice": 11.26,
+        "directLowPrice": null
+      }
+    }
+  }
+}

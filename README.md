@@ -226,3 +226,9 @@ Cada nova rodada passa por uma barreira de prontidão: ambos os navegadores deve
 A classificação de uma partida concluída compara primeiro a quantidade de Pokémon vivos e depois a soma da vida restante. Igualdade nos dois critérios resulta em empate. O placar exibe ambos os valores.
 
 Teste de regressão específico: `node tests/pokemon-readiness.cjs`.
+
+### Expansão de nove Pokémon
+
+Catálogo ampliado para 40: Zorua, Nickit e Purrloin (Escuridão); Mew, Jirachi e Espurr (Psíquico); Dedenne, Emolga e Pachirisu (Elétrico). As imagens de cartas oficiais foram obtidas no TCGdex; os originais, metadados e URLs estão preservados em `source-images/pokemon-cards/cute-nine/` e `dist/assets/pokemon-table/sources.json`.
+
+As nove cartas usam enquadramento CSS definido por `artCrop`, sem redesenhar os personagens ou alterar os pixels originais. O recorte oculta os textos e preserva borda e símbolo usados pelo jogo. Nickit usa uma carta comum de Céus em Evolução, pois não foi encontrada uma Full Art dele nas fontes consultadas. A carta selecionada de Jirachi é Metal no TCG; sua categoria no jogo é Psíquico, conforme a seleção aprovada. O catálogo e as regras de sorteio são compartilhados com o servidor, por isso ambos os contêineres precisam ser atualizados.

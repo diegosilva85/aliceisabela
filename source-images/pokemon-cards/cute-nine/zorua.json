@@ -1,0 +1,124 @@
+{
+  "category": "Pokemon",
+  "id": "sv10.5w-142",
+  "illustrator": "Naoki Saito",
+  "image": "https://assets.tcgdex.net/en/sv/sv10.5w/142",
+  "localId": "142",
+  "name": "Zorua",
+  "rarity": "Illustration rare",
+  "set": {
+    "cardCount": {
+      "official": 86,
+      "total": 173
+    },
+    "id": "sv10.5w",
+    "logo": "https://assets.tcgdex.net/en/sv/sv10.5w/logo",
+    "name": "White Flare",
+    "symbol": "https://assets.tcgdex.net/univ/sv/sv10.5w/symbol"
+  },
+  "variants": {
+    "firstEdition": false,
+    "holo": true,
+    "normal": false,
+    "reverse": false,
+    "wPromo": false
+  },
+  "variants_detailed": [
+    {
+      "type": "holo",
+      "size": "standard",
+      "thirdParty": {
+        "cardmarket": 836168,
+        "tcgplayer": 642255
+      },
+      "variantId": "jr7oetx1mqug9",
+      "pricing": {
+        "cardmarket": {
+          "updated": "2026-10-26T22:54:32.927Z",
+          "unit": "EUR",
+          "idProduct": 836168,
+          "avg": 49.86,
+          "low": 20.5,
+          "trend": 16.78,
+          "avg1": 47.99,
+          "avg7": 36.9,
+          "avg30": 46.41,
+          "avg-holo": null,
+          "low-holo": null,
+          "trend-holo": 0,
+          "avg1-holo": null,
+          "avg7-holo": null,
+          "avg30-holo": null
+        },
+        "tcgplayer": {
+          "unit": "USD",
+          "updated": "2026-10-14T22:55:12.595Z",
+          "holofoil": {
+            "productId": 642255,
+            "lowPrice": 37.76,
+            "midPrice": 43.5,
+            "highPrice": 259.62,
+            "marketPrice": 40.62,
+            "directLowPrice": null
+          }
+        }
+      }
+    }
+  ],
+  "dexId": [
+    570
+  ],
+  "hp": 70,
+  "types": [
+    "Darkness"
+  ],
+  "stage": "Basic",
+  "attacks": [
+    {
+      "cost": [
+        "Darkness"
+      ],
+      "name": "Take Down",
+      "effect": "This Pokémon also does 10 damage to itself.",
+      "damage": 30
+    }
+  ],
+  "retreat": 1,
+  "regulationMark": "I",
+  "legal": {
+    "standard": true,
+    "expanded": true
+  },
+  "updated": "2026-04-21T19:45:38+01:00",
+  "pricing": {
+    "cardmarket": {
+      "updated": "2026-10-26T22:54:32.927Z",
+      "unit": "EUR",
+      "idProduct": 836168,
+      "avg": 49.86,
+      "low": 20.5,
+      "trend": 16.78,
+      "avg1": 47.99,
+      "avg7": 36.9,
+      "avg30": 46.41,
+      "avg-holo": null,
+      "low-holo": null,
+      "trend-holo": 0,
+      "avg1-holo": null,
+      "avg7-holo": null,
+      "avg30-holo": null
+    },
+    "tcgplayer": {
+      "unit": "USD",
+      "updated": "2026-10-14T22:55:12.595Z",
+      "holofoil": {
+        "productId": 642255,
+        "lowPrice": 37.76,
+        "midPrice": 43.5,
+        "highPrice": 259.62,
+        "marketPrice": 40.62,
+        "directLowPrice": null
+      }
+    }
+  }
+}

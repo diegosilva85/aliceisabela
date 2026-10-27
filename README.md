@@ -207,7 +207,7 @@ Os efeitos de fogo, água, choque, pancada, folhas, ondas psíquicas e energia n
 
 Manter no Alto agora começa pela escolha de 1 ou 2 pessoas. No online, a fila combina jogadores da mesma dificuldade; cada um escolhe Bluey ou Bingo, sem repetir. Os dois cooperam na mesma sala e compartilham os três estouros. O servidor calcula os movimentos e colisões; o navegador desenha e suaviza as posições recebidas. A sessão encerra quando alguém sai ou fica sem conexão por 15 segundos. A fila e as partidas ficam na memória e não sobrevivem a reinícios.
 
-Pokémon: os doze Pokémon são distribuídos por escolhas alternadas, sem cronômetro na montagem dos times. Só após as doze escolhas começa a batalha. Cada rodada permite cinco segundos de escolha (automática no fim do prazo), espera ambos, mostra 3–2–1, revela as cartas e aplica a sequência visual de ataques. Máximo de sete rodadas; termina antes se um time perder todos. Desempate: mais Pokémon vivos, depois soma da vida restante, depois empate.
+Pokémon: os doze Pokémon são distribuídos por escolhas alternadas, sem cronômetro na montagem dos times. Só após as doze escolhas começa a batalha. Cada rodada permite cinco segundos de escolha (automática no fim do prazo), espera ambos, mostra 3–2–1, revela as cartas e aplica a sequência visual de ataques. Máximo de dez rodadas; termina antes se um time perder todos. Desempate: mais Pokémon vivos, depois soma da vida restante, depois empate.
 
 Atualize ambos os contêineres (o Caddy do host continua atendendo HTTPS):
 
@@ -265,7 +265,7 @@ Nos dois jogos, o padrão é o servidor. Nas salas por convite, a opção desmar
 
 No modo direto, o criador executa a autoridade de jogo e o convidado envia ações pelo canal confiável. `dist/pokemon-session.js` e `dist/keepup-session.js` são os mesmos motores usados pelo Node; não há segunda implementação das regras. Colisões, sorteios, prontidão e pontuação são decididos pelo anfitrião. Ambos veem o modo de conexão. Se o anfitrião fechar a página, a sessão termina; não há migração de autoridade no meio da partida. Não há tráfego de gameplay via HTTP nesse modo, apenas sinalização/presença. Por ser um jogo entre amigos, o anfitrião tem controle sobre seu processo, sem garantia antitrapaça contra um anfitrião modificado.
 
-“Jogar novamente” pede revanche ao outro participante, tanto nas salas quanto no matchmaking. A partida só reinicia quando os dois aceitam; conserva participantes, transporte e convite. Pokémon sorteia doze cartas novas e zera vida/rodadas; Bluey retorna à escolha das personagens. As sete rodadas máximas de Pokémon permanecem.
+“Jogar novamente” pede revanche ao outro participante, tanto nas salas quanto no matchmaking. A partida só reinicia quando os dois aceitam; conserva participantes, transporte e convite. Pokémon sorteia doze cartas novas e zera vida/rodadas; Bluey retorna à escolha das personagens. O limite de Pokémon é de dez rodadas.
 
 Atualização no Pi: `git pull --ff-only` e `sudo docker compose up -d --build jogos matchmaking`. Atualize os dois serviços juntos e recarregue os navegadores. Testes adicionais: `node tests/private-rooms.cjs`, `node tests/online-transport.cjs`, `node tests/pokemon-server.cjs`. As regras são testadas também com os mesmos motores que rodam no navegador anfitrião.
 

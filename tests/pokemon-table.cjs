@@ -12,7 +12,7 @@ for(let run=0;run<150;run++){
   assert.equal(s.phase,'choose');const a=C.available(s,0)[0],b=C.available(s,1)[0],hp=[a.hp,b.hp];
   assert.ok(C.choose(s,0,a.id,now));assert.equal(C.view(s,1).choices[0],true);assert.equal(C.choose(s,0,a.id,now),false);assert.equal(C.choose(s,1,'fake',now),false);assert.ok(C.choose(s,1,b.id,now));
   assert.equal(s.phase,'countdown');assert.equal(a.hp,hp[0]);assert.equal(s.result,null);now=s.deadline;C.tick(s,now,rng);assert.equal(s.phase,'result');assert.equal(a.hp,Math.max(0,hp[0]-C.damage(b.type,a.type)));assert.equal(b.hp,Math.max(0,hp[1]-C.damage(a.type,b.type)));assert.deepEqual(s.result.cards.map(c=>c.hp),hp);
-  assert.equal(C.tick(s,s.deadline-1,rng),false);now=s.deadline;C.tick(s,now,rng);assert.ok(s.round<=7);
+  assert.equal(C.tick(s,s.deadline-1,rng),false);now=s.deadline;C.tick(s,now,rng);assert.ok(s.round<=10);
  }
 }
 // Both attacks land even when the first would knock out its target.
@@ -33,3 +33,6 @@ for(let i=0;i<1000;i++){const pool=C.deal(cards,rng),counts={};for(const c of po
 assert.deepEqual([...extraTypesSeen].sort(),C.types.filter(t=>!['normal','fighting'].includes(t)).sort());assert.equal(JSON.stringify(cards),before);
 assert.throws(()=>C.deal(C.types.map(t=>cards.find(c=>c.type===t))),/duas cartas/);
 console.log('Twelve cards: two fighters, two normals, all other types and one eligible extra in 1000 deals OK');
+
+// With survivors on both sides, rounds 7–9 continue and round 10 ends.
+for(const round of [7,8,9,10]){const match={phase:'result',round,deadline:100,hands:[[{id:'a',hp:50}],[{id:'b',hp:25}]],revision:0};C.tick(match,100);assert.equal(match.phase,round===10?'over':'choose');assert.equal(match.round,round===10?10:round+1);if(round===10)assert.equal(match.winner,0);}

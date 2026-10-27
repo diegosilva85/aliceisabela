@@ -31,7 +31,7 @@ function resolve(s,now){const cards=s.choices.map((id,p)=>s.hands[p].find(c=>c.i
 function choose(s,p,id,now=Date.now()){if(s.phase!=='choose'||s.choices[p]||now>=s.deadline||!available(s,p).some(c=>c.id===id))return false;s.choices[p]=id;s.revision++;if(s.choices.every(Boolean))countdown(s,now);return true;}
 function tick(s,now=Date.now(),rng=Math.random){if(now<s.deadline||s.phase==='over')return false;if(s.phase==='draft')return false;if(s.phase==='countdown'){resolve(s,now);return true;}
  if(s.phase==='choose'){for(let p=0;p<2;p++)if(!s.choices[p]){const a=available(s,p);s.choices[p]=a[Math.floor(rng()*a.length)].id;}countdown(s,now);return true;}
- if(s.phase==='result'){const alive=[available(s,0).length,available(s,1).length];if(!alive[0]||!alive[1]||s.round>=7){s.phase='over';s.winner=winner(s);s.revision++;}else begin(s,now);return true;}return false;}
+ if(s.phase==='result'){const alive=[available(s,0).length,available(s,1).length];if(!alive[0]||!alive[1]||s.round>=10){s.phase='over';s.winner=winner(s);s.revision++;}else begin(s,now);return true;}return false;}
 function view(s,p){return {...s,you:p,choices:s.choices.map((c,i)=>i===p?c:!!c),hands:s.hands.map(h=>h.map(c=>({...c})))};}
 const api={standings,winner,types,strong,weak,CHOOSE_MS,RESULT_MS,shuffle,damage,deal,create,available,draft,choose,tick,view};root.PokemonTableCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window==='undefined'?globalThis:window);

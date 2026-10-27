@@ -147,3 +147,5 @@ Escolha Fácil (novo balão a cada 10 s), Médio (8 s) ou Difícil (6 s), depois
 A física usa passos fixos de 1/120 s, desaceleração, limites laterais e proteção contra rebatidas duplicadas. O tempo pausa em aba oculta. Em dispositivos de toque, solicita tela cheia e orientação horizontal; se o navegador não permitir, usa a área disponível e gira o cenário em retrato. A sala inteira mantém proporção 16:9. PNGs originais são preservados e o jogo carrega cópias WebP menores. Não há música neste jogo ainda.
 
 Retratos oficiais: https://www.bluey.tv/characters/bluey/ e https://www.bluey.tv/characters/bingo/; URLs dos arquivos em `dist/assets/manter-no-alto/sources.json`. Cenário e sprites de ação são imagens geradas para este projeto.
+
+A irmã não escolhida aparece sentada, sorrindo para a tela, à esquerda da saída da sala. As imagens ficam em `dist/assets/manter-no-alto/{bluey,bingo}-sentada-v1.png`, com cópias WebP usadas pelo jogo e prompts em `seated-prompts.txt`.

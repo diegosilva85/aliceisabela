@@ -1,5 +1,22 @@
-const assert=require('node:assert/strict'),C=require('../dist/pokemon-core');
-for(const a of C.types){assert.equal(C.beats[a].length,2);for(const b of C.types)if(a!==b)assert.notEqual(C.beats[a].includes(b),C.beats[b].includes(a));}
-const cards=Array.from({length:10},(_,i)=>({id:String(i),type:C.types[i%5]}));assert.throws(()=>C.create(cards.slice(0,5)));
-for(let trial=0;trial<100;trial++){const s=C.create(cards);for(let i=0;i<5;i++){assert.ok(C.draft(s,s.pool[0].id));assert.equal(C.draft(s,s.pool[0].id),false);assert.ok(C.cpuDraft(s));}assert.equal(s.player.length,5);assert.equal(s.cpu.length,5);assert.equal(s.pool.length,0);for(let i=0;i<5;i++){const chosen=s.cpuChoice;const result=C.play(s,s.player[0].id);assert.equal(result.cpu.id,chosen);assert.equal(C.play(s,s.player[0]?.id),null);if(i<4)assert.ok(C.next(s));}assert.equal(s.phase,'over');assert.equal(new Set(s.used).size,10);assert.equal(s.score[0]+s.score[1],5);assert.equal(C.next(s),false);}
-console.log('Pokémon: balanced type rules, unique draft, precommitted CPU, five rounds, no card reuse OK');
+const assert=require('node:assert/strict'),C=require('../dist/pokemon-core');global.window={};require('../dist/pokemon-data');const cards=window.PokemonTableData.cards;
+let seed=123;const rng=()=>((seed=(1664525*seed+1013904223)>>>0)/4294967296);
+for(const a of C.types)for(const b of C.types)assert.ok([12,25,50].includes(C.damage(a,b)));
+assert.equal(C.damage('fire','grass'),50);assert.equal(C.damage('fire','water'),12);assert.equal(C.damage('normal','dark'),25);assert.equal(C.damage('psychic','dark'),12);
+for(let run=0;run<150;run++){
+ let now=1000;const s=C.create(cards,now,rng),counts={};assert.equal(new Set(s.pool.map(c=>c.id)).size,10);for(const c of s.pool){counts[c.type]=(counts[c.type]||0)+1;assert.ok(counts[c.type]<=2);assert.equal(c.hp,50);}
+ assert.equal(C.draft(s,1,s.pool[0].id,now),false);
+ while(s.phase==='draft'){const turn=s.turn;assert.ok(C.draft(s,turn,s.pool[0].id,now));now+=10;}
+ assert.equal(s.hands[0].length,5);assert.equal(s.hands[1].length,5);
+ while(s.phase!=='over'){
+  assert.equal(s.phase,'choose');const a=C.available(s,0)[0],b=C.available(s,1)[0],hp=[a.hp,b.hp];
+  assert.ok(C.choose(s,0,a.id,now));assert.equal(C.view(s,1).choices[0],true);assert.equal(C.choose(s,0,a.id,now),false);assert.equal(C.choose(s,1,'fake',now),false);assert.ok(C.choose(s,1,b.id,now));
+  assert.equal(s.phase,'result');assert.equal(a.hp,Math.max(0,hp[0]-C.damage(b.type,a.type)));assert.equal(b.hp,Math.max(0,hp[1]-C.damage(a.type,b.type)));assert.deepEqual(s.result.cards.map(c=>c.hp),hp);
+  assert.equal(C.tick(s,s.deadline-1,rng),false);now=s.deadline;C.tick(s,now,rng);assert.ok(s.round<=45);
+ }
+}
+// Both attacks land even when the first would knock out its target.
+const s={phase:'choose',hands:[[{id:'a',type:'normal',hp:12}],[{id:'b',type:'normal',hp:12}]],choices:[null,null],round:1,revision:0,deadline:5000};C.choose(s,0,'a',0);C.choose(s,1,'b',0);assert.deepEqual(s.result.hp,[0,0]);C.tick(s,s.deadline);assert.equal(s.winner,'draw');
+// No-input expiry chooses automatically and still finishes a full game.
+const idle=C.create(cards,0,rng);for(let i=0;i<120&&idle.phase!=='over';i++)C.tick(idle,idle.deadline,rng);assert.equal(idle.phase,'over');
+assert.throws(()=>C.deal(cards.filter(c=>c.type==='water')),/tipos suficientes/);
+console.log('150 matches: balanced deals, persistent HP, simultaneous damage, hidden choices, deadlines and draws OK');

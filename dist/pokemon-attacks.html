@@ -1,7 +1,7 @@
 <!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ataques Pokémon · Alice e Isabela</title>
 <style>*{box-sizing:border-box}body{margin:0;padding:24px;font:16px system-ui;color:#fff;background:#183e35}main{max-width:1100px;margin:auto}a{color:#fff}h1{font-size:clamp(25px,5vw,42px)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}article{background:#285449;padding:16px;border-radius:24px;text-align:center}figure{margin:0;border-radius:18px;background:#ddc3a0 url('assets/pokemon-table/table-v1.webp') center/cover;aspect-ratio:1;overflow:hidden}img{width:100%;height:100%;object-fit:contain}button{font:inherit;border:0;border-radius:24px;padding:12px 20px;cursor:pointer;background:#ffe29a;color:#263e30;font-weight:700}button:focus-visible{outline:3px solid white;outline-offset:3px}p{line-height:1.6}small{display:block;margin:10px}</style>
 <main><a href="index.html">← Voltar aos jogos</a><h1>Experimente os ataques</h1><p>Toque em um botão para ver os quadros em movimento sobre a mesa.</p><div class="grid" id="effects"></div></main>
-<script src="pokemon-attacks-data.js"></script><script src="pokemon-attacks.js"></script><script>
+<script src="pokemon-attacks-data.js?v=2"></script><script src="pokemon-attacks.js"></script><script>
 const stops=new Map();
 for(const [type,a] of Object.entries(PokemonAttacksData)){
  const card=document.createElement('article');card.innerHTML='<h2>'+a.name+'</h2><figure><img src="'+a.frames[0]+'" alt="'+a.name+'"></figure><small>'+a.frames.length+' quadros</small><button>Reproduzir '+a.name.toLowerCase()+'</button>';

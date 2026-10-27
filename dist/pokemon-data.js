@@ -1,5 +1,5 @@
 window.PokemonTableData={
-  "rulesConfirmed": false,
+  "rulesConfirmed": true,
   "types": {
     "fire": {
       "name": "Fogo",

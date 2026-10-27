@@ -173,3 +173,31 @@ Charmander e Bulbasaur receberam novos recortes oficiais. Adicionados Riolu, Luc
 ### Efeitos de ataques
 
 `dist/pokemon-attacks.html` permite testar os efeitos transparentes. Fogo, Água, Elétrico e Lutador: 3 quadros cada; Planta: 6. Arquivos em `dist/assets/pokemon-table/attacks`, fontes e descrição dos prompts em `source-images/pokemon-attacks`. O reprodutor `PokemonAttacks.play(img, tipo)` retorna função de cancelamento e aguarda o carregamento dos quadros. São animações prontas para integração às rodadas; as regras das partidas continuam pendentes. Greninja agora usa a Full Art GX de Luz Proibida 120/131, aparência normal e tipo Água.
+
+## Batalha Pokémon: solo e online
+
+A coleção agora abre partidas. São sorteadas dez cartas únicas, com no máximo duas de cada tipo. Os jogadores alternam a escolha das cinco cartas. Há 5 segundos por escolha (também na montagem do time); ao expirar, uma carta válida é escolhida automaticamente. Cada Pokémon começa com 50 HP, mantidos entre rodadas. Os danos são simultâneos na regra, apresentados em sequência na tela: 50 super efetivo, 25 neutro/efetivo e 12 resistido/não efetivo. A tabela simplificada de oito tipos está em “Como jogar”. Normal não tem vantagens especiais. Cartas a zero HP são retiradas; vence quem mantiver Pokémon vivos depois de derrotar todos os adversários. Se os últimos caírem juntos, há empate. O efeito Normal reutiliza o golpe de caratê.
+
+**Atualizar no Raspberry Pi (Caddy do host continua atendendo 80/443):**
+
+```bash
+cd ~/aliceisabela/aliceisabela
+git pull --ff-only
+sudo docker compose up -d --build jogos matchmaking
+sudo docker compose ps
+```
+
+O novo serviço `matchmaking` usa Node.js 22 sem dependências externas, porta 3000 apenas dentro da rede Docker. O Nginx encaminha `/api/pokemon/`; não é preciso abrir outra porta no roteador nem alterar o Caddy. Duas pessoas acessam o mesmo site e escolhem “2 pessoas · online”. A fila é global e emparelha por ordem de chegada, sem salas privadas. O estado fica em memória: reiniciar o serviço encerra partidas. Após 30 segundos sem comunicação, o oponente vence por desconexão. Atualizar a página ou sair encerra a sessão; não há recuperação após recarregar. Os tokens de sessão não são exibidos nem compartilhados entre abas. Escolhas não são reveladas ao oponente antes da resolução. O servidor valida turnos, prazos, cartas e danos. Limite inicial: 200 sessões, adequado ao uso familiar. CPU e modo solo funcionam no navegador sem o servidor de matchmaking.
+
+**Desenvolvimento local com multiplayer:**
+
+```bash
+SERVE_STATIC=1 PORT=8766 node server/server.cjs
+# http://localhost:8766 — abra duas abas e selecione o modo online
+node tests/pokemon-table.cjs
+node tests/pokemon-server.cjs
+node tests/pokemon-attacks.cjs
+node tests/pokemon-assets.cjs
+```
+
+Os efeitos de fogo, água, choque, pancada, folhas, ondas psíquicas e energia noturna acompanham os ataques. Sons são sintetizados localmente com Web Audio e têm botão de silenciar. A versão nova do fogo mantém a chama fixa e altera seu interior. Fontes e prompts estão em `source-images/pokemon-attacks/README.md`.

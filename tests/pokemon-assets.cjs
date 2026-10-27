@@ -6,4 +6,4 @@ console.log('Pokémon: all 27 cards, local art, official icons and original comp
 
 for(const id of ['riolu','lucario','lugia','ho-oh','lapras','psyduck','gengar','zeraora','sprigatito','quaxly','fuecoco','piplup','torchic','snivy'])assert.ok(d.cards.some(c=>c.id===id),id);
 for(const id of ['charmander','bulbasaur'])assert.equal(d.cards.find(c=>c.id===id).art,id+'-art-v2.webp');
-for(const id of ['psyduck','riolu','sprigatito'])assert.equal(d.cards.find(c=>c.id===id).art,id+'-art-v2.webp');
+for(const id of ['psyduck','riolu','sprigatito'])assert.equal(d.cards.find(c=>c.id===id).art,id+'-art-v3.webp');

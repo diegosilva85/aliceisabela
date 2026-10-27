@@ -9,5 +9,7 @@ body[data-section=pokemon]{background:#25492f;color:#263d30}body[data-section=po
 .pk-art[alt="Zeraora"]{object-position:left center}
 .pk-art[alt="Gengar"]{object-position:right center}
 
-/* Full illustration windows: preserve the entire Pokémon in these three cards. */
-.pk-art:is([alt="Psyduck"],[alt="Riolu"],[alt="Sprigatito"]){object-fit:contain;object-position:center;background:linear-gradient(145deg,#e8f2dc,#b9d9c7)}
+
+.pk-art:is([alt="Psyduck"],[alt="Riolu"],[alt="Sprigatito"]){object-fit:cover;object-position:center}
+
+.pk-art:is([alt="Psyduck"],[alt="Riolu"],[alt="Sprigatito"]){object-fit:cover;object-position:center}

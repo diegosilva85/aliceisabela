@@ -118,12 +118,13 @@
   },
   {
     "pokemon": "riolu",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV01/SV01_EN_112.png",
-    "original": "source-images/pokemon-cards/expansion/riolu-v2.png",
-    "derivative": "riolu-art-v2.webp",
-    "crop": "205x127+20+35",
-    "editing": "Complete illustration window crop; contain framing preserves the whole Pokemon without AI reconstruction",
-    "symbol": "Official printed type symbol"
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV01/SV01_EN_215.png",
+    "original": "source-images/pokemon-cards/expansion/riolu-v3.png",
+    "derivative": "riolu-art-v3.webp",
+    "crop": "140x170+50+30",
+    "editing": "Portrait cover crop of full-art official card; no generated reconstruction",
+    "symbol": "Official printed type symbol",
+    "rarity": "Illustration Rare"
   },
   {
     "pokemon": "lucario",
@@ -163,12 +164,13 @@
   },
   {
     "pokemon": "psyduck",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_54.png",
-    "original": "source-images/pokemon-cards/expansion/psyduck-v2.png",
-    "derivative": "psyduck-art-v2.webp",
-    "crop": "205x127+20+35",
-    "editing": "Complete illustration window crop; contain framing preserves the whole Pokemon without AI reconstruction",
-    "symbol": "Official printed type symbol"
+    "source": "https://images.scrydex.com/pokemon/me2pt5-226/medium",
+    "original": "source-images/pokemon-cards/expansion/psyduck-v3.png",
+    "derivative": "psyduck-art-v3.webp",
+    "crop": "200x178+105+98",
+    "editing": "Portrait cover crop of full-art official card; no generated reconstruction",
+    "symbol": "Official printed type symbol",
+    "rarity": "Illustration Rare"
   },
   {
     "pokemon": "gengar",
@@ -190,12 +192,13 @@
   },
   {
     "pokemon": "sprigatito",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV02/SV02_EN_12.png",
-    "original": "source-images/pokemon-cards/expansion/sprigatito-v2.png",
-    "derivative": "sprigatito-art-v2.webp",
-    "crop": "205x127+20+35",
-    "editing": "Complete illustration window crop; contain framing preserves the whole Pokemon without AI reconstruction",
-    "symbol": "Official printed type symbol"
+    "source": "https://images.scrydex.com/pokemon/mep-61/medium",
+    "original": "source-images/pokemon-cards/expansion/sprigatito-v3.png",
+    "derivative": "sprigatito-art-v3.webp",
+    "crop": "180x252+100+65",
+    "editing": "Portrait cover crop of full-art official card; no generated reconstruction",
+    "symbol": "Official printed type symbol",
+    "rarity": "Full Art Promo"
   },
   {
     "pokemon": "quaxly",

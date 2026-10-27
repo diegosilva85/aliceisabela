@@ -7,7 +7,18 @@ const weak={fire:['fire','water'],water:['water','grass'],grass:['fire','grass',
 const CHOOSE_MS=5000,RESULT_MS=7200;
 function shuffle(a,rng=Math.random){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function damage(a,b){if(!types.includes(a)||!types.includes(b))throw Error('Tipo desconhecido');return strong[a].includes(b)?50:weak[a].includes(b)?12:25;}
-function deal(cards,rng=Math.random){const counts={},pool=[];if(new Set(cards.map(c=>c.id)).size!==cards.length)throw Error('Cartas duplicadas');for(const c of shuffle(cards,rng)){if(!types.includes(c.type))throw Error('Tipo desconhecido');if((counts[c.type]||0)>=2)continue;counts[c.type]=(counts[c.type]||0)+1;pool.push({...c,hp:50});if(pool.length===10)return pool;}throw Error('Não há tipos suficientes para dez cartas com limite de duas por tipo');}
+function deal(cards,rng=Math.random){
+ if(new Set(cards.map(c=>c.id)).size!==cards.length)throw Error('Cartas duplicadas');
+ const groups=Object.fromEntries(types.map(t=>[t,[]]));
+ for(const c of cards){if(!types.includes(c.type))throw Error('Tipo desconhecido');groups[c.type].push(c);}
+ if(types.some(t=>!groups[t].length))throw Error('Não há tipos suficientes: é necessária uma carta de cada tipo');
+ const pool=types.map(t=>{const group=groups[t];return group.splice(Math.floor(rng()*group.length),1)[0];});
+ const extraTypes=types.filter(t=>t!=='fighting'&&t!=='normal'&&groups[t].length);
+ if(!extraTypes.length)throw Error('Não há carta extra disponível fora de Lutador e Normal');
+ const extraType=extraTypes[Math.floor(rng()*extraTypes.length)],extraGroup=groups[extraType];
+ pool.push(extraGroup[Math.floor(rng()*extraGroup.length)]);
+ return shuffle(pool,rng).map(c=>({...c,hp:50}));
+}
 function create(cards,now=Date.now(),rng=Math.random){return {phase:'draft',pool:deal(cards,rng),hands:[[],[]],turn:0,picks:0,round:0,choices:[null,null],deadline:null,result:null,winner:null,revision:0};}
 function available(s,p){return s.hands[p].filter(c=>c.hp>0);}
 function standings(s){return s.hands.map(h=>({alive:h.filter(c=>c.hp>0).length,hp:h.reduce((n,c)=>n+Math.max(0,c.hp),0)}));}

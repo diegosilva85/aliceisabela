@@ -176,7 +176,7 @@ Charmander e Bulbasaur receberam novos recortes oficiais. Adicionados Riolu, Luc
 
 ## Batalha Pokémon: solo e online
 
-A coleção agora abre partidas. São sorteadas dez cartas únicas, com no máximo duas de cada tipo. Os jogadores alternam a escolha das cinco cartas. Há 5 segundos por escolha (também na montagem do time); ao expirar, uma carta válida é escolhida automaticamente. Cada Pokémon começa com 50 HP, mantidos entre rodadas. Os danos são simultâneos na regra, apresentados em sequência na tela: 50 super efetivo, 25 neutro/efetivo e 12 resistido/não efetivo. A tabela simplificada de oito tipos está em “Como jogar”. Normal não tem vantagens especiais. Cartas a zero HP são retiradas; vence quem mantiver Pokémon vivos depois de derrotar todos os adversários. Se os últimos caírem juntos, há empate. O efeito Normal reutiliza o golpe de caratê.
+A coleção agora abre partidas. São sorteadas dez cartas únicas: uma de cada um dos nove tipos e uma extra, cujo tipo é sorteado entre os sete restantes, excluindo Lutador e Normal. Os jogadores alternam a escolha das cinco cartas. Há 5 segundos por escolha (também na montagem do time); ao expirar, uma carta válida é escolhida automaticamente. Cada Pokémon começa com 50 HP, mantidos entre rodadas. Os danos são simultâneos na regra, apresentados em sequência na tela: 50 super efetivo, 25 neutro/efetivo e 12 resistido/não efetivo. A tabela simplificada de oito tipos está em “Como jogar”. Normal não tem vantagens especiais. Cartas a zero HP são retiradas; vence quem mantiver Pokémon vivos depois de derrotar todos os adversários. Se os últimos caírem juntos, há empate. O efeito Normal reutiliza o golpe de caratê.
 
 **Atualizar no Raspberry Pi (Caddy do host continua atendendo 80/443):**
 
@@ -242,3 +242,5 @@ Durante a escolha de cada rodada, a mão adversária mostra apenas versos do Pok
 A coleção tem 53 cartas. Entraram Scizor, Scyther, Onix, Steelix, Togedemaru, Mawile, Tinkaton, Corviknight, Metagross, Solgaleo, Raikou, Entei e Suicune. As artes originais e metadados ficam em `source-images/pokemon-cards/steel-legends`; os recortes são janelas CSS, com fontes registradas no catálogo. Scyther usa uma Shiny Rare, não Full Art. Mawile e Tinkaton ficam em Aço pelo tipo secundário, apesar das cartas selecionadas serem Psíquico.
 
 Na tabela simplificada do jogo, Aço vence Psíquico (que também agrupa Fada) e perde para Fogo e Lutador. Seus ataques causam 12 contra Fogo, Água, Elétrico e Aço; recebe 12 de Planta, Psíquico e Normal. As demais relações permanecem iguais. O símbolo é a energia Metal da carta oficial de Scizor, exibido por CSS. O ataque usa três cortes metálicos animados em CSS com som sintetizado localmente.
+
+O sorteio do pool garante os nove tipos em partidas locais e online. O tipo da décima carta é sorteado com chances iguais entre os tipos elegíveis com outra carta disponível; depois sorteia-se o Pokémon desse tipo. A ordem das dez cartas é embaralhada.

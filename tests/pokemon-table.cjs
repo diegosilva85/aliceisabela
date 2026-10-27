@@ -4,6 +4,7 @@ for(const a of C.types)for(const b of C.types)assert.ok([12,25,50].includes(C.da
 assert.equal(C.damage('fire','grass'),50);assert.equal(C.damage('fire','water'),12);assert.equal(C.damage('normal','dark'),25);assert.equal(C.damage('psychic','dark'),12);
 for(let run=0;run<150;run++){
  let now=1000;const s=C.create(cards,now,rng),counts={};assert.equal(new Set(s.pool.map(c=>c.id)).size,10);for(const c of s.pool){counts[c.type]=(counts[c.type]||0)+1;assert.ok(counts[c.type]<=2);assert.equal(c.hp,50);}
+ for(const t of C.types)assert.ok(counts[t]>=1,t);assert.equal(counts.fighting,1);assert.equal(counts.normal,1);assert.equal(Object.values(counts).filter(n=>n===2).length,1);
  assert.equal(C.draft(s,1,s.pool[0].id,now),false);
  while(s.phase==='draft'){const turn=s.turn;assert.ok(C.draft(s,turn,s.pool[0].id,now));now+=10;}
  assert.equal(s.hands[0].length,5);assert.equal(s.hands[1].length,5);
@@ -25,3 +26,10 @@ assert.equal(C.winner({hands:[[{hp:12}],[{hp:13}]]}),1);
 assert.equal(C.winner({hands:[[{hp:12},{hp:0}],[{hp:12}]]}),'draw');
 
 assert.equal(C.damage('fire','steel'),50);assert.equal(C.damage('fighting','steel'),50);assert.equal(C.damage('steel','psychic'),50);assert.equal(C.damage('normal','steel'),12);
+
+// Every eligible type can supply the tenth card, and the source catalog stays intact.
+const before=JSON.stringify(cards),extraTypesSeen=new Set();
+for(let i=0;i<1000;i++){const pool=C.deal(cards,rng),counts={};for(const c of pool)counts[c.type]=(counts[c.type]||0)+1;for(const t of C.types){assert.ok(counts[t]>=1);if(counts[t]===2)extraTypesSeen.add(t);}assert.equal(counts.fighting,1);assert.equal(counts.normal,1);assert.equal(new Set(pool.map(c=>c.id)).size,10);}
+assert.deepEqual([...extraTypesSeen].sort(),C.types.filter(t=>!['normal','fighting'].includes(t)).sort());assert.equal(JSON.stringify(cards),before);
+assert.throws(()=>C.deal(C.types.map(t=>cards.find(c=>c.type===t))),/carta extra/);
+console.log('Nine guaranteed types plus eligible tenth card: 1000 deals OK');

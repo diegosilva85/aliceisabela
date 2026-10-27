@@ -149,3 +149,11 @@ A física usa passos fixos de 1/120 s, desaceleração, limites laterais e prote
 Retratos oficiais: https://www.bluey.tv/characters/bluey/ e https://www.bluey.tv/characters/bingo/; URLs dos arquivos em `dist/assets/manter-no-alto/sources.json`. Cenário e sprites de ação são imagens geradas para este projeto.
 
 A irmã não escolhida aparece sentada, sorrindo para a tela, à esquerda da saída da sala. As imagens ficam em `dist/assets/manter-no-alto/{bluey,bingo}-sentada-v2.png`, com cópias WebP usadas pelo jogo e prompts em `seated-v2-prompts.json`.
+
+## Pokémon — primeira etapa
+
+Novo botão na tela inicial e prévia interativa das cinco primeiras cartas sobre uma mesa redonda na grama, à sombra de uma árvore. Pikachu, Eevee, Charmander, Squirtle e Bulbasaur usam artes derivadas de cartas Ilustração Rara obtidas no servidor oficial da Pokémon. Quatro foram editadas com image_gen para retirar textos; Squirtle usa um recorte da arte original após falha da ferramenta de edição. Símbolos oficiais recortados das próprias cartas, bordas coloridas por tipo. Fontes e limitações em `dist/pokemon-sources.html` e `dist/assets/pokemon-table/sources.json`. Prompts em `dist/assets/pokemon-table/prompts.txt`. Originais preservados em `source-images/pokemon-cards/`.
+
+Funciona: abrir a coleção, ampliar cada carta, fechar com botão/Escape, retornar ao início, layout responsivo. A partida completa permanece desativada: só foram solicitados cinco dos dez Pokémon, e a regra exata de vantagens ainda não foi definida. Nenhuma carta foi duplicada para simular dez Pokémon.
+
+Estrutura já implementada em `pokemon-core.js` e `pokemon-table.js`: escolhas alternadas até cinco por lado, compromisso prévio da escolha do computador, cartas usadas uma vez, cinco rodadas, placar, resultado e reinício. Tabela experimental equilibrada entre cinco tipos (dois confrontos favoráveis e dois desfavoráveis), com sorteio em tipo igual, ainda não ativada: `rulesConfirmed:false`. A interface de combate exige dez registros e regras confirmadas. `node tests/pokemon-table.cjs` valida 100 partidas simuladas, alternância, exclusividade das cartas, compromisso da máquina e pontuação.

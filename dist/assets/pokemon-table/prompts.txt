@@ -1,0 +1,4 @@
+Built-in image_gen.
+Background: Strict overhead view of a large round wooden table on grass in the shade of a tree, dappled light, empty table, no cards or characters, 16:9.
+Card edits: Preserve supplied official illustration and all characters, poses and composition. Remove only all printed card interface text, symbols, rules and frame. Reconstruct background behind text; full bleed portrait 5:7, no new text or symbols. References in source-images/pokemon-cards.
+Squirtle: image generation failed twice; used an unmodified-art crop of the official card instead.

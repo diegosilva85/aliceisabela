@@ -1,0 +1,47 @@
+[
+  {
+    "pokemon": "pikachu",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_173.png",
+    "rarity": "Illustration Rare",
+    "original": "source-images/pokemon-cards/pikachu.png",
+    "derivative": "pikachu-art-v1.webp",
+    "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
+    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
+  },
+  {
+    "pokemon": "eevee",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV06/SV06_EN_188.png",
+    "rarity": "Illustration Rare",
+    "original": "source-images/pokemon-cards/eevee.png",
+    "derivative": "eevee-art-v1.webp",
+    "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
+    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
+  },
+  {
+    "pokemon": "charmander",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_168.png",
+    "rarity": "Illustration Rare",
+    "original": "source-images/pokemon-cards/charmander.png",
+    "derivative": "charmander-art-v1.webp",
+    "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
+    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
+  },
+  {
+    "pokemon": "squirtle",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_170.png",
+    "rarity": "Illustration Rare",
+    "original": "source-images/pokemon-cards/squirtle.png",
+    "derivative": "squirtle-art-v1.webp",
+    "editing": "Original art crop, no generated reconstruction",
+    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
+  },
+  {
+    "pokemon": "bulbasaur",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_166.png",
+    "rarity": "Illustration Rare",
+    "original": "source-images/pokemon-cards/bulbasaur.png",
+    "derivative": "bulbasaur-art-v1.webp",
+    "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
+    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
+  }
+]

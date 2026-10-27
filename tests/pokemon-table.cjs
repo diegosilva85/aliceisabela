@@ -1,0 +1,5 @@
+const assert=require('node:assert/strict'),C=require('../dist/pokemon-core');
+for(const a of C.types){assert.equal(C.beats[a].length,2);for(const b of C.types)if(a!==b)assert.notEqual(C.beats[a].includes(b),C.beats[b].includes(a));}
+const cards=Array.from({length:10},(_,i)=>({id:String(i),type:C.types[i%5]}));assert.throws(()=>C.create(cards.slice(0,5)));
+for(let trial=0;trial<100;trial++){const s=C.create(cards);for(let i=0;i<5;i++){assert.ok(C.draft(s,s.pool[0].id));assert.equal(C.draft(s,s.pool[0].id),false);assert.ok(C.cpuDraft(s));}assert.equal(s.player.length,5);assert.equal(s.cpu.length,5);assert.equal(s.pool.length,0);for(let i=0;i<5;i++){const chosen=s.cpuChoice;const result=C.play(s,s.player[0].id);assert.equal(result.cpu.id,chosen);assert.equal(C.play(s,s.player[0]?.id),null);if(i<4)assert.ok(C.next(s));}assert.equal(s.phase,'over');assert.equal(new Set(s.used).size,10);assert.equal(s.score[0]+s.score[1],5);assert.equal(C.next(s),false);}
+console.log('Pokémon: balanced type rules, unique draft, precommitted CPU, five rounds, no card reuse OK');

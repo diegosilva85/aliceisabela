@@ -1,0 +1,31 @@
+(()=>{
+const base='assets/pokemon-table/',D=PokemonTableData,C=PokemonTableCore;
+let state=null,timer=0;
+function stop(){clearTimeout(timer);state=null;}
+function card(c,action='',small=false){const t=D.types[c.type];return '<button class="pk-card '+(small?'pk-small':'')+'" style="--type:'+t.color+'" '+(action?'data-'+action+'="'+c.id+'"':'disabled')+' aria-label="'+c.name+', tipo '+t.name+'"><img class="pk-art" src="'+base+c.id+'-art-v1.webp" alt="'+c.name+'" draggable="false"><img class="pk-type" src="'+base+c.type+'-official.png" alt="'+t.name+'"></button>';}
+function open(){stop();document.body.dataset.section='pokemon';render();window.scrollTo(0,0);}
+function rules(){return '<details class="pk-rules"><summary>Como será a partida?</summary><p>Dez Pokémon diferentes ficam na mesa. Você escolhe um, o computador escolhe outro, até cada um ter cinco cartas. Depois, cada carta é usada uma única vez em cinco rodadas.</p><p>A regra de vantagens e desempate está em preparação. Este é um minijogo próprio, não as regras do Pokémon Estampas Ilustradas.</p><a href="pokemon-sources.html" target="_blank" rel="noopener">Ver cartas originais e fontes ↗</a></details>';}
+function render(){
+ const ready=D.cards.length>=10&&D.rulesConfirmed;
+ let title='Uma mesa, muitas aventuras',hint='Conheça as primeiras cartas. Toque em uma para ver de perto.',content='';
+ if(!state){content='<div class="pk-gallery">'+D.cards.map(c=>card(c,'preview')).join('')+'</div><div class="pk-caption">'+D.cards.length+' Pokémon preparados · coleção inicial</div><button class="pk-primary" id="pk-start" '+(ready?'':'disabled')+'>'+(ready?'Escolher minhas cartas':'Partida completa em preparação')+'</button><p class="pk-status">'+(ready?'Escolha cinco cartas e enfrente o computador.':'Faltam cinco Pokémon e a definição das vantagens para abrir a partida de 10 cartas.')+'</p>';}
+ else if(state.phase==='draft'){title='Escolha seu time';hint=state.turn==='player'?'Sua vez! Escolha uma carta da mesa.':'O computador está escolhendo…';content='<div class="pk-teams"><div>Você · '+state.player.length+'/5<div class="pk-hand">'+state.player.map(c=>card(c,'',true)).join('')+'</div></div><div>Computador · '+state.cpu.length+'/5<div class="pk-hand">'+state.cpu.map(c=>card(c,'',true)).join('')+'</div></div></div><div class="pk-gallery">'+state.pool.map(c=>card(c,state.turn==='player'?'draft':'')).join('')+'</div>';}
+ else {const r=state.rounds.at(-1);title=state.phase==='over'?(state.score[0]>state.score[1]?'Você venceu!':'O computador venceu!'):'Rodada '+Math.min(5,state.rounds.length+(state.phase==='battle'?1:0))+' de 5';hint=state.phase==='battle'?'O computador já escolheu a carta dele. Escolha a sua!':r.tie?'Tipos iguais: sorteio de desempate.':D.types[r.player.type].name+' × '+D.types[r.cpu.type].name;
+ content='<div class="pk-score">Você <b>'+state.score[0]+' × '+state.score[1]+'</b> Computador</div>';
+ if(state.phase==='battle')content+='<div class="pk-mystery">?</div><div class="pk-gallery">'+state.player.map(c=>card(c,'play')).join('')+'</div>';
+ else content+='<div class="pk-duel"><div><span>Você</span>'+card(r.player)+'</div><b>×</b><div><span>Computador</span>'+card(r.cpu)+'</div></div><p class="pk-result">'+(r.winner==='player'?'Você ganhou a rodada!':'Ponto do computador!')+'</p><button class="pk-primary" id="'+(state.phase==='over'?'pk-restart':'pk-next')+'">'+(state.phase==='over'?'Jogar novamente':'Próxima rodada')+'</button>';
+ }
+ app.innerHTML='<section class="pk-page"><div class="pk-top"><button id="pk-home">← Jogos</button><span>POKÉMON · BATALHA DE CARTAS</span>'+(state?'<button id="pk-reset">← Coleção</button>':'<span class="pk-chip">Primeira coleção</span>')+'</div><div class="pk-intro"><p>UM DESAFIO À SOMBRA DA ÁRVORE</p><h1>'+title+'</h1><p role="status">'+hint+'</p></div><div class="pk-table">'+content+'</div>'+rules()+'</section>';
+ app.querySelector('#pk-home').onclick=home;
+ app.querySelector('#pk-reset')?.addEventListener('click',open);
+ app.querySelector('#pk-start')?.addEventListener('click',()=>{if(ready){state=C.create(D.cards);render();}});
+ app.querySelectorAll('[data-preview]').forEach(b=>b.onclick=()=>preview(b.dataset.preview));
+ app.querySelectorAll('[data-draft]').forEach(b=>b.onclick=()=>{if(!C.draft(state,b.dataset.draft))return;render();timer=setTimeout(()=>{if(!state)return;C.cpuDraft(state);render();},650);});
+ app.querySelectorAll('[data-play]').forEach(b=>b.onclick=()=>{if(C.play(state,b.dataset.play))render();});
+ app.querySelector('#pk-next')?.addEventListener('click',()=>{C.next(state);render();});
+ app.querySelector('#pk-restart')?.addEventListener('click',()=>{state=C.create(D.cards);render();});
+}
+function preview(id){const c=D.cards.find(c=>c.id===id),dialog=document.createElement('dialog');dialog.className='pk-preview';dialog.innerHTML='<button class="pk-close" autofocus aria-label="Fechar carta">×</button>'+card(c)+'<h2>'+c.name+'</h2><p>'+D.types[c.type].name+' · '+c.set+' · '+c.number+'</p><small>Ilustração oficial adaptada para retirar os textos.</small>';app.append(dialog);dialog.querySelector('.pk-close').onclick=()=>dialog.close();dialog.onclose=()=>{dialog.remove();app.querySelector('[data-preview="'+id+'"]')?.focus();};dialog.onclick=e=>{if(e.target===dialog)dialog.close();};dialog.showModal();}
+const oldHome=home;home=function(){stop();oldHome();const cards=app.querySelector('.game-cards');if(!cards)return;cards.insertAdjacentHTML('beforeend','<button class="game-card pk-portal" id="pk-open"><div class="game-cover pk-cover"><img src="'+base+'table-v1.webp" alt="Mesa redonda na grama"><div class="pk-cover-cards">'+['charmander','pikachu','squirtle'].map(n=>'<img src="'+base+n+'-art-v1.webp" alt="'+n+'">').join('')+'</div><span class="cover-badge">✦ BATALHA DE CARTAS</span></div><div class="game-card-copy"><small>ESCOLHA SEU TIME</small><h2>Pokémon <span>↗</span></h2><p>Uma coleção de amigos e um desafio na mesa.</p></div></button>');app.querySelector('#pk-open').onclick=open;};
+const oldCatalog=showCatalog;showCatalog=function(){stop();oldCatalog();};home();
+})();

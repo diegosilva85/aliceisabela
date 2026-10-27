@@ -33,3 +33,12 @@ body[data-section=pokemon]{background:#25492f;color:#263d30}body[data-section=po
 .pk-card-back img{display:block;width:100%;height:100%;object-fit:fill}
 .pk-defeat-psyduck{display:block;width:clamp(130px,28vh,230px);height:auto;object-fit:contain;margin:0 auto}
 @media(max-height:550px) and (orientation:landscape){.pk-live .pk-opponent-row{display:flex;gap:5px;margin:4px auto}.pk-live .pk-opponent-row .pk-card-back{width:32px}.pk-defeat-psyduck{width:120px}}
+.pk-type-dialog{border:0;border-radius:24px;background:#fff9e9;color:#243d30;width:min(480px,90vw);max-height:88dvh;padding:24px;box-sizing:border-box;overflow:auto}
+.pk-type-dialog::backdrop{background:#102a32aa;backdrop-filter:blur(4px)}
+.pk-type-dialog h2{margin:0 40px 12px 0}.pk-type-dialog p,.pk-type-dialog small{font-size:13px;line-height:1.5}
+.pk-type-dialog .pk-close{position:absolute;right:10px;top:10px;padding:5px 12px;font-size:24px}
+.pk-type-chart table{border-collapse:collapse;margin:12px auto;width:100%;max-width:440px;text-align:center;background:#fff9e9;color:#243d30;border-radius:12px;overflow:hidden}
+.pk-type-chart th,.pk-type-chart td{padding:7px 12px;border-bottom:1px solid #30463122}
+.pk-type-chart thead{background:#e3edd6}.pk-type-chart img{width:30px;height:30px;vertical-align:middle;margin:0 4px}
+@media(max-width:600px){.pk-top{gap:5px;flex-wrap:wrap}.pk-top>div{display:flex;gap:5px}.pk-page .pk-top button{padding:8px 12px;font-size:12px}.pk-type-dialog{padding:18px}.pk-type-chart th,.pk-type-chart td{padding:4px 8px}}
+.pk-type-chart img{border-radius:50%}

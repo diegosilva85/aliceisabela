@@ -139,3 +139,11 @@ for teste in tests/*.cjs; do node "$teste" || exit 1; done
 ```
 
 O Pet Shop alterna gato e cachorro e guarda a última escolha no navegador. Dálmata e shih-tzu estão jogáveis e têm chances iguais nas rodadas de cachorro, com banho, biscoito, corte das unhas e acessórios.
+
+## Manter no Alto
+
+Escolha Fácil (novo balão a cada 10 s), Médio (8 s) ou Difícil (6 s), depois Bluey ou Bingo. Um balão começa no topo; cores e posições são sorteadas. Segure ←/→ ou A/D no computador, ou as setas translúcidas na tela. As duas poses se alternam durante a corrida e são espelhadas para a esquerda. O ponto de contato e a velocidade horizontal influenciam a rebatida. A rodada termina quando qualquer balão toca o chão, com opção de repetir ou trocar de personagem.
+
+A física usa passos fixos de 1/120 s, desaceleração, limites laterais e proteção contra rebatidas duplicadas. O tempo pausa em aba oculta. Em dispositivos de toque, solicita tela cheia e orientação horizontal; se o navegador não permitir, usa a área disponível e gira o cenário em retrato. A sala inteira mantém proporção 16:9. PNGs originais são preservados e o jogo carrega cópias WebP menores. Não há música neste jogo ainda.
+
+Retratos oficiais: https://www.bluey.tv/characters/bluey/ e https://www.bluey.tv/characters/bingo/; URLs dos arquivos em `dist/assets/manter-no-alto/sources.json`. Cenário e sprites de ação são imagens geradas para este projeto.

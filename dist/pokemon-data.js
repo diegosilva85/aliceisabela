@@ -148,9 +148,9 @@ window.PokemonTableData={
       "name": "Riolu",
       "type": "fighting",
       "set": "Escarlate e Violeta",
-      "number": "215/198",
-      "art": "riolu-art-v1.webp",
-      "original": "originals/riolu-solo.png"
+      "number": "112/198",
+      "art": "riolu-art-v2.webp",
+      "original": "originals/riolu-solo-v2.png"
     },
     {
       "id": "lucario",
@@ -193,9 +193,9 @@ window.PokemonTableData={
       "name": "Psyduck",
       "type": "water",
       "set": "151",
-      "number": "175/165",
-      "art": "psyduck-art-v1.webp",
-      "original": "originals/psyduck-solo.png"
+      "number": "54/165",
+      "art": "psyduck-art-v2.webp",
+      "original": "originals/psyduck-solo-v2.png"
     },
     {
       "id": "gengar",
@@ -220,9 +220,9 @@ window.PokemonTableData={
       "name": "Sprigatito",
       "type": "grass",
       "set": "Evoluções em Paldea",
-      "number": "196/193",
-      "art": "sprigatito-art-v1.webp",
-      "original": "originals/sprigatito-solo.png"
+      "number": "12/193",
+      "art": "sprigatito-art-v2.webp",
+      "original": "originals/sprigatito-solo-v2.png"
     },
     {
       "id": "quaxly",

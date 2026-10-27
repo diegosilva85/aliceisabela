@@ -118,11 +118,11 @@
   },
   {
     "pokemon": "riolu",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV01/SV01_EN_215.png",
-    "original": "source-images/pokemon-cards/expansion/riolu.png",
-    "derivative": "riolu-art-v1.webp",
-    "crop": "220x163+12+30",
-    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV01/SV01_EN_112.png",
+    "original": "source-images/pokemon-cards/expansion/riolu-v2.png",
+    "derivative": "riolu-art-v2.webp",
+    "crop": "205x127+20+35",
+    "editing": "Complete illustration window crop; contain framing preserves the whole Pokemon without AI reconstruction",
     "symbol": "Official printed type symbol"
   },
   {
@@ -163,11 +163,11 @@
   },
   {
     "pokemon": "psyduck",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_175.png",
-    "original": "source-images/pokemon-cards/expansion/psyduck.png",
-    "derivative": "psyduck-art-v1.webp",
-    "crop": "120x165+110+30",
-    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_54.png",
+    "original": "source-images/pokemon-cards/expansion/psyduck-v2.png",
+    "derivative": "psyduck-art-v2.webp",
+    "crop": "205x127+20+35",
+    "editing": "Complete illustration window crop; contain framing preserves the whole Pokemon without AI reconstruction",
     "symbol": "Official printed type symbol"
   },
   {
@@ -190,11 +190,11 @@
   },
   {
     "pokemon": "sprigatito",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV02/SV02_EN_196.png",
-    "original": "source-images/pokemon-cards/expansion/sprigatito.png",
-    "derivative": "sprigatito-art-v1.webp",
-    "crop": "220x161+12+30",
-    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV02/SV02_EN_12.png",
+    "original": "source-images/pokemon-cards/expansion/sprigatito-v2.png",
+    "derivative": "sprigatito-art-v2.webp",
+    "crop": "205x127+20+35",
+    "editing": "Complete illustration window crop; contain framing preserves the whole Pokemon without AI reconstruction",
     "symbol": "Official printed type symbol"
   },
   {

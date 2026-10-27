@@ -2,9 +2,15 @@ const assert=require('node:assert/strict'),{KeepupMatchmaking}=require('../serve
 let now=1000;const m=new KeepupMatchmaking({now:()=>now,rng:()=>.5});
 const a=m.join({level:'easy'}),c=m.join({level:'hard'});assert.equal(m.state(a.token).phase,'waiting');const b=m.join({level:'easy'});assert.equal(b.phase,'characters');assert.equal(m.state(c.token).phase,'waiting');
 m.action(a.token,{kind:'character',character:'bluey'});assert.throws(()=>m.action(b.token,{kind:'character',character:'bluey'}));m.action(b.token,{kind:'character',character:'bingo'});assert.equal(m.state(a.token).phase,'playing');
+now+=500;m.sweep();assert.equal(m.state(a.token).state.elapsed,0);
+m.action(a.token,{kind:'ready'});now+=100;m.sweep();assert.equal(m.state(a.token).state.elapsed,0);m.action(b.token,{kind:'ready'});
 m.action(a.token,{kind:'input',direction:1,sequence:1});m.action(b.token,{kind:'input',direction:-1,sequence:1});now+=200;m.sweep();let s=m.state(a.token);assert.ok(s.state.players[0].x>600);assert.ok(s.state.players[1].x<1000);assert.deepEqual(s.state,m.state(b.token).state);
 m.action(a.token,{kind:'input',direction:-1,sequence:0});assert.equal([...m.rooms.values()][0].directions[0],1);
 const r=[...m.rooms.values()][0];r.state.balloons=[{x:r.state.players[1].x,y:613,vx:0,vy:80,r:43,cool:0}];now+=20;m.sweep();assert.equal(r.state.hits,1);
+const elapsed=r.state.elapsed;
+now+=1600;m.sweep();assert.equal(r.state.elapsed,elapsed);assert.equal(m.state(a.token).state.paused,true);
+m.action(a.token,{kind:'input',direction:0,sequence:2,active:true});m.action(b.token,{kind:'input',direction:0,sequence:2,active:false});now+=20;m.sweep();assert.equal(r.state.elapsed,elapsed);
+m.action(b.token,{kind:'input',direction:0,sequence:3,active:true});now+=20;m.sweep();assert.ok(r.state.elapsed>elapsed);assert.equal(m.state(a.token).state.paused,false);
 m.leave(b.token);assert.equal(m.state(a.token).phase,'over');assert.equal(m.state(a.token).state.over,true);
 now+=16000;m.sweep();assert.equal(m.sessions.size,0);assert.equal(m.rooms.size,0);
 console.log('Bluey: difficulty queues, exclusive characters, shared physics, both-player collision, stale inputs and disconnect OK');

@@ -244,3 +244,14 @@ A coleção tem 53 cartas. Entraram Scizor, Scyther, Onix, Steelix, Togedemaru, 
 Na tabela simplificada do jogo, Aço vence Psíquico (que também agrupa Fada) e perde para Fogo e Lutador. Seus ataques causam 12 contra Fogo, Água, Elétrico e Aço; recebe 12 de Planta, Psíquico e Normal. As demais relações permanecem iguais. O símbolo é a energia Metal da carta oficial de Scizor, exibido por CSS. O ataque usa três cortes metálicos animados em CSS com som sintetizado localmente.
 
 O sorteio do pool garante os nove tipos em partidas locais e online. O tipo da décima carta é sorteado com chances iguais entre os tipos elegíveis com outra carta disponível; depois sorteia-se o Pokémon desse tipo. A ordem das dez cartas é embaralhada.
+
+
+### Suavização da Bluey/Bingo online
+
+O cliente antecipa apenas o movimento visual da própria personagem, usando a mesma aceleração do servidor, e reconcilia a posição suavemente. Balões e a outra personagem usam extrapolação limitada a 100 ms e suavização independente da taxa de quadros. Colisões, estouros e pontuação continuam exclusivamente no servidor. Após 350 ms sem atualização a previsão local congela; após 700 ms aparece “Reconectando…”.
+
+As requisições são sequenciais, com cadência alvo de 60 ms durante a partida (descontando o tempo da resposta), envio antecipado ao mudar o controle, timeout de 1,5 s e intervalo maior no lobby/segundo plano. Não há fila paralela de comandos. A sala e os familiares são desenhados uma vez em canvas auxiliar; o placar só altera o DOM quando muda.
+
+Ambos precisam terminar de carregar as imagens antes de a física avançar. Se alguém ficar em segundo plano ou sem enviar controles por 1,5 s, a simulação pausa e retoma quando ambos responderem; a desconexão definitiva continua encerrando a sessão após 15 s. Atualize os serviços `jogos` e `matchmaking` juntos.
+
+Validação: `node tests/keepup.cjs`, `node tests/keepup-net.cjs`, `node tests/keepup-server.cjs`, `node tests/keepup-music.cjs`, `node tests/keepup-pop.cjs`. A previsão foi testada em 30/60/120 quadros por segundo, perda de atualizações, correção de posição e pausa. Ganho real de latência depende da rede; os testes locais não equivalem a medições no Wi-Fi/tablet do usuário.

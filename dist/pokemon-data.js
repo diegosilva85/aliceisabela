@@ -268,6 +268,42 @@ window.PokemonTableData={
       "number": "1/114",
       "art": "snivy-art-v1.webp",
       "original": "originals/snivy-solo.png"
+    },
+    {
+      "id": "greninja",
+      "name": "Greninja",
+      "type": "fighting",
+      "set": "Mascarada do Crepúsculo",
+      "number": "214/167",
+      "art": "greninja-art-v1.webp",
+      "original": "originals/greninja-solo.png"
+    },
+    {
+      "id": "jigglypuff",
+      "name": "Jigglypuff",
+      "type": "normal",
+      "set": "Eclipse Cósmico",
+      "number": "225/236",
+      "art": "jigglypuff-art-v1.webp",
+      "original": "originals/jigglypuff-solo.png"
+    },
+    {
+      "id": "ditto",
+      "name": "Ditto",
+      "type": "normal",
+      "set": "Destinos Brilhantes",
+      "number": "SV118/SV122",
+      "art": "ditto-art-v1.webp",
+      "original": "originals/ditto-solo.png"
+    },
+    {
+      "id": "meowth",
+      "name": "Meowth",
+      "type": "normal",
+      "set": "Phantasmal Flames",
+      "number": "106/094",
+      "art": "meowth-art-v1.webp",
+      "original": "originals/meowth-solo.png"
     }
   ]
 };

@@ -244,5 +244,45 @@
     "crop": "206x126+20+36",
     "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
     "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "greninja",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV06/SV06_EN_214.png",
+    "rarity": "Special Illustration Rare",
+    "original": "source-images/pokemon-cards/batch-four/greninja.png",
+    "derivative": "greninja-art-v1.webp",
+    "crop": "130x130+60+65",
+    "editing": "Upper artwork crop from full-art card, no AI reconstruction",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "jigglypuff",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SM12/SM12_EN_225.png",
+    "rarity": "Full Art TAG TEAM; crop focuses on Jigglypuff",
+    "original": "source-images/pokemon-cards/batch-four/jigglypuff.png",
+    "derivative": "jigglypuff-art-v1.webp",
+    "crop": "105x143+8+55",
+    "editing": "Upper artwork crop from full-art card, no AI reconstruction",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "ditto",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH45/SWSH45_EN_SV118.png",
+    "rarity": "Shiny Full Art V",
+    "original": "source-images/pokemon-cards/batch-four/ditto.png",
+    "derivative": "ditto-art-v1.webp",
+    "crop": "220x150+12+40",
+    "editing": "Upper artwork crop from full-art card, no AI reconstruction",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "meowth",
+    "source": "https://images.scrydex.com/pokemon/me2-106/medium",
+    "rarity": "Illustration Rare",
+    "original": "source-images/pokemon-cards/batch-four/meowth.png",
+    "derivative": "meowth-art-v1.webp",
+    "crop": "240x250+55+65",
+    "editing": "Upper artwork crop from full-art card, no AI reconstruction",
+    "symbol": "Official printed type symbol"
   }
 ]

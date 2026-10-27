@@ -165,3 +165,7 @@ Coleção ampliada para 13 Pokémon. Pikachu V 170/185 substitui a cena urbana; 
 Tentativas de retirar a interface por image_gen foram recusadas; as novas prévias usam recortes da área superior sem textos, com menor resolução e enquadramento mais fechado. Nenhum Pokémon novo foi redesenhado. Cada prévia oferece a carta oficial completa para comparação, e a página de fontes mostra os dez originais novos. Originais locais em `dist/assets/pokemon-table/originals/`.
 
 Tipos seguem os símbolos impressos: Glaceon usa Água, Sylveon e Espeon usam Psíquico, Umbreon usa Escuridão. As regras continuam pendentes e o combate desativado. O protótipo de regras de cinco tipos ainda precisa ser revisto para os sete tipos agora representados.
+
+### Expansão da coleção Pokémon — 27 cartas
+
+Charmander e Bulbasaur receberam novos recortes oficiais. Adicionados Riolu, Lucario, Lugia, Ho-Oh, Lapras, Psyduck, Gengar, Zeraora, Sprigatito, Quaxly, Fuecoco, Piplup, Torchic e Snivy. As imagens incluem Full Art, ilustrações raras e janelas de ilustração de cartas comuns, sem reconstrução por IA. Originais e fontes estão em `dist/pokemon-sources.html`; os recortes exatos estão em `dist/assets/pokemon-table/sources.json`. Tipos seguem as cartas impressas (Lugia e Ho-Oh: Normal; Riolu e Lucario: Lutador). A coleção está disponível; as partidas continuam bloqueadas até definir as vantagens dos tipos.

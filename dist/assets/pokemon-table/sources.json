@@ -1,29 +1,11 @@
 [
   {
-    "pokemon": "charmander",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_168.png",
-    "rarity": "Illustration Rare",
-    "original": "source-images/pokemon-cards/charmander.png",
-    "derivative": "charmander-art-v1.webp",
-    "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
-    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
-  },
-  {
     "pokemon": "squirtle",
     "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_170.png",
     "rarity": "Illustration Rare",
     "original": "source-images/pokemon-cards/squirtle.png",
     "derivative": "squirtle-art-v1.webp",
     "editing": "Original art crop, no generated reconstruction",
-    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
-  },
-  {
-    "pokemon": "bulbasaur",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_166.png",
-    "rarity": "Illustration Rare",
-    "original": "source-images/pokemon-cards/bulbasaur.png",
-    "derivative": "bulbasaur-art-v1.webp",
-    "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
     "symbol": "Upper right type symbol cropped from original card; no generated symbol"
   },
   {
@@ -115,5 +97,149 @@
     "derivative": "eevee-art-v2.webp",
     "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
     "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "charmander",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_4.png",
+    "original": "source-images/pokemon-cards/expansion/charmander.png",
+    "derivative": "charmander-art-v2.webp",
+    "crop": "206x126+28+36",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "bulbasaur",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_1.png",
+    "original": "source-images/pokemon-cards/expansion/bulbasaur.png",
+    "derivative": "bulbasaur-art-v2.webp",
+    "crop": "206x126+28+36",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "riolu",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV01/SV01_EN_215.png",
+    "original": "source-images/pokemon-cards/expansion/riolu.png",
+    "derivative": "riolu-art-v1.webp",
+    "crop": "220x163+12+30",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "lucario",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSHP/SWSHP_EN_SWSH213.png",
+    "original": "source-images/pokemon-cards/expansion/lucario.png",
+    "derivative": "lucario-art-v1.webp",
+    "crop": "220x199+12+33",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "lugia",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH12/SWSH12_EN_185.png",
+    "original": "source-images/pokemon-cards/expansion/lugia.png",
+    "derivative": "lugia-art-v1.webp",
+    "crop": "220x194+12+33",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "ho-oh",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH12/SWSH12_EN_187.png",
+    "original": "source-images/pokemon-cards/expansion/ho-oh.png",
+    "derivative": "ho-oh-art-v1.webp",
+    "crop": "220x151+12+33",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "lapras",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH1/SWSH1_EN_189.png",
+    "original": "source-images/pokemon-cards/expansion/lapras.png",
+    "derivative": "lapras-art-v1.webp",
+    "crop": "220x177+12+33",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "psyduck",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_175.png",
+    "original": "source-images/pokemon-cards/expansion/psyduck.png",
+    "derivative": "psyduck-art-v1.webp",
+    "crop": "120x165+110+30",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "gengar",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH8/SWSH8_EN_156.png",
+    "original": "source-images/pokemon-cards/expansion/gengar.png",
+    "derivative": "gengar-art-v1.webp",
+    "crop": "220x171+12+54",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "zeraora",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH6/SWSH6_EN_165.png",
+    "original": "source-images/pokemon-cards/expansion/zeraora.png",
+    "derivative": "zeraora-art-v1.webp",
+    "crop": "220x179+12+54",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "sprigatito",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV02/SV02_EN_196.png",
+    "original": "source-images/pokemon-cards/expansion/sprigatito.png",
+    "derivative": "sprigatito-art-v1.webp",
+    "crop": "220x161+12+30",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "quaxly",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV02/SV02_EN_50.png",
+    "original": "source-images/pokemon-cards/expansion/quaxly.png",
+    "derivative": "quaxly-art-v1.webp",
+    "crop": "206x126+20+36",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "fuecoco",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV02/SV02_EN_201.png",
+    "original": "source-images/pokemon-cards/expansion/fuecoco.png",
+    "derivative": "fuecoco-art-v1.webp",
+    "crop": "220x175+12+30",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "piplup",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH9/SWSH9_EN_35.png",
+    "original": "source-images/pokemon-cards/expansion/piplup.png",
+    "derivative": "piplup-art-v1.webp",
+    "crop": "206x126+28+36",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "torchic",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH3/SWSH3_EN_22.png",
+    "original": "source-images/pokemon-cards/expansion/torchic.png",
+    "derivative": "torchic-art-v1.webp",
+    "crop": "206x126+20+36",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
+  },
+  {
+    "pokemon": "snivy",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/BW1/BW1_EN_1.png",
+    "original": "source-images/pokemon-cards/expansion/snivy.png",
+    "derivative": "snivy-art-v1.webp",
+    "crop": "206x126+20+36",
+    "editing": "Original illustration crop, without text or AI reconstruction; framing may crop body/background",
+    "symbol": "Official printed type symbol"
   }
 ]

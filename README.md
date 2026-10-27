@@ -201,3 +201,20 @@ node tests/pokemon-assets.cjs
 ```
 
 Os efeitos de fogo, água, choque, pancada, folhas, ondas psíquicas e energia noturna acompanham os ataques. Sons são sintetizados localmente com Web Audio e têm botão de silenciar. A versão nova do fogo mantém a chama fixa e altera seu interior. Fontes e prompts estão em `source-images/pokemon-attacks/README.md`.
+
+
+### Duas pessoas na Bluey e novas rodadas Pokémon
+
+Manter no Alto agora começa pela escolha de 1 ou 2 pessoas. No online, a fila combina jogadores da mesma dificuldade; cada um escolhe Bluey ou Bingo, sem repetir. Os dois cooperam na mesma sala e compartilham os três estouros. O servidor calcula os movimentos e colisões; o navegador desenha e suaviza as posições recebidas. A sessão encerra quando alguém sai ou fica sem conexão por 15 segundos. A fila e as partidas ficam na memória e não sobrevivem a reinícios.
+
+Pokémon: os dez Pokémon são distribuídos por escolhas alternadas, sem cronômetro na montagem dos times. Só após as dez escolhas começa a batalha. Cada rodada permite cinco segundos de escolha (automática no fim do prazo), espera ambos, mostra 3–2–1, revela as cartas e aplica a sequência visual de ataques. Máximo de sete rodadas; termina antes se um time perder todos. Desempate: mais Pokémon vivos, depois soma da vida restante, depois empate.
+
+Atualize ambos os contêineres (o Caddy do host continua atendendo HTTPS):
+
+```bash
+cd ~/aliceisabela/aliceisabela
+git pull --ff-only
+sudo docker compose up -d --build jogos matchmaking
+```
+
+Verificações locais: `node tests/keepup.cjs`, `node tests/keepup-server.cjs`, `node tests/pokemon-table.cjs` e `node tests/pokemon-server.cjs`.

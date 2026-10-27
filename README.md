@@ -232,3 +232,7 @@ Teste de regressão específico: `node tests/pokemon-readiness.cjs`.
 Catálogo ampliado para 40: Zorua, Nickit e Purrloin (Escuridão); Mew, Jirachi e Espurr (Psíquico); Dedenne, Emolga e Pachirisu (Elétrico). As imagens de cartas oficiais foram obtidas no TCGdex; os originais, metadados e URLs estão preservados em `source-images/pokemon-cards/cute-nine/` e `dist/assets/pokemon-table/sources.json`.
 
 As nove cartas usam enquadramento CSS definido por `artCrop`, sem redesenhar os personagens ou alterar os pixels originais. O recorte oculta os textos e preserva borda e símbolo usados pelo jogo. Nickit usa uma carta comum de Céus em Evolução, pois não foi encontrada uma Full Art dele nas fontes consultadas. A carta selecionada de Jirachi é Metal no TCG; sua categoria no jogo é Psíquico, conforme a seleção aprovada. O catálogo e as regras de sorteio são compartilhados com o servidor, por isso ambos os contêineres precisam ser atualizados.
+
+### Cartas ocultas e derrota
+
+Durante a escolha de cada rodada, a mão adversária mostra apenas versos do Pokémon TCG Pocket, sem nomes, tipos ou vida individual. As cartas escolhidas continuam sendo reveladas após a contagem regressiva. A tela de derrota usa o Psyduck oficial da Pokédex com as mãos na cabeça; empate e partida interrompida não usam essa imagem. As duas imagens são locais e suas fontes estão em `dist/assets/pokemon-table/sources.json`.

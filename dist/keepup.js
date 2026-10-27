@@ -2,7 +2,7 @@
 const base='assets/manter-no-alto/',colors=['vermelho','laranja','amarelo','verde','azul','roxo','rosa','turquesa'];
 let level='easy',who='bluey',state=null,raf=0,last=0,acc=0,epoch=0,owned=false,assets=null,loading=null,stage=null,context=null;
 let music=null,musicEnabled=true,musicActive=false;
-function musicSync(){if(!musicActive||!musicEnabled||document.hidden){music?.pause();return;}if(!music){music=new Audio('assets/audio/keepup-party-loop.mp3');music.loop=true;music.volume=.25;}music.play().catch(()=>{});}
+function musicSync(){if(!musicActive||!musicEnabled||document.hidden){music?.pause();return;}if(!music){music=new Audio('assets/audio/keepup-dance-mode-loop.mp3');music.loop=true;music.volume=.25;}music.play().catch(()=>{});}
 function musicButton(){const button=document.createElement('button');button.className='ku-music';button.textContent=musicEnabled?'♫ Música ligada':'♪ Música desligada';button.setAttribute('aria-pressed',String(musicEnabled));button.onclick=()=>{musicEnabled=!musicEnabled;button.textContent=musicEnabled?'♫ Música ligada':'♪ Música desligada';button.setAttribute('aria-pressed',String(musicEnabled));musicSync();};(stage?.querySelector('.ku-hud')||app.querySelector('.ku-setup')).append(button);musicActive=true;musicSync();}
 // A short synthesized latex pop; independent of the music toggle.
 let popAudio=null,popBuffer=null;

@@ -1,5 +1,7 @@
 # Balões em Festa
 
+Versão anterior preservada. O tema ativo do jogo agora usa o MIDI fornecido pelo usuário; veja [DANCE-MODE.md](DANCE-MODE.md).
+
 Composição original de dança eletrônica infantil para Manter no Alto. Não é transcrição ou reprodução de Dance Mode. Referência de clima indicada pelo usuário: https://www.bluey.tv/watch/bluey-tunes/dance-mode-music-video/
 
 40 compassos, 4/4, 120 BPM, 80 segundos: introdução (0–8), verso (8–24), refrão (24–40), ponte (40–56), refrão (56–72), outro (72–80). Sintetizador, baixo sintetizado, piano elétrico rítmico, caixa de música e bateria; sem violão, guitarra ou flauta.

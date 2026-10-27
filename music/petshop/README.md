@@ -18,4 +18,4 @@ Renderizado pelo exportador WAV do Cadência com o banco TimGM6mb instalado pelo
 
 Para reexportar manualmente, abra o projeto no Cadência e use Arquivo → Exportar áudio WAV/MP3. Para o loop de produção, o gerador repete a composição três vezes antes de exportar; aproveitamos o ciclo central para preservar as caudas do ciclo anterior. Corte WAV de 60 a 120 segundos e aplique fades de 3 ms nas pontas antes de converter para MP3 com FFmpeg, com ganho de 14 dB (pico final aproximado de −7 dBFS). O WAV resultante contém exatamente 2.880.000 frames a 48 kHz.
 
-A reprodução usa AudioBufferSourceNode com loop de 0 a 60 s e volume de 30%, respeita o botão de som, pausa em aba oculta e para ao sair do Pet Shop. Não há chamadas a serviços externos para compor ou tocar a música.
+A reprodução usa AudioBufferSourceNode com loop de 0 a 60 s e controle de volume de 0–100% (padrão 50%, ganho efetivo de 15%), respeita o botão de som, pausa em aba oculta e para ao sair do Pet Shop. Não há chamadas a serviços externos para compor ou tocar a música.

@@ -2,11 +2,17 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const s=fs.readFileSync('dist/pet.js','utf8');
 const code=s.slice(s.indexOf('let musicBuffer='),s.indexOf('let lastBreed='));
 let starts=0,stops=0,resolveFetch;
-const ctx={state:{},soundOn:true,run:1,document:{hidden:false},window:{},fetch:()=>new Promise(r=>resolveFetch=r),audio:{resume:()=>Promise.resolve(),decodeAudioData:async()=>({duration:60}),createBufferSource:()=>({connect(){},disconnect(){},start(){starts++},stop(){stops++;this.onended?.()}}),createGain:()=>({gain:{},connect(){},disconnect(){}})}};
+const ctx={state:{},soundOn:true,run:1,document:{hidden:false},window:{},fetch:()=>new Promise(r=>resolveFetch=r),audio:{resume:()=>Promise.resolve(),decodeAudioData:async()=>({duration:60}),createBufferSource:()=>({connect(){},disconnect(){},start(){starts++},stop(){stops++;this.onended?.()}}),createGain:()=>({gain:{setTargetAtTime(value){this.value=value}},connect(){},disconnect(){}})}};
 vm.createContext(ctx);vm.runInContext(code,ctx);
 (async()=>{
 ctx.syncMusic();ctx.syncMusic();resolveFetch({ok:true,arrayBuffer:async()=>new ArrayBuffer(1)});await new Promise(r=>setImmediate(r));assert.equal(starts,1,'No duplicate sources');
 assert.equal(vm.runInContext('musicSource.loopEnd',ctx),60);
+assert.equal(vm.runInContext('musicVolume',ctx),50);
+assert.equal(vm.runInContext('musicGain.gain.value',ctx),.15);
+ctx.setMusicVolume(0);assert.equal(vm.runInContext('musicGain.gain.value',ctx),0);
+ctx.setMusicVolume(100);assert.equal(vm.runInContext('musicGain.gain.value',ctx),.3);
+ctx.setMusicVolume(50);assert.equal(vm.runInContext('musicGain.gain.value',ctx),.15);
+assert.equal(starts,1,'Adjusting volume does not restart music');
 ctx.soundOn=false;ctx.syncMusic();assert.equal(stops,1);
 ctx.soundOn=true;ctx.syncMusic();await new Promise(r=>setImmediate(r));assert.equal(starts,2);
 ctx.document.hidden=true;ctx.syncMusic();assert.equal(stops,2);

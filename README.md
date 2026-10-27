@@ -218,3 +218,11 @@ sudo docker compose up -d --build jogos matchmaking
 ```
 
 Verificações locais: `node tests/keepup.cjs`, `node tests/keepup-server.cjs`, `node tests/pokemon-table.cjs` e `node tests/pokemon-server.cjs`.
+
+### Presença e prontidão nas partidas Pokémon online
+
+Cada nova rodada passa por uma barreira de prontidão: ambos os navegadores devem confirmar a rodada com a página visível antes de iniciar os cinco segundos. O cliente envia sinais de presença a cada consulta. Após 1,5 segundo sem sinal, ou ao ocultar a página, o servidor pausa o fluxo. A escolha automática no fim do prazo exige confirmação desse prazo pelos dois navegadores, impedindo a penalização de um aparelho que tenha perdido a conexão perto do fim do cronômetro. Ao reconectar durante a escolha, as escolhas são reiniciadas e ambos recebem cinco segundos completos. Após 30 segundos sem contato, ou saída explícita, a partida é interrompida sem vencedor; não é considerada vitória nem empate competitivo.
+
+A classificação de uma partida concluída compara primeiro a quantidade de Pokémon vivos e depois a soma da vida restante. Igualdade nos dois critérios resulta em empate. O placar exibe ambos os valores.
+
+Teste de regressão específico: `node tests/pokemon-readiness.cjs`.

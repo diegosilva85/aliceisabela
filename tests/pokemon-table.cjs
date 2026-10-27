@@ -20,3 +20,6 @@ const s={phase:'choose',hands:[[{id:'a',type:'normal',hp:12}],[{id:'b',type:'nor
 const idle=C.create(cards,0,rng);while(idle.phase==='draft')C.draft(idle,idle.turn,idle.pool[0].id,0);for(let i=0;i<120&&idle.phase!=='over';i++)C.tick(idle,idle.deadline,rng);assert.equal(idle.phase,'over');
 assert.throws(()=>C.deal(cards.filter(c=>c.type==='water')),/tipos suficientes/);
 console.log('150 matches: balanced deals, persistent HP, simultaneous damage, hidden choices, deadlines and draws OK');
+assert.equal(C.winner({hands:[[{hp:1},{hp:1}],[{hp:50}]]}),0);
+assert.equal(C.winner({hands:[[{hp:12}],[{hp:13}]]}),1);
+assert.equal(C.winner({hands:[[{hp:12},{hp:0}],[{hp:12}]]}),'draw');

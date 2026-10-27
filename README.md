@@ -169,3 +169,7 @@ Tipos seguem os símbolos impressos: Glaceon usa Água, Sylveon e Espeon usam Ps
 ### Expansão da coleção Pokémon — 27 cartas
 
 Charmander e Bulbasaur receberam novos recortes oficiais. Adicionados Riolu, Lucario, Lugia, Ho-Oh, Lapras, Psyduck, Gengar, Zeraora, Sprigatito, Quaxly, Fuecoco, Piplup, Torchic e Snivy. As imagens incluem Full Art, ilustrações raras e janelas de ilustração de cartas comuns, sem reconstrução por IA. Originais e fontes estão em `dist/pokemon-sources.html`; os recortes exatos estão em `dist/assets/pokemon-table/sources.json`. Tipos seguem as cartas impressas (Lugia e Ho-Oh: Normal; Riolu e Lucario: Lutador). A coleção está disponível; as partidas continuam bloqueadas até definir as vantagens dos tipos.
+
+### Efeitos de ataques
+
+`dist/pokemon-attacks.html` permite testar os efeitos transparentes. Fogo, Água, Elétrico e Lutador: 3 quadros cada; Planta: 6. Arquivos em `dist/assets/pokemon-table/attacks`, fontes e descrição dos prompts em `source-images/pokemon-attacks`. O reprodutor `PokemonAttacks.play(img, tipo)` retorna função de cancelamento e aguarda o carregamento dos quadros. São animações prontas para integração às rodadas; as regras das partidas continuam pendentes. Greninja agora usa a Full Art GX de Luz Proibida 120/131, aparência normal e tipo Água.

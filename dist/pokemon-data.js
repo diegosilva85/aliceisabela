@@ -272,11 +272,11 @@ window.PokemonTableData={
     {
       "id": "greninja",
       "name": "Greninja",
-      "type": "fighting",
-      "set": "Mascarada do Crepúsculo",
-      "number": "214/167",
-      "art": "greninja-art-v1.webp",
-      "original": "originals/greninja-solo.png"
+      "type": "water",
+      "set": "Luz Proibida",
+      "number": "120/131",
+      "art": "greninja-art-v2.webp",
+      "original": "originals/greninja-normal.png"
     },
     {
       "id": "jigglypuff",

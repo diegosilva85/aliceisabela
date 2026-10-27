@@ -247,11 +247,11 @@
   },
   {
     "pokemon": "greninja",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV06/SV06_EN_214.png",
-    "rarity": "Special Illustration Rare",
-    "original": "source-images/pokemon-cards/batch-four/greninja.png",
-    "derivative": "greninja-art-v1.webp",
-    "crop": "130x130+60+65",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SM6/SM6_EN_120.png",
+    "rarity": "Full Art GX",
+    "original": "source-images/pokemon-cards/batch-four/greninja-normal.png",
+    "derivative": "greninja-art-v2.webp",
+    "crop": "170x114+63+40",
     "editing": "Upper artwork crop from full-art card, no AI reconstruction",
     "symbol": "Official printed type symbol"
   },

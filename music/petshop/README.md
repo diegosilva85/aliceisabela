@@ -1,6 +1,13 @@
 # Banho de Bossa
 
-Composição instrumental original para o Pet Shop: 20 compassos em 4/4, 80 BPM, 60 segundos. Violão de nylon sincopado, contrabaixo, piano elétrico e percussão leve. Sem gravações de músicas de terceiros.
+Composição instrumental original para o Pet Shop: 20 compassos em 4/4, 80 BPM, 60 segundos. Versão 2: violão de nylon sincopado, contrabaixo, piano elétrico, flauta, vibrafone e percussão leve.
+
+- 0–18 s: verso, motivo de piano elétrico com pausas e acompanhamento delicado.
+- 18–36 s: refrão, flauta em destaque e respostas do piano, com percussão mais presente.
+- 36–48 s: ponte, contraste harmônico e textura mais espaçada.
+- 48–60 s: outro, retorno do motivo e dominante preparando a volta ao verso.
+
+As seções variam vozes, ritmo, dinâmica e harmonia; o último compasso funciona como preparação para o primeiro. Sem gravações de músicas de terceiros.
 
 - `banho-de-bossa.cadencia`: projeto editável no Cadência.
 - `banho-de-bossa.mid`: versão MIDI.

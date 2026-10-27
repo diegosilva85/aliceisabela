@@ -157,3 +157,11 @@ Novo botão na tela inicial e prévia interativa das cinco primeiras cartas sobr
 Funciona: abrir a coleção, ampliar cada carta, fechar com botão/Escape, retornar ao início, layout responsivo. A partida completa permanece desativada: só foram solicitados cinco dos dez Pokémon, e a regra exata de vantagens ainda não foi definida. Nenhuma carta foi duplicada para simular dez Pokémon.
 
 Estrutura já implementada em `pokemon-core.js` e `pokemon-table.js`: escolhas alternadas até cinco por lado, compromisso prévio da escolha do computador, cartas usadas uma vez, cinco rodadas, placar, resultado e reinício. Tabela experimental equilibrada entre cinco tipos (dois confrontos favoráveis e dois desfavoráveis), com sorteio em tipo igual, ainda não ativada: `rulesConfirmed:false`. A interface de combate exige dez registros e regras confirmadas. `node tests/pokemon-table.cjs` valida 100 partidas simuladas, alternância, exclusividade das cartas, compromisso da máquina e pontuação.
+
+### Revisão da coleção Pokémon: personagens sozinhos
+
+Coleção ampliada para 13 Pokémon. Pikachu V 170/185 substitui a cena urbana; Eevee V SWSH065 substitui o grupo de Eevees. Acrescentados Jolteon V 177, Leafeon V 166, Glaceon V 174, Flareon V 169, Umbreon V 188, Espeon V 179, Sylveon V 183 e Vaporeon V 172 de Céus em Evolução. Todos os novos escolhidos aparecem sozinhos. São Full Art V (Eevee: promo V), não cartas de raridade Ilustração Especial.
+
+Tentativas de retirar a interface por image_gen foram recusadas; as novas prévias usam recortes da área superior sem textos, com menor resolução e enquadramento mais fechado. Nenhum Pokémon novo foi redesenhado. Cada prévia oferece a carta oficial completa para comparação, e a página de fontes mostra os dez originais novos. Originais locais em `dist/assets/pokemon-table/originals/`.
+
+Tipos seguem os símbolos impressos: Glaceon usa Água, Sylveon e Espeon usam Psíquico, Umbreon usa Escuridão. As regras continuam pendentes e o combate desativado. O protótipo de regras de cinco tipos ainda precisa ser revisto para os sete tipos agora representados.

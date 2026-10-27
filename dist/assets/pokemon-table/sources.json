@@ -1,23 +1,5 @@
 [
   {
-    "pokemon": "pikachu",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_173.png",
-    "rarity": "Illustration Rare",
-    "original": "source-images/pokemon-cards/pikachu.png",
-    "derivative": "pikachu-art-v1.webp",
-    "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
-    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
-  },
-  {
-    "pokemon": "eevee",
-    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV06/SV06_EN_188.png",
-    "rarity": "Illustration Rare",
-    "original": "source-images/pokemon-cards/eevee.png",
-    "derivative": "eevee-art-v1.webp",
-    "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
-    "symbol": "Upper right type symbol cropped from original card; no generated symbol"
-  },
-  {
     "pokemon": "charmander",
     "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SV3PT5/SV3PT5_EN_168.png",
     "rarity": "Illustration Rare",
@@ -43,5 +25,95 @@
     "derivative": "bulbasaur-art-v1.webp",
     "editing": "Text and card UI removed using built-in image_gen; reconstructed areas may differ from original",
     "symbol": "Upper right type symbol cropped from original card; no generated symbol"
+  },
+  {
+    "pokemon": "pikachu",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH4/SWSH4_EN_170.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/pikachu.png",
+    "derivative": "pikachu-art-v2.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "jolteon",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_177.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/jolteon.png",
+    "derivative": "jolteon-art-v1.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "leafeon",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_166.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/leafeon.png",
+    "derivative": "leafeon-art-v1.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "glaceon",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_174.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/glaceon.png",
+    "derivative": "glaceon-art-v1.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "flareon",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_169.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/flareon.png",
+    "derivative": "flareon-art-v1.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "umbreon",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_188.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/umbreon.png",
+    "derivative": "umbreon-art-v1.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "espeon",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_179.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/espeon.png",
+    "derivative": "espeon-art-v1.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "sylveon",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_183.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/sylveon.png",
+    "derivative": "sylveon-art-v1.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "vaporeon",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH7/SWSH7_EN_172.png",
+    "rarity": "Full Art V",
+    "original": "source-images/pokemon-cards/solo/vaporeon.png",
+    "derivative": "vaporeon-art-v1.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
+  },
+  {
+    "pokemon": "eevee",
+    "source": "https://assets.pokemon.com/assets/cms2/img/cards/web/SWSHP/SWSHP_EN_SWSH065.png",
+    "rarity": "Promo V",
+    "original": "source-images/pokemon-cards/solo/eevee.png",
+    "derivative": "eevee-art-v2.webp",
+    "editing": "Crop of original upper artwork, no AI reconstruction; cropped body/background may not be fully visible",
+    "symbol": "Official printed type symbol, cropped; Glaceon Water, Sylveon Psychic"
   }
 ]

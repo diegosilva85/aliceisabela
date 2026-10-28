@@ -12,5 +12,10 @@
     "steel": "Sonicboom.wav",
     "dark": "Swift2.wav"
   },
-  "playback": "Volume 30%; máximo 2 segundos com fade final para não sobrepor o próximo ataque. Normal compartilha DoubleKick com Lutador."
+  "playback": "Volume 30%. Ao aplicar dano, interrompe o ataque e toca o impacto (25 normal, 12 fraco, 50 super). Impactos limitados a 1,2 segundo; próximo ataque interrompe qualquer áudio restante.",
+  "damageMapping": {
+    "25": "IMHIT_Damage.wav",
+    "12": "IMHITWEAK_Not_Very_Effective.wav",
+    "50": "IMHITSUPER_Super_Effective.wav"
+  }
 }

@@ -1,0 +1,16 @@
+{
+  "source": "https://sounds.spriters-resource.com/game_boy_gbc/pokemonredblue/asset/410768/",
+  "providedBy": "Arquivos escolhidos pelo usuário em Downloads; WAV originais sem alteração.",
+  "mapping": {
+    "fire": "FireBlast2.wav",
+    "water": "Bubblebeam1.wav",
+    "electric": "ThunderShock.wav",
+    "grass": "RazorLeaf.wav",
+    "fighting": "DoubleKick.wav",
+    "normal": "DoubleKick.wav",
+    "psychic": "Psychic.wav",
+    "steel": "Sonicboom.wav",
+    "dark": "Swift2.wav"
+  },
+  "playback": "Volume 30%; máximo 2 segundos com fade final para não sobrepor o próximo ataque. Normal compartilha DoubleKick com Lutador."
+}

@@ -1,16 +1,17 @@
 'use strict';
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path');const {Matchmaking}=require('./matchmaking.cjs');
 const {KeepupMatchmaking}=require('./keepup-matchmaking.cjs');
+const {BurrinhoMatchmaking}=require('./burrinho-matchmaking.cjs');
 const {withPrivateRooms}=require('./private-rooms.cjs');
-function createServer({matchmaking=new Matchmaking(),keepup=new KeepupMatchmaking(),staticRoot=null}={}){
- matchmaking=withPrivateRooms(matchmaking,'pokemon');keepup=withPrivateRooms(keepup,'keepup');
+function createServer({matchmaking=new Matchmaking(),keepup=new KeepupMatchmaking(),burrinho=new BurrinhoMatchmaking(),staticRoot=null}={}){
+ burrinho=withPrivateRooms(burrinho,'burrinho');matchmaking=withPrivateRooms(matchmaking,'pokemon');keepup=withPrivateRooms(keepup,'keepup');
  const simulation=setInterval(()=>keepup.sweep(),20);simulation.unref();
- const limits=new Map();const sweep=setInterval(()=>{matchmaking.sweep();for(const [ip,v] of limits)if(Date.now()-v.start>60000)limits.delete(ip);},250);sweep.unref();
+ const limits=new Map();const sweep=setInterval(()=>{matchmaking.sweep();burrinho.sweep();for(const [ip,v] of limits)if(Date.now()-v.start>60000)limits.delete(ip);},250);sweep.unref();
  const server=http.createServer(async(req,res)=>{
   const send=(code,obj)=>{res.writeHead(code,{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(obj));};
   try{const url=new URL(req.url,'http://localhost');
    if(url.pathname==='/healthz')return send(200,{ok:true});
-   const isKeepup=url.pathname.startsWith('/api/keepup/'),service=isKeepup?keepup:matchmaking,route=isKeepup?url.pathname.replace('/api/keepup/','/api/pokemon/'):url.pathname;
+   const game=url.pathname.split('/')[2],service=game==='burrinho'?burrinho:game==='keepup'?keepup:matchmaking,route=['burrinho','keepup'].includes(game)?url.pathname.replace('/api/'+game+'/','/api/pokemon/'):url.pathname;
    if(!route.startsWith('/api/pokemon/')){if(staticRoot&&['GET','HEAD'].includes(req.method)){const file=path.resolve(staticRoot,'.'+decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname));if(!file.startsWith(path.resolve(staticRoot)+path.sep))return send(404,{});const stat=fs.statSync(file);if(!stat.isFile())return send(404,{});const ext=path.extname(file);res.writeHead(200,{'Content-Type':({'.html':'text/html','.js':'application/javascript','.css':'text/css','.webp':'image/webp','.png':'image/png','.json':'application/json','.mp3':'audio/mpeg','.wav':'audio/wav','.svg':'image/svg+xml'})[ext]||'application/octet-stream'});if(req.method==='HEAD')return res.end();return fs.createReadStream(file).pipe(res);}return send(404,{error:'Não encontrado'});}
    const token=(req.headers.authorization||'').replace(/^Bearer /,'');
    const ip=service.sessions.has(token)?token:req.socket.remoteAddress;let rate=limits.get(ip);if(!rate||Date.now()-rate.start>60000){rate={start:Date.now(),count:0,joins:0};limits.set(ip,rate);}if(++rate.count>3000)return send(429,{error:'Muitas solicitações.'});

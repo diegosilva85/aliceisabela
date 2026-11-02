@@ -11,7 +11,7 @@ function withPrivateRooms(service,game){
   if(!options.private&&!options.invite)return original.join(options);
   service.sweep();if(service.sessions.size>=200)fail('Servidor cheio.',503);
   let r;if(options.invite){if(typeof options.invite!=='string'||!/^[a-f0-9]{48}$/.test(options.invite))fail('Convite inválido.',404);r=rooms.get(options.invite);if(!r||r.closed)fail('Este convite expirou.',404);if(r.started||r.tokens.length>=2)fail('Esta sala já está ocupada.');}
-  else{const level=options.level||'easy';if(game==='keepup'&&!['easy','medium','hard'].includes(level))fail('Dificuldade inválida.',400);r={code:crypto.randomBytes(24).toString('hex'),tokens:[],level,started:false,closed:false,preferHost:options.preferHost===true&&options.lanOnly===true,transport:'server',signals:[null,null],connected:[false,false],lan:[null,null],created:service.now()};rooms.set(r.code,r);}
+  else{const level=options.level||'easy';if(game==='keepup'&&!['easy','medium','hard'].includes(level))fail('Dificuldade inválida.',400);r={code:crypto.randomBytes(24).toString('hex'),tokens:[],level,started:false,closed:false,preferHost:game!=='burrinho'&&options.preferHost===true&&options.lanOnly===true,transport:'server',signals:[null,null],connected:[false,false],lan:[null,null],created:service.now()};rooms.set(r.code,r);}
   const token=crypto.randomBytes(24).toString('hex');service.sessions.set(token,{token,private:true,level:r.level,seen:service.now(),created:service.now(),room:null,seat:r.tokens.length});r.tokens.push(token);member.set(token,r.code);return {token,...service.state(token)};
  };
  service.state=function(t){const s=fresh(t),r=rooms.get(member.get(t));if(!r)return original.state(t);

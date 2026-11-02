@@ -12,3 +12,9 @@ for(const pair of [[a.token,b.token],[host.token,friend.token]]){
 m.leave(friend.token);assert.equal(m.state(host.token).lobby.closed,true);
 for(let n=1;n<=28;n++){const l=layout(n);assert.equal(l.tiles.length,n);for(const t of l.tiles){assert.ok(t.x+l.dx>=0&&t.y+l.dy>=0&&t.x+t.w+l.dx<=l.size&&t.y+t.h+l.dy<=l.size);}for(let i=0;i<n;i++)for(let j=i+1;j<n;j++){const a=l.tiles[i],b=l.tiles[j];assert.ok(a.x+a.w<=b.x||b.x+b.w<=a.x||a.y+a.h<=b.y||b.y+b.h<=a.y,'no overlap');}for(let i=1;i<n;i++){const a=l.tiles[i-1],b=l.tiles[i];assert.ok((a.x+a.w===b.x||b.x+b.w===a.x)&&Math.min(a.y+a.h,b.y+b.h)>Math.max(a.y,b.y)||(a.y+a.h===b.y||b.y+b.h===a.y)&&Math.min(a.x+a.w,b.x+b.w)>Math.max(a.x,b.x),'continuous chain');}}
 console.log('Burrinho: queue, private isolation, hidden hands, complete matches, replay, pause/reconnect and all 28 layouts OK');
+// Optional fishing is authorized by the server even on an empty board (all tiles playable).
+const qa=m.join(),qb=m.join(),v=m.state(qa.token),who=v.turn===0?qa.token:qb.token,ready=m.state(who);
+assert.ok(C.moves(ready,ready.you).length);const drawn=m.action(who,{kind:'draw',generation:ready.generation,revision:ready.revision});assert.equal(drawn.hands[drawn.you].length,4);assert.equal(drawn.turn,ready.turn);
+// Hit testing follows the actual endpoint halves, including vertical and reversed tiles.
+for(let n=1;n<=28;n++){const l=layout(n),last=l.tiles.at(-1);assert.equal(layout.dropSide(n,l.dx+.5,l.dy+.5),'left');const x=last.x+l.dx+(last.w===2?(last.reverse?.5:1.5):.5),y=last.y+l.dy+(last.h===2?1.5:.5);assert.equal(layout.dropSide(n,x,y),'right');assert.equal(layout.dropSide(n,-10,-10),null);}
+assert.equal(layout.dropSide(0,0,0),'right');console.log('Voluntary online draw and rotated endpoint hit testing OK');

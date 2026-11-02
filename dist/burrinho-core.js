@@ -14,7 +14,7 @@ function play(s,p,id,side){
  s.hands[p].splice(i,1);if(side==='left')s.board.unshift(tile);else s.board.push(tile);s.passes=0;
  if(!s.hands[p].length){s.over=true;s.winner=p;}else s.turn=1-p;return true;
 }
-function draw(s,p){if(s.over||p!==s.turn||moves(s,p).length||!s.stock.length)return false;s.hands[p].push(s.stock.pop());s.passes=0;return true;}
+function draw(s,p){if(s.over||p!==s.turn||!s.stock.length)return false;s.hands[p].push(s.stock.pop());s.passes=0;return true;}
 function pass(s,p){if(s.over||p!==s.turn||s.stock.length||moves(s,p).length)return false;s.passes++;if(s.passes===2){s.over=true;s.winner=null;}else s.turn=1-p;return true;}
 const api={create,ends,sides,moves,play,draw,pass};if(typeof module!=='undefined')module.exports=api;else root.BurrinhoCore=api;
 })(typeof window!=='undefined'?window:globalThis);

@@ -17,11 +17,49 @@ function file(breed,paw){return base+(['','gatinho-branco-','gatinho-siames-','g
 function create(){return {paw:0,cut:paws.map((_,i)=>tips[i].map(()=>false)),selected:false};}
 function clip(s,index){if(!s.selected||!Number.isInteger(index)||index<0||index>=s.cut[s.paw].length||s.cut[s.paw][index])return false;s.cut[s.paw][index]=true;return true;}
 function total(s){return s.cut.flat().filter(Boolean).length;}
+// Keep the verified bytes for the SVG instead of requesting the image again.
+async function loadPaw(url,signal,{timeout=20000,attempts=3}={}){
+ for(let attempt=0;attempt<attempts;attempt++){
+  if(signal.aborted)throw new Error('Cancelled');
+  const request=new AbortController(),cancel=()=>request.abort();
+  signal.addEventListener('abort',cancel,{once:true});
+  let objectURL,timer;
+  try{
+   const work=(async()=>{
+    const response=await fetch(url,{signal:request.signal,cache:attempt?'reload':'default'});
+    if(!response.ok)throw new Error('Image HTTP '+response.status);
+    const blob=await response.blob();
+    if(request.signal.aborted)throw new Error('Cancelled');
+    objectURL=URL.createObjectURL(blob);
+    const image=new Image();image.src=objectURL;
+    await image.decode();
+    if(request.signal.aborted)throw new Error('Cancelled');
+    return objectURL;
+   })();
+   const interrupted=new Promise((_,reject)=>{
+    request.signal.addEventListener('abort',()=>reject(new Error('Image interrupted')),{once:true});
+    timer=setTimeout(()=>request.abort(),timeout);
+   });
+   return await Promise.race([work,interrupted]);
+  }catch(error){
+   if(objectURL)URL.revokeObjectURL(objectURL);
+   if(signal.aborted||attempt===attempts-1)throw error;
+  }finally{clearTimeout(timer);signal.removeEventListener('abort',cancel);}
+ }
+}
 let cleanup=()=>{};
 function mount({breed,onClip,onComplete}){
  cleanup();const stage=document.querySelector('.pet-play'),panel=stage.querySelector('.pet-tools'),s=create();
  const abort=new AbortController(),listen=(el,event,fn)=>el.addEventListener(event,fn,{signal:abort.signal});
- let timer=0,loadTimer=0,token=0,ready=false,locked=false;
+ let timer=0,token=0,ready=false,locked=false;
+ const images=new Map(),urls=new Set();
+ function prepare(paw){
+  if(!images.has(paw))images.set(paw,loadPaw(file(breed,paw),abort.signal).then(url=>{
+   if(abort.signal.aborted){URL.revokeObjectURL(url);return null;}
+   urls.add(url);return url;
+  }).catch(()=>{images.delete(paw);return null;}));
+  return images.get(paw);
+ }
  stage.classList.add('pet-nails');stage.querySelector('.pet-cursor').hidden=true;
  stage.querySelector('.pet-steps').innerHTML='<span class="current">5 · Cortar as unhas</span>';
  stage.querySelector('.pet-hint').textContent='Pegue o cortador e toque em cada unha.';
@@ -32,18 +70,31 @@ function mount({breed,onClip,onComplete}){
  function message(text){stage.querySelector('#pet-message').textContent=text;}
  function progress(){stage.querySelector('#pet-count').textContent='Pata '+(s.paw+1)+' de 4 · '+total(s)+' / 18 unhas';stage.querySelector('.pet-total-fill').style.width=total(s)/18*100+'%';panel.querySelector('.pet-paw-progress').innerHTML=labels.map((label,i)=>'<span class="'+(i===s.paw?'current':'')+'">'+(s.cut[i].every(Boolean)?'✓':i+1)+' · '+label+'</span>').join('');}
  function paint(){const cuts=area.querySelector('#pet-claw-cuts');if(!cuts)return;cuts.innerHTML=pawTips(breed,s.paw).map((r,i)=>s.cut[s.paw][i]?'<rect x="'+r[0]+'" y="'+r[1]+'" width="'+r[2]+'" height="'+r[3]+'" fill="black"/>':'').join('');area.querySelectorAll('[data-claw]').forEach((b,i)=>{b.hidden=s.cut[s.paw][i];b.disabled=!ready||locked;});progress();}
- function render(){ready=false;locked=false;cursor.hidden=true;const id=++token;clearTimeout(loadTimer);area.innerHTML='<div class="pet-paw-loading" role="status">Preparando a patinha…</div>';message(labels[s.paw]);progress();const img=new Image();
- const fail=()=>{if(id!==token||abort.signal.aborted)return;clearTimeout(loadTimer);area.innerHTML='<div class="pet-paw-loading">Não foi possível carregar a patinha.<button class="pet-paw-retry">Tentar novamente</button></div>';area.querySelector('button').onclick=render;};
- img.onload=()=>{if(id!==token||abort.signal.aborted)return;clearTimeout(loadTimer);ready=true;area.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="pet-claw-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="white"/><g id="pet-claw-cuts"></g></mask></defs><image href="'+file(breed,s.paw)+'" width="100" height="100" mask="url(#pet-claw-mask)"/></svg>'+pawTips(breed,s.paw).map((r,i)=>'<button data-claw="'+i+'" aria-label="Cortar unha '+(i+1)+' da pata '+labels[s.paw].toLowerCase()+'" style="left:'+(r[0]+r[2]/2)+'%;top:'+(r[1]+r[3]*.65)+'%;width:'+Math.max(10,r[2])+'%;height:'+Math.max(10,r[3])+'%"></button>').join('');paint();};img.onerror=fail;loadTimer=setTimeout(fail,15000);img.src=file(breed,s.paw);
+ async function render(){
+ ready=false;locked=false;cursor.hidden=true;const id=++token;
+ area.innerHTML='<div class="pet-paw-loading" role="status">Preparando a patinha… Tentaremos novamente automaticamente se a conexão falhar.</div>';
+ message(labels[s.paw]);progress();
+ const url=await prepare(s.paw);
+ if(id!==token||abort.signal.aborted)return;
+ if(!url){
+  area.innerHTML='<div class="pet-paw-loading" role="status">Não conseguimos carregar esta patinha. Seu progresso está salvo nesta partida.<button class="pet-paw-retry">Tentar novamente</button></div>';
+  area.querySelector('button').onclick=render;return;
  }
+ ready=true;
+ area.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="pet-claw-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="white"/><g id="pet-claw-cuts"></g></mask></defs><image href="'+url+'" width="100" height="100" mask="url(#pet-claw-mask)"/></svg>'+pawTips(breed,s.paw).map((r,i)=>'<button data-claw="'+i+'" aria-label="Cortar unha '+(i+1)+' da pata '+labels[s.paw].toLowerCase()+'" style="left:'+(r[0]+r[2]/2)+'%;top:'+(r[1]+r[3]*.65)+'%;width:'+Math.max(10,r[2])+'%;height:'+Math.max(10,r[3])+'%"></button>').join('');paint();
+ }
+
  function position(e){if(!s.selected||!ready||locked)return;const r=stage.getBoundingClientRect(),rotated=stage.classList.contains('pet-portrait');cursor.style.left=(rotated?e.clientY-r.top:e.clientX-r.left)+'px';cursor.style.top=(rotated?r.right-e.clientX:e.clientY-r.top)+'px';cursor.hidden=false;}
  listen(panel.querySelector('.pet-pick-clipper'),'click',()=>{s.selected=true;stage.classList.add('pet-clipper-selected');panel.querySelector('button').setAttribute('aria-pressed','true');stage.querySelector('.pet-hint').textContent='Clique ou toque em cada unha para cortar a pontinha.';});
  listen(stage,'pointermove',position);listen(stage,'pointerleave',()=>cursor.hidden=true);listen(stage,'pointercancel',()=>cursor.hidden=true);
  listen(area,'click',e=>{const b=e.target.closest('[data-claw]');if(!b||!ready||locked)return;if(!s.selected){message('Primeiro, pegue o cortador ao lado.');return;}const i=+b.dataset.claw;if(!clip(s,i))return;if(e.detail)position(e);cursor.classList.remove('snip');void cursor.offsetWidth;cursor.classList.add('snip');onClip?.();const r=pawTips(breed,s.paw)[i],star=document.createElement('span');star.className='pet-glitter';star.textContent='✦';star.style.left=(r[0]+r[2]/2)+'%';star.style.top=(r[1]+r[3])+'%';area.append(star);star.addEventListener('animationend',()=>star.remove(),{once:true});paint();
  if(s.cut[s.paw].every(Boolean)){locked=true;paint();message(s.paw===3?'Todas as unhas prontinhas!':'Patinha pronta!');timer=setTimeout(()=>{if(s.paw<3){s.paw++;render();}else{cleanup();onComplete?.();}},950);}
  });
- cleanup=()=>{abort.abort();token++;clearTimeout(timer);clearTimeout(loadTimer);area.remove();cursor.remove();stage.classList.remove('pet-nails','pet-clipper-selected');cleanup=()=>{};};render();
+ cleanup=()=>{abort.abort();token++;clearTimeout(timer);urls.forEach(url=>URL.revokeObjectURL(url));urls.clear();area.remove();cursor.remove();stage.classList.remove('pet-nails','pet-clipper-selected');cleanup=()=>{};};render();
+ // Download the remaining paws while the first one is being groomed.
+ for(let paw=1;paw<4;paw++)prepare(paw);
+ listen(window,'online',()=>{if(!ready&&area.querySelector('.pet-paw-retry'))render();});
 }
-root.PetNails={mount,stop:()=>cleanup(),create,clip,total,file,tips,pawTips};
+root.PetNails={mount,stop:()=>cleanup(),create,clip,total,file,tips,pawTips,loadPaw};
 if(typeof module!=='undefined')module.exports=root.PetNails;
 })(typeof window!=='undefined'?window:globalThis);

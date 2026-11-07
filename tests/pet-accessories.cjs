@@ -21,3 +21,12 @@ for(let breed=0;breed<6;breed++){
  for(const [x,y] of [[54,53],[54,90],[5,18],[95,18],[54,-1]])assert.equal(A.placement(breed,'hat',x,y),null);
 }
 console.log('Link hat: head-only placement on all six pets OK');
+assert.ok(A.items.some(i=>i.id==='vestido-zelda'&&i.type==='dress'));
+for(let breed=0;breed<6;breed++){
+ const dress=A.placement(breed,'dress',54,69);
+ assert.equal(dress.slot,'body');
+ assert.ok(dress.y-dress.height/2>=48);
+ assert.ok(dress.y+dress.height/2<=90);
+ for(const [x,y] of [[54,18],[54,32],[54,96],[5,69],[95,69]])assert.equal(A.placement(breed,'dress',x,y),null);
+}
+console.log('Zelda dress: body-only placement on all six pets OK');

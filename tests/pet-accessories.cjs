@@ -15,3 +15,9 @@ for(let breed=0;breed<4;breed++){
  const mask=A.placement(breed,'mask',90,90);assert.equal(mask.slot,'mask');assert.ok(mask.y>=30&&mask.y<=33);
  const cape=A.placement(breed,'cape',5,5);assert.equal(cape.slot,'cape');assert.ok(cape.width>100);
 }
+assert.ok(A.items.some(i=>i.id==='gorro-link'&&i.type==='hat'));
+for(let breed=0;breed<6;breed++){
+ const hat=A.placement(breed,'hat',54,18);assert.equal(hat.slot,'hat');assert.ok(hat.y<20);
+ for(const [x,y] of [[54,53],[54,90],[5,18],[95,18],[54,-1]])assert.equal(A.placement(breed,'hat',x,y),null);
+}
+console.log('Link hat: head-only placement on all six pets OK');
